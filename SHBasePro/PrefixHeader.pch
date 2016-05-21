@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  NetWork
+//
+//  Created by shenghai on 16/5/6.
+//  Copyright © 2016年 ren. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __cplusplus
+
+#import <opencv2/opencv.hpp>
+#import <opencv2/stitching/detail/blenders.hpp>
+#import <opencv2/stitching/detail/exposure_compensate.hpp>
+#endif
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#endif
+
+#endif /* PrefixHeader_pch */
