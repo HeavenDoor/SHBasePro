@@ -13,9 +13,13 @@
 #import "PhoneVerificationView.h"
 #import "RongClouldMessageControllerViewController.h"
 #import "HitTestView.h"
-
+#import "QRCodeScanViewController.h"
 #import <RongIMKit/RongIMKit.h>
-
+#import "VRSourceViewController.h"
+#import "SocketIO.h"
+#import "SocketIOPacket.h"
+#import "TrueHouseDepositsView.h"
+#import "BondRechargeViewController.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 
@@ -26,14 +30,22 @@ static NSString *const RONGCLOUD_IM_APPKEY = @"n19jmcy5934m9"; //<!融云的Key 
 static NSString *const RONGCLOUD_IM_TOKEN = @"TMoJmfT71gMJ0TgmiDiFZ0NsFYdxP1Yv6S70MRjyp/5Tdgg8LYtH6O+1/7UJc3eV0fKvrcbSzxGa0pkX1gmepQ=="; //<!融云Token
 static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql67YLoW+tiyBdx0mXe961zQEMZlh6q9//E6XZsoKBZOaZ8gPw==";
 
-@interface ViewController ()
+@interface ViewController () <QRCodeScanDelegate,SocketIODelegate, UIWebViewDelegate>
 {
     NSString*DateStr;
     UIImageView* imageView;
     NSInteger num;
     HitTestView* hitView;
     UIView* backView;
+    SocketIO* socket;
+    UIWebView* webView;
     
+    TrueHouseDepositsView*  depositsView;  // 真房源保证金界面
+    UIView* depositsBackView; // 真房源保证金蒙层
+    
+    UIImageView* imageViewgg;
+    UILabel* labelx;
+    UITextField* textField;
 }
 @property(nonatomic,strong)UIButton*start_Button;
 @property(nonatomic,strong)UILabel*title_Lab;
@@ -60,11 +72,29 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
 //    //_phoneNumber = arr[0];
 //    [self gg];
     
+    /*
+    NSString* pListPath = [[NSBundle mainBundle] pathForResource:@"shenghai" ofType: @"plist"];
+    NSMutableArray* arrayDatas = [NSMutableArray arrayWithContentsOfFile:pListPath];
+    NSLog(@"%@", arrayDatas);
+    NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:@"6", @"EEE", nil];
+    [arrayDatas addObject: dict];
     
-    NSString* ss = @"aaa\\bbb\\\\cgg\\d\\eee\\ff";
     
-    NSString*gg = [ss stringByReplacingOccurrencesOfString: @"\\\\" withString:@"/" ];
-    NSString*hh = [gg stringByReplacingOccurrencesOfString: @"\\" withString:@"/" ];
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    
+    NSString* path = [NSHomeDirectory() stringByAppendingPathComponent:@"Library"];
+    path = [path stringByAppendingString:@"/dy.plist"];
+    
+    if (![fileManager fileExistsAtPath:path]) {
+        [fileManager createFileAtPath:path contents:nil attributes:nil];
+    }
+    
+    
+    [arrayDatas writeToFile:path atomically:YES];
+    
+    NSMutableArray* array = [NSMutableArray arrayWithContentsOfFile:path];
+    NSLog(@"==============================================");
+    NSLog(@"%@", array);
     
     [[RCIM sharedRCIM] initWithAppKey:RONGCLOUD_IM_APPKEY];
     [[RCIM sharedRCIM] connectWithToken:RONGCLOUD_IM_TOKEN
@@ -76,11 +106,131 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
                                 tokenIncorrect:^{
                              
                                 }];
+    */
+}
+
+-(void)View
+{
+    self.start_Button=[UIButton buttonWithType:UIButtonTypeCustom];
+    self.start_Button.frame=CGRectMake(100, 100, 100, 100);
+    //self.start_Button.center=self.view.center;
+    [self.start_Button setBackgroundColor:[UIColor redColor]];
+    [self.start_Button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.start_Button setTitle:@"开始" forState:UIControlStateNormal];
+    [self.start_Button addTarget:self action:@selector(gg) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.start_Button];
     
+    self.title_Lab=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 100)];
+    self.title_Lab.textAlignment=NSTextAlignmentCenter;
+    self.title_Lab.center=CGPointMake(self.view.center.x, self.view.center.y+100);
+    self.title_Lab.userInteractionEnabled=NO;
+    [self.view addSubview:self.title_Lab];
+    
+    
+    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 350, 200, 200)];
+    view.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:view];
+    
+    UIImage* img = [UIImage imageNamed:@"ggb"];
+    imageViewgg = [[UIImageView alloc] initWithFrame:CGRectMake(200 - img.size.width, 0, img.size.width, img.size.height)];
+    [imageViewgg setImage:img];
+    [view addSubview:imageViewgg];
+    //labelx.frame = CGRectMake(16, 10, 13, 5);
+    labelx = [[UILabel alloc] initWithFrame:CGRectMake(11, 5, 13, 5)];
+    [labelx setFont:[UIFont systemFontOfSize:12.0]];
+    //labelx.text = @"";
+    labelx.textColor = [UIColor whiteColor];
+    //[labelx sizeToFit];
+    
+    labelx.transform = CGAffineTransformMakeRotation (M_PI_4);
+    [imageViewgg addSubview:labelx];
+    
+    textField = [[UITextField alloc] initWithFrame:CGRectMake(220, 350, 100, 50)];
+    [self.view addSubview:textField];
+    [textField resignFirstResponder];
+    [textField becomeFirstResponder];
+    //    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, 500)];
+    //    webView.delegate = self;
+    //    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://panorama.haofang.net:11011/pano/pano720.jsp?CITY_ID=1&CASE_TYPE=1&CASE_ID=6628786&ARCHIVE_ID=352784&SOURCE=APP"]];
+    //    [webView loadRequest: request];
+    //    [self.view addSubview:webView];
+}
+
+
+
+#pragma mark - UIWebViewDelegate
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    NSLog(@"url === %@",request.URL);
+    
+    return YES;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
+    //    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"加载失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    //    [alertView show];
+}
+
+
+
+- (void) socketIO:(SocketIO *)socket onError:(NSError *)error
+{
+    NSLog(@"didReceiveEvent >>> data: %@", error);
+}
+// event delegate
+- (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet
+{
+    NSLog(@"didReceiveEvent >>> data: %@", packet.data);
 }
 
 - (void) gg
 {
+    //[textField becomeFirstResponder];
+    
+    
+    [labelx removeFromSuperview];
+    labelx.frame = CGRectMake(16, 10, 13, 5);
+    //labelx = [[UILabel alloc] initWithFrame:CGRectMake(11, 5, 13, 5)];
+    [labelx setFont:[UIFont systemFontOfSize:12.0]];
+    labelx.text = @"独家";
+    labelx.textColor = [UIColor whiteColor];
+    [labelx sizeToFit];
+    
+    labelx.transform = CGAffineTransformMakeRotation (M_PI_4);
+    [imageViewgg addSubview:labelx];
+//    depositsView = [[TrueHouseDepositsView alloc] init];  // 真房源保证金界面
+//    [depositsView perFormCloseAction:^{
+//        [depositsBackView removeFromSuperview];
+//        [depositsView removeFromSuperview];
+//    }];
+//    
+//    [depositsView perFormLightAction:^{
+//        [depositsBackView removeFromSuperview];
+//        [depositsView removeFromSuperview];
+//    }];
+//    
+//    depositsBackView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    depositsBackView.backgroundColor = [UIColor blackColor];
+//    depositsBackView.alpha = 0.5;
+//    [[[UIApplication sharedApplication] keyWindow] addSubview:depositsBackView];
+//    [[[UIApplication sharedApplication] keyWindow] addSubview:depositsView];
+    
+//    BondRechargeViewController* conTroller = [[BondRechargeViewController alloc] init];
+//    [self.navigationController pushViewController:conTroller animated:YES];
+    
+    
+    
+    
+//    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://panorama.haofang.net:11011/pano/pano720.jsp?CITY_ID=1&CASE_TYPE=1&CASE_ID=6628821&ARCHIVE_ID=352784&SOURCE=APP"]];
+//    [webView loadRequest: request];
+//    socket = [[SocketIO alloc] initWithDelegate:self];
+//    [socket connectToHost:@"hftsoft.com" onPort:2120 ]; // withParams:@{@"login":@"APP_CLIENT739"}
+    //[self qrCodeScan: nil];
+    
+//    VRSourceViewController* controller = [[VRSourceViewController alloc] init];
+//    controller.urlStr = @"http://panorama.myfun7.com/pano/pano_720.jsp";
+//    [self.navigationController pushViewController:controller animated:YES];
+    
 //    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PhoneVerificationView" owner:nil options:nil];
 //    
 //    PhoneVerificationView *phoneView = [nib objectAtIndex:0];
@@ -97,7 +247,7 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
 //    chat.title = @"想显示的会话标题";
 //    [self.navigationController pushViewController:chat animated:YES];
     
-    backView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+/*    backView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     backView.backgroundColor = [UIColor blackColor];
     backView.alpha = 0.6;
     
@@ -111,7 +261,7 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
 
     //[backView addSubview:hitView];
     [[[UIApplication sharedApplication] keyWindow] addSubview:backView];
-    [[[UIApplication sharedApplication] keyWindow] addSubview:hitView];
+    [[[UIApplication sharedApplication] keyWindow] addSubview:hitView];*/
     
     
 }
@@ -332,26 +482,48 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     }
 }
 
--(void)View
-{
-    self.start_Button=[UIButton buttonWithType:UIButtonTypeCustom];
-    self.start_Button.bounds=CGRectMake(0, 0, 100, 100);
-    self.start_Button.center=self.view.center;
-    [self.start_Button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.start_Button setTitle:@"开始" forState:UIControlStateNormal];
-    [self.start_Button addTarget:self action:@selector(gg) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.start_Button];
-    
-    self.title_Lab=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 100)];
-    self.title_Lab.textAlignment=NSTextAlignmentCenter;
-    self.title_Lab.center=CGPointMake(self.view.center.x, self.view.center.y+100);
-    self.title_Lab.userInteractionEnabled=NO;
-    [self.view addSubview:self.title_Lab];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark -
+#pragma mark 二维码扫描
+
+- (void)qrCodeScan:(id)sender
+{
+    QRCodeScanViewController *viewController = [[QRCodeScanViewController alloc] init];
+    viewController.delegate = self;
+
+    //[self.navigationController pushViewController:viewController animated:YES];
+    [self presentViewController:viewController animated:YES
+                     completion:^
+     {
+         
+     }];
+    
+}
+
+#pragma mark -
+#pragma mark QRCodeScanDelegate Method
+- (void)didQRCodeScanCaptureCode:(NSString*)codeString
+{
+    //TODO:得到二维码后的处理
+    NSLog(@"扫描到二维码%@",codeString);
+    
+    if(codeString!=nil&&![@"" isEqualToString:codeString])
+    {
+        //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示"
+                                                        message:codeString
+                                                       delegate:nil
+                                              cancelButtonTitle:@"好的"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+
+}
 @end

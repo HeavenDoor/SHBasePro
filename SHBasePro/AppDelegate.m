@@ -27,11 +27,18 @@
     self.window.rootViewController=nav;
     
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
-    //[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"NetworkStatus" options:NSKeyValueObservingOptionNew context:NULL];
-    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-    [_reachability startNotifier];
-    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
+//    //[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"NetworkStatus" options:NSKeyValueObservingOptionNew context:NULL];
+//    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+//    [_reachability startNotifier];
+//    
+//    
+//    NSString* explainPath = @"c://shenghai/haofangtong/bbb/a.txt";
+//    NSRange range = [explainPath rangeOfString:@"/" options:NSBackwardsSearch];
+//    NSString* filePath = [explainPath substringWithRange:NSMakeRange(0, range.location)];
+//    if (filePath == nil) {
+//        
+//    }
     return YES;
 }
 
@@ -93,6 +100,11 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
     }
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

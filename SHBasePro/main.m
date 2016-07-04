@@ -10,7 +10,16 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
-    @autoreleasepool {
+    @autoreleasepool
+    {
+//        __block int shanghaiTag = 8;
+//    
+//    shanghaiTag = 9;
+//        void (^blk)(void) = ^{
+//            
+//            shanghaiTag = 123;
+//        };
+//        blk();
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
