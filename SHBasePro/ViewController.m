@@ -20,6 +20,8 @@
 #import "SocketIOPacket.h"
 #import "TrueHouseDepositsView.h"
 #import "BondRechargeViewController.h"
+#import "ContactMethodAlertView.h"
+#import "TrueHouseRuleController.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 
@@ -46,9 +48,11 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     UIImageView* imageViewgg;
     UILabel* labelx;
     UITextField* textField;
+    
 }
-@property(nonatomic,strong)UIButton*start_Button;
-@property(nonatomic,strong)UILabel*title_Lab;
+@property(nonatomic,strong) UIButton*start_Button;
+@property(nonatomic,strong) UILabel*title_Lab;
+@property(nonatomic,strong) TrueHouseRuleController* TrueHouseRuleVc;
 @end
 
 @implementation ViewController
@@ -147,8 +151,8 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     
     textField = [[UITextField alloc] initWithFrame:CGRectMake(220, 350, 100, 50)];
     [self.view addSubview:textField];
-    [textField resignFirstResponder];
-    [textField becomeFirstResponder];
+//    [textField resignFirstResponder];
+//    [textField becomeFirstResponder];
     //    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, 500)];
     //    webView.delegate = self;
     //    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://panorama.haofang.net:11011/pano/pano720.jsp?CITY_ID=1&CASE_TYPE=1&CASE_ID=6628786&ARCHIVE_ID=352784&SOURCE=APP"]];
@@ -185,19 +189,45 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
 
 - (void) gg
 {
+    NSString* kk = @"\r\n\shenghairen\r\n\<dy125846>\r\n";
+    NSString* dd = [kk stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    NSString* gg = [dd stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    __weak typeof(self) weakSelf = self;
+    _TrueHouseRuleVc = [[TrueHouseRuleController alloc] init];
+    _TrueHouseRuleVc.agreeBlock = ^{
+        [weakSelf.TrueHouseRuleVc dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+        NSLog(@"同意");
+    };
+    _TrueHouseRuleVc.rejectBlock = ^{
+        NSLog(@"拒绝");
+        [weakSelf.TrueHouseRuleVc dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    };
+    [self.navigationController presentViewController:self.TrueHouseRuleVc animated:YES completion:^{
+        
+    }];
+//    ContactMethodAlertView *vie = [[ContactMethodAlertView alloc] initWithFrame:CGRectZero images:@[@"yinhao_",@"1call2_"] titles:@[@"在线聊天",@"免费隐号拨打"]];
+//    vie.canTapBG = NO;
+//    [vie show];
+
     //[textField becomeFirstResponder];
     
     
-    [labelx removeFromSuperview];
-    labelx.frame = CGRectMake(16, 10, 13, 5);
-    //labelx = [[UILabel alloc] initWithFrame:CGRectMake(11, 5, 13, 5)];
-    [labelx setFont:[UIFont systemFontOfSize:12.0]];
-    labelx.text = @"独家";
-    labelx.textColor = [UIColor whiteColor];
-    [labelx sizeToFit];
+//    [labelx removeFromSuperview];
+//    labelx.frame = CGRectMake(16, 10, 13, 5);
+//    //labelx = [[UILabel alloc] initWithFrame:CGRectMake(11, 5, 13, 5)];
+//    [labelx setFont:[UIFont systemFontOfSize:12.0]];
+//    labelx.text = @"独家";
+//    labelx.textColor = [UIColor whiteColor];
+//    [labelx sizeToFit];
+//    
+//    labelx.transform = CGAffineTransformMakeRotation (M_PI_4);
+//    [imageViewgg addSubview:labelx];
     
-    labelx.transform = CGAffineTransformMakeRotation (M_PI_4);
-    [imageViewgg addSubview:labelx];
+    
 //    depositsView = [[TrueHouseDepositsView alloc] init];  // 真房源保证金界面
 //    [depositsView perFormCloseAction:^{
 //        [depositsBackView removeFromSuperview];

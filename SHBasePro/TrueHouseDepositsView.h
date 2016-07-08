@@ -9,8 +9,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define kColor(a,b,c) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:1]
-
 
 // 关闭按钮
 typedef void(^closeBlock)(void);

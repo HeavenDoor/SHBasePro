@@ -44,6 +44,18 @@
 		4A9114601CF0702900641789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114091CF0702900641789 /* ViewController.m */; };
 		4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114301CF0702900641789 /* XMLDictionary.m */; };
 		4A91147C1CF0702900641789 /* RongClouldMessageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */; };
+		4AD05DF31D2A8C07001CE689 /* ContactMethodAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */; };
+		4AD05E051D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF61D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m */; };
+		4AD05E061D2A8D9E001CE689 /* NSString+XTSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF81D2A8D9E001CE689 /* NSString+XTSize.m */; };
+		4AD05E071D2A8D9E001CE689 /* UIButton+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DFA1D2A8D9E001CE689 /* UIButton+Layout.m */; };
+		4AD05E081D2A8D9E001CE689 /* UIColor+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DFC1D2A8D9E001CE689 /* UIColor+Tool.m */; };
+		4AD05E091D2A8D9E001CE689 /* UIImageView+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DFE1D2A8D9E001CE689 /* UIImageView+Tool.m */; };
+		4AD05E0A1D2A8D9E001CE689 /* UILabel+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E001D2A8D9E001CE689 /* UILabel+Tool.m */; };
+		4AD05E0B1D2A8D9E001CE689 /* UINavigationController+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E021D2A8D9E001CE689 /* UINavigationController+Push.m */; };
+		4AD05E0C1D2A8D9E001CE689 /* UIWindow+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E041D2A8D9E001CE689 /* UIWindow+Category.m */; };
+		4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E151D2A8EEB001CE689 /* UIViewExt.m */; };
+		4AD05E241D2B9453001CE689 /* TrueHouseRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */; };
+		4AD05E261D2B9ABA001CE689 /* truehouse_agreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */; };
 		4AEEA1C91D1967D100DB0D76 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEEA1C81D1967D100DB0D76 /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +110,29 @@
 		4A9114301CF0702900641789 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		4A9114321CF0702900641789 /* RongClouldMessageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongClouldMessageControllerViewController.h; sourceTree = "<group>"; };
 		4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongClouldMessageControllerViewController.m; sourceTree = "<group>"; };
+		4AD05DF11D2A8C07001CE689 /* ContactMethodAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMethodAlertView.h; sourceTree = "<group>"; };
+		4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMethodAlertView.m; sourceTree = "<group>"; };
+		4AD05DF51D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+XTAttributionSize.h"; sourceTree = "<group>"; };
+		4AD05DF61D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+XTAttributionSize.m"; sourceTree = "<group>"; };
+		4AD05DF71D2A8D9E001CE689 /* NSString+XTSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XTSize.h"; sourceTree = "<group>"; };
+		4AD05DF81D2A8D9E001CE689 /* NSString+XTSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTSize.m"; sourceTree = "<group>"; };
+		4AD05DF91D2A8D9E001CE689 /* UIButton+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Layout.h"; sourceTree = "<group>"; };
+		4AD05DFA1D2A8D9E001CE689 /* UIButton+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Layout.m"; sourceTree = "<group>"; };
+		4AD05DFB1D2A8D9E001CE689 /* UIColor+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tool.h"; sourceTree = "<group>"; };
+		4AD05DFC1D2A8D9E001CE689 /* UIColor+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tool.m"; sourceTree = "<group>"; };
+		4AD05DFD1D2A8D9E001CE689 /* UIImageView+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Tool.h"; sourceTree = "<group>"; };
+		4AD05DFE1D2A8D9E001CE689 /* UIImageView+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Tool.m"; sourceTree = "<group>"; };
+		4AD05DFF1D2A8D9E001CE689 /* UILabel+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Tool.h"; sourceTree = "<group>"; };
+		4AD05E001D2A8D9E001CE689 /* UILabel+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Tool.m"; sourceTree = "<group>"; };
+		4AD05E011D2A8D9E001CE689 /* UINavigationController+Push.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Push.h"; sourceTree = "<group>"; };
+		4AD05E021D2A8D9E001CE689 /* UINavigationController+Push.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Push.m"; sourceTree = "<group>"; };
+		4AD05E031D2A8D9E001CE689 /* UIWindow+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Category.h"; sourceTree = "<group>"; };
+		4AD05E041D2A8D9E001CE689 /* UIWindow+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Category.m"; sourceTree = "<group>"; };
+		4AD05E141D2A8EEB001CE689 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		4AD05E151D2A8EEB001CE689 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		4AD05E221D2B9453001CE689 /* TrueHouseRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueHouseRuleController.h; sourceTree = "<group>"; };
+		4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueHouseRuleController.m; sourceTree = "<group>"; };
+		4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = truehouse_agreement.html; sourceTree = "<group>"; };
 		4AEEA1C81D1967D100DB0D76 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.release.xcconfig"; sourceTree = "<group>"; };
 		D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHBasePro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +208,10 @@
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
 			isa = PBXGroup;
 			children = (
+				4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */,
+				4AD05DF41D2A8D9E001CE689 /* Categrory */,
+				4AD05DF11D2A8C07001CE689 /* ContactMethodAlertView.h */,
+				4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */,
 				4A572EB21D18D94100C46D36 /* BondRechargeViewController.m */,
 				4A572EB31D18D94100C46D36 /* BondRechargeViewController.h */,
 				4A572EAC1D17E7FA00C46D36 /* TrueHouseDepositsView.m */,
@@ -198,6 +237,8 @@
 				4A9114091CF0702900641789 /* ViewController.m */,
 				4A91142E1CF0702900641789 /* XMLDictionary */,
 				4A9114311CF0702900641789 /* 融云 */,
+				4AD05E221D2B9453001CE689 /* TrueHouseRuleController.h */,
+				4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */,
 			);
 			path = SHBasePro;
 			sourceTree = "<group>";
@@ -227,6 +268,31 @@
 				4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */,
 			);
 			path = "融云";
+			sourceTree = "<group>";
+		};
+		4AD05DF41D2A8D9E001CE689 /* Categrory */ = {
+			isa = PBXGroup;
+			children = (
+				4AD05E141D2A8EEB001CE689 /* UIViewExt.h */,
+				4AD05E151D2A8EEB001CE689 /* UIViewExt.m */,
+				4AD05DF51D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.h */,
+				4AD05DF61D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m */,
+				4AD05DF71D2A8D9E001CE689 /* NSString+XTSize.h */,
+				4AD05DF81D2A8D9E001CE689 /* NSString+XTSize.m */,
+				4AD05DF91D2A8D9E001CE689 /* UIButton+Layout.h */,
+				4AD05DFA1D2A8D9E001CE689 /* UIButton+Layout.m */,
+				4AD05DFB1D2A8D9E001CE689 /* UIColor+Tool.h */,
+				4AD05DFC1D2A8D9E001CE689 /* UIColor+Tool.m */,
+				4AD05DFD1D2A8D9E001CE689 /* UIImageView+Tool.h */,
+				4AD05DFE1D2A8D9E001CE689 /* UIImageView+Tool.m */,
+				4AD05DFF1D2A8D9E001CE689 /* UILabel+Tool.h */,
+				4AD05E001D2A8D9E001CE689 /* UILabel+Tool.m */,
+				4AD05E011D2A8D9E001CE689 /* UINavigationController+Push.h */,
+				4AD05E021D2A8D9E001CE689 /* UINavigationController+Push.m */,
+				4AD05E031D2A8D9E001CE689 /* UIWindow+Category.h */,
+				4AD05E041D2A8D9E001CE689 /* UIWindow+Category.m */,
+			);
+			path = Categrory;
 			sourceTree = "<group>";
 		};
 		746F532D732D7AA210F6AA29 /* Pods */ = {
@@ -346,6 +412,7 @@
 			files = (
 				4A91143C1CF0702900641789 /* Main.storyboard in Resources */,
 				4A9114351CF0702900641789 /* Assets.xcassets in Resources */,
+				4AD05E261D2B9ABA001CE689 /* truehouse_agreement.html in Resources */,
 				4A91145F1CF0702900641789 /* PhoneVerificationView.xib in Resources */,
 				4A91143B1CF0702900641789 /* LaunchScreen.storyboard in Resources */,
 				4A9114561CF0702900641789 /* Info.plist in Resources */,
@@ -408,18 +475,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A572EAE1D17E7FA00C46D36 /* TrueHouseDepositsView.m in Sources */,
+				4AD05DF31D2A8C07001CE689 /* ContactMethodAlertView.m in Sources */,
 				4A9114601CF0702900641789 /* ViewController.m in Sources */,
+				4AD05E0C1D2A8D9E001CE689 /* UIWindow+Category.m in Sources */,
+				4AD05E241D2B9453001CE689 /* TrueHouseRuleController.m in Sources */,
 				4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */,
 				4A91145B1CF0702900641789 /* JsonBaseModel.m in Sources */,
 				4A91147C1CF0702900641789 /* RongClouldMessageControllerViewController.m in Sources */,
+				4AD05E061D2A8D9E001CE689 /* NSString+XTSize.m in Sources */,
 				4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				4A9114551CF0702900641789 /* HitTestView.m in Sources */,
 				4A91145E1CF0702900641789 /* PhoneVerificationView.m in Sources */,
+				4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */,
 				4A572EB41D18D94100C46D36 /* BondRechargeViewController.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
+				4AD05E0A1D2A8D9E001CE689 /* UILabel+Tool.m in Sources */,
+				4AD05E071D2A8D9E001CE689 /* UIButton+Layout.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
+				4AD05E091D2A8D9E001CE689 /* UIImageView+Tool.m in Sources */,
 				4A57DD871CF2A3FD00174FC8 /* QRCodeScanViewController.m in Sources */,
 				4A57DDE61CF2D78900174FC8 /* VRSourceViewController.m in Sources */,
+				4AD05E051D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m in Sources */,
+				4AD05E081D2A8D9E001CE689 /* UIColor+Tool.m in Sources */,
+				4AD05E0B1D2A8D9E001CE689 /* UINavigationController+Push.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
