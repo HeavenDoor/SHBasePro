@@ -21,24 +21,16 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
-    ViewController*VC=[[ViewController alloc]init];
-    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
+    ViewController *VC = [[ViewController alloc]init];
+    //UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController=nav;
+    self.window.rootViewController = VC;
     
 
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
-//    //[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"NetworkStatus" options:NSKeyValueObservingOptionNew context:NULL];
-//    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-//    [_reachability startNotifier];
-//    
-//    
-//    NSString* explainPath = @"c://shenghai/haofangtong/bbb/a.txt";
-//    NSRange range = [explainPath rangeOfString:@"/" options:NSBackwardsSearch];
-//    NSString* filePath = [explainPath substringWithRange:NSMakeRange(0, range.location)];
-//    if (filePath == nil) {
-//        
-//    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
+    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [_reachability startNotifier];
+
     return YES;
 }
 

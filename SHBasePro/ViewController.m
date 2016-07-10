@@ -32,7 +32,8 @@ static NSString *const RONGCLOUD_IM_APPKEY = @"n19jmcy5934m9"; //<!融云的Key 
 static NSString *const RONGCLOUD_IM_TOKEN = @"TMoJmfT71gMJ0TgmiDiFZ0NsFYdxP1Yv6S70MRjyp/5Tdgg8LYtH6O+1/7UJc3eV0fKvrcbSzxGa0pkX1gmepQ=="; //<!融云Token
 static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql67YLoW+tiyBdx0mXe961zQEMZlh6q9//E6XZsoKBZOaZ8gPw==";
 
-@interface ViewController () <QRCodeScanDelegate,SocketIODelegate, UIWebViewDelegate>
+static NSString *const MainCellIdentifier = @"MainCellIdentifier";
+@interface ViewController () <QRCodeScanDelegate,SocketIODelegate, UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     NSString*DateStr;
     UIImageView* imageView;
@@ -53,6 +54,8 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
 @property(nonatomic,strong) UIButton*start_Button;
 @property(nonatomic,strong) UILabel*title_Lab;
 @property(nonatomic,strong) TrueHouseRuleController* TrueHouseRuleVc;
+
+@property(nonatomic, strong) UITableView* tableView;
 @end
 
 @implementation ViewController
@@ -62,7 +65,7 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor=[UIColor whiteColor];
     
-    [self View];
+    [self initUserInterface];
 //    //[self createDB];
 //    //[self test];
 //    //[self kk];
@@ -113,9 +116,14 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     */
 }
 
--(void)View
+-(void)initUserInterface
 {
-    self.start_Button=[UIButton buttonWithType:UIButtonTypeCustom];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    [self.view addSubview:_tableView];
+    /*self.start_Button=[UIButton buttonWithType:UIButtonTypeCustom];
     self.start_Button.frame=CGRectMake(100, 100, 100, 100);
     //self.start_Button.center=self.view.center;
     [self.start_Button setBackgroundColor:[UIColor redColor]];
@@ -151,6 +159,9 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     
     textField = [[UITextField alloc] initWithFrame:CGRectMake(220, 350, 100, 50)];
     [self.view addSubview:textField];
+    
+    */
+    
 //    [textField resignFirstResponder];
 //    [textField becomeFirstResponder];
     //    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, [[UIScreen mainScreen] bounds].size.width, 500)];
@@ -158,6 +169,31 @@ static NSString *const OTHER_IM_TOKEN = @"JcMoTrB11myhg1PiQlRRPWnAB6QkODEROUlvql
     //    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://panorama.haofang.net:11011/pano/pano720.jsp?CITY_ID=1&CASE_TYPE=1&CASE_ID=6628786&ARCHIVE_ID=352784&SOURCE=APP"]];
     //    [webView loadRequest: request];
     //    [self.view addSubview:webView];
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MainCellIdentifier"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MainCellIdentifier];
+    }
+    cell.textLabel.text = @"sehenghaio";
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 
