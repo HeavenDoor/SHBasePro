@@ -56,7 +56,6 @@
 		4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E151D2A8EEB001CE689 /* UIViewExt.m */; };
 		4AD05E241D2B9453001CE689 /* TrueHouseRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */; };
 		4AD05E261D2B9ABA001CE689 /* truehouse_agreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */; };
-		4AEEA1C91D1967D100DB0D76 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEEA1C81D1967D100DB0D76 /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,7 +132,6 @@
 		4AD05E221D2B9453001CE689 /* TrueHouseRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueHouseRuleController.h; sourceTree = "<group>"; };
 		4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueHouseRuleController.m; sourceTree = "<group>"; };
 		4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = truehouse_agreement.html; sourceTree = "<group>"; };
-		4AEEA1C81D1967D100DB0D76 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.release.xcconfig"; sourceTree = "<group>"; };
 		D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHBasePro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8AE3F71CD36CF200B0DD29 /* SHBasePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHBasePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +149,6 @@
 				4A3CE3811CDD94FE0084E6E0 /* CoreVideo.framework in Frameworks */,
 				4A3CE37F1CDD94B90084E6E0 /* libc++.tbd in Frameworks */,
 				4A3CE37D1CDD94A90084E6E0 /* libc++abi.tbd in Frameworks */,
-				4AEEA1C91D1967D100DB0D76 /* Reveal.framework in Frameworks */,
 				4A3CE37B1CDD94300084E6E0 /* libresolv.tbd in Frameworks */,
 				4A3CE3791CDD94020084E6E0 /* CFNetwork.framework in Frameworks */,
 				4A6B783D1CDCA81F0062111F /* libxml2.tbd in Frameworks */,
@@ -307,7 +304,6 @@
 		8511C120A58AE682EA956E94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4AEEA1C81D1967D100DB0D76 /* Reveal.framework */,
 				4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */,
 				4A3CE3861CDD953C0084E6E0 /* Security.framework */,
 				4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */,
