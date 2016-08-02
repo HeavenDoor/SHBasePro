@@ -22,6 +22,7 @@
 #import "BondRechargeViewController.h"
 #import "ContactMethodAlertView.h"
 #import "TrueHouseRuleController.h"
+#import "NSSHTest.h"
 
 #define WeakSelf __weak typeof(self) weakSelf = self;
 
@@ -114,15 +115,23 @@ static NSString *const MainCellIdentifier = @"MainCellIdentifier";
                              
                                 }];
     */
+    
+    NSSHTest* test = [[NSSHTest alloc] init];
+    test.text = @"123";
+    
+    NSLog(@"%@",test.text);
 }
 
 -(void)initUserInterface
-{
+{  
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
     [self.view addSubview:_tableView];
+    
+    
+    
     /*self.start_Button=[UIButton buttonWithType:UIButtonTypeCustom];
     self.start_Button.frame=CGRectMake(100, 100, 100, 100);
     //self.start_Button.center=self.view.center;
@@ -193,7 +202,23 @@ static NSString *const MainCellIdentifier = @"MainCellIdentifier";
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    __weak typeof(self) weakSelf = self;
+    _TrueHouseRuleVc = [[TrueHouseRuleController alloc] init];
+    _TrueHouseRuleVc.agreeBlock = ^{
+        [weakSelf.TrueHouseRuleVc dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+        NSLog(@"同意");
+    };
+    _TrueHouseRuleVc.rejectBlock = ^{
+        NSLog(@"拒绝");
+        [weakSelf.TrueHouseRuleVc dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    };
+    [self.navigationController presentViewController:self.TrueHouseRuleVc animated:YES completion:^{
+        
+    }];
 }
 
 

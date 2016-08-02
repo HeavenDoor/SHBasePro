@@ -44,6 +44,7 @@
 		4A9114601CF0702900641789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114091CF0702900641789 /* ViewController.m */; };
 		4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114301CF0702900641789 /* XMLDictionary.m */; };
 		4A91147C1CF0702900641789 /* RongClouldMessageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */; };
+		4AA1940C1D4CB2070008ABD3 /* NSSHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */; };
 		4AD05DF31D2A8C07001CE689 /* ContactMethodAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */; };
 		4AD05E051D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF61D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m */; };
 		4AD05E061D2A8D9E001CE689 /* NSString+XTSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF81D2A8D9E001CE689 /* NSString+XTSize.m */; };
@@ -109,6 +110,8 @@
 		4A9114301CF0702900641789 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		4A9114321CF0702900641789 /* RongClouldMessageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongClouldMessageControllerViewController.h; sourceTree = "<group>"; };
 		4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongClouldMessageControllerViewController.m; sourceTree = "<group>"; };
+		4AA1940A1D4CB2070008ABD3 /* NSSHTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSHTest.h; sourceTree = "<group>"; };
+		4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSHTest.m; sourceTree = "<group>"; };
 		4AD05DF11D2A8C07001CE689 /* ContactMethodAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMethodAlertView.h; sourceTree = "<group>"; };
 		4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMethodAlertView.m; sourceTree = "<group>"; };
 		4AD05DF51D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+XTAttributionSize.h"; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 				4A9114311CF0702900641789 /* 融云 */,
 				4AD05E221D2B9453001CE689 /* TrueHouseRuleController.h */,
 				4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */,
+				4AA1940A1D4CB2070008ABD3 /* NSSHTest.h */,
+				4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */,
 			);
 			path = SHBasePro;
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				4AD05E091D2A8D9E001CE689 /* UIImageView+Tool.m in Sources */,
 				4A57DD871CF2A3FD00174FC8 /* QRCodeScanViewController.m in Sources */,
+				4AA1940C1D4CB2070008ABD3 /* NSSHTest.m in Sources */,
 				4A57DDE61CF2D78900174FC8 /* VRSourceViewController.m in Sources */,
 				4AD05E051D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m in Sources */,
 				4AD05E081D2A8D9E001CE689 /* UIColor+Tool.m in Sources */,
@@ -647,10 +653,6 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
-					"-all_load",
-					"-ObjC",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
 				PRODUCT_NAME = SHBasePro;
@@ -703,10 +705,6 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
-					"-all_load",
-					"-ObjC",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
 				PRODUCT_NAME = SHBasePro;

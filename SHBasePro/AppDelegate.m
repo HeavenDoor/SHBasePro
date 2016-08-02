@@ -22,16 +22,59 @@
     
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
     ViewController *VC = [[ViewController alloc]init];
-    //UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
+    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = VC;
+    self.window.rootViewController = nav;
     
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [_reachability startNotifier];
-
+    //[self setup3DTouch];
     return YES;
+}
+
+- (void)setup3DTouch
+{
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"fx_3DTouch_AdorableStar"];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"fx_3DTouch_Search_brand"];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"fx_3DTouch_Receipt_of_goods"];
+    UIApplicationShortcutIcon *icon4 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"fx_3DTouch_Star_Ticket"];
+    
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.51fanxing.adorableStar" localizedTitle:@"萌星说" localizedSubtitle:nil icon:icon1 userInfo:nil];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.51fanxing.searchBrand" localizedTitle:@"搜品牌" localizedSubtitle:nil icon:icon2 userInfo:nil];
+    UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.51fanxing.receiptOfGoods" localizedTitle:@"查物流" localizedSubtitle:nil icon:icon3 userInfo:nil];
+    UIMutableApplicationShortcutItem *item4 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.51fanxing.starTicket" localizedTitle:@"摇星券" localizedSubtitle:nil icon:icon4 userInfo:nil];
+    
+    NSArray *items = @[item1, item2, item3,item4];
+    NSArray *existingItems = [UIApplication sharedApplication].shortcutItems;
+    NSArray *updatedItems = [existingItems arrayByAddingObjectsFromArray:items];
+    [UIApplication sharedApplication].shortcutItems = updatedItems;
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler
+{
+    // 判断先前我们设置的唯一标识
+    if([shortcutItem.type isEqualToString:@"com.51fanxing.adorableStar"])
+    {
+        
+        
+        
+    }
+    else if ([shortcutItem.type isEqualToString:@"com.51fanxing.searchBrand"])
+    {
+        
+        
+    }
+    else if ([shortcutItem.type isEqualToString:@"com.51fanxing.receiptOfGoods"])
+    {
+        
+    }
+    else if ([shortcutItem.type isEqualToString:@"com.51fanxing.starTicket"])
+    {
+        
+        
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -8,6 +8,9 @@
 
 #import "TrueHouseRuleController.h"
 #import "masonry.h"
+#import "UIImageView+WebCache.h"
+
+#import <AVFoundation/AVFoundation.h>
 
 @interface TrueHouseRuleController()
 @property (nonatomic, strong) UIWebView* webView;
@@ -15,12 +18,17 @@
 @property (nonatomic, strong) UIView* contentView;
 @property (nonatomic, strong) UIButton* rejectButton;
 @property (nonatomic, strong) UIButton* agreeButton;
+@property (nonatomic, strong) UIImageView* imgView;
+
+@property (nonatomic, assign) NSInteger num;
+@property (nonatomic, strong) UILabel* soundLabel;
 @end
 
 @implementation TrueHouseRuleController
 
 - (void) viewDidLoad
 {
+    self.num = 999;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     _webView = [[UIWebView alloc] init];
@@ -36,7 +44,7 @@
         make.top.equalTo(self.view.mas_top);
         make.left.equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
-        make.height.equalTo(self.view.mas_height).offset(-44);
+        make.height.equalTo(self.view.mas_height).offset(-244);
     }];
     
     _spliderLabel = [[UILabel alloc] init];
@@ -72,7 +80,7 @@
         make.top.equalTo(_contentView.mas_top);
         make.left.equalTo(_contentView.mas_left);
         make.width.equalTo(_contentView.mas_width).multipliedBy(0.5);
-        make.bottom.equalTo(_contentView.mas_bottom);
+        make.bottom.equalTo(_contentView.mas_bottom).offset(-150);
     }];
     
     _agreeButton = [[UIButton alloc] init];
@@ -88,20 +96,52 @@
         make.top.equalTo(_contentView.mas_top);
         make.right.equalTo(_contentView.mas_right);
         make.width.equalTo(_contentView.mas_width).multipliedBy(0.5);
-        make.bottom.equalTo(_contentView.mas_bottom);
+        make.bottom.equalTo(_contentView.mas_bottom).offset(-150);
     }];
     
+    
+    _imgView = [[UIImageView alloc] init];
+    
+    [_contentView addSubview: _imgView];
+    [_imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(@100);
+        make.height.mas_equalTo(@100);
+        make.top.equalTo(_agreeButton.mas_bottom).offset(20);
+        make.left.equalTo(_agreeButton.mas_left);
+    }];
+    [_imgView sd_setImageWithURL:[NSURL URLWithString:@"http://pic.hftsoft.com/pic/hftpic/house/2016/07/1_1/AA01D0/SmallPic/1/CSCD1607081030002_23384984.jpg!240!180"] placeholderImage:[UIImage imageNamed:@"banner6p_"] options:SDWebImageRefreshCached];
+    
+    _soundLabel = [[UILabel alloc] init];
+    [_contentView addSubview: _soundLabel];
+    [_soundLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(@200);
+        make.height.mas_equalTo(@100);
+        make.top.equalTo(_agreeButton.mas_bottom).offset(20);
+        make.left.equalTo(_rejectButton.mas_left);
+    }];
 }
 
 
 - (void) agreeButtonClicked: (UIButton*) sender
 {
-    self.agreeBlock();
+    
+    [self playAudio: ++self.num];
+    _soundLabel.text = [NSString stringWithFormat:@"%ld", self.num];
+    
+    [_imgView sd_setImageWithURL:[NSURL URLWithString:@"http://pic.hftsoft.com/pic/hftpic/house/2016/07/1_1/AA01D0/SmallPic/1/CSCD1607081030002_23384984.jpg!240!180"] placeholderImage:[UIImage imageNamed:@"banner6p_"] options:SDWebImageRefreshCached];
+    //self.agreeBlock();
+}
+
+- (void) playAudio: (NSInteger) ids
+{
+    AudioServicesPlaySystemSound(ids);
 }
 
 - (void) rejectButtonClicked: (UIButton*) sender
 {
-    self.rejectBlock();
+    [self playAudio:--self.num];
+    //self.rejectBlock();
+    _soundLabel.text = [NSString stringWithFormat:@"%ld", self.num];
 }
 
 @end
