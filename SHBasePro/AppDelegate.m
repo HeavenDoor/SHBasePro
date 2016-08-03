@@ -30,7 +30,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [_reachability startNotifier];
-    //[self setup3DTouch];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [NSThread sleepForTimeInterval:2.0];
+    [self setup3DTouch];
     return YES;
 }
 

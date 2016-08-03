@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
+		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
 		4A3BE51F1CDC7684005DBC90 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51E1CDC7684005DBC90 /* MapKit.framework */; };
@@ -43,7 +44,6 @@
 		4A91145F1CF0702900641789 /* PhoneVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9114061CF0702900641789 /* PhoneVerificationView.xib */; };
 		4A9114601CF0702900641789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114091CF0702900641789 /* ViewController.m */; };
 		4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114301CF0702900641789 /* XMLDictionary.m */; };
-		4A91147C1CF0702900641789 /* RongClouldMessageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */; };
 		4AA1940C1D4CB2070008ABD3 /* NSSHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */; };
 		4AD05DF31D2A8C07001CE689 /* ContactMethodAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */; };
 		4AD05E051D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF61D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m */; };
@@ -61,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
+		4A0986591D50D1C100D0802C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4A3BE51E1CDC7684005DBC90 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -108,8 +109,6 @@
 		4A9114091CF0702900641789 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4A91142F1CF0702900641789 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		4A9114301CF0702900641789 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
-		4A9114321CF0702900641789 /* RongClouldMessageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongClouldMessageControllerViewController.h; sourceTree = "<group>"; };
-		4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongClouldMessageControllerViewController.m; sourceTree = "<group>"; };
 		4AA1940A1D4CB2070008ABD3 /* NSSHTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSHTest.h; sourceTree = "<group>"; };
 		4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSHTest.m; sourceTree = "<group>"; };
 		4AD05DF11D2A8C07001CE689 /* ContactMethodAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMethodAlertView.h; sourceTree = "<group>"; };
@@ -137,7 +136,7 @@
 		4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = truehouse_agreement.html; sourceTree = "<group>"; };
 		A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.release.xcconfig"; sourceTree = "<group>"; };
 		D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHBasePro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB8AE3F71CD36CF200B0DD29 /* SHBasePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHBasePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB8AE3F71CD36CF200B0DD29 /* 有意思.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有意思.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +151,7 @@
 				4A3CE3811CDD94FE0084E6E0 /* CoreVideo.framework in Frameworks */,
 				4A3CE37F1CDD94B90084E6E0 /* libc++.tbd in Frameworks */,
 				4A3CE37D1CDD94A90084E6E0 /* libc++abi.tbd in Frameworks */,
+				4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */,
 				4A3CE37B1CDD94300084E6E0 /* libresolv.tbd in Frameworks */,
 				4A3CE3791CDD94020084E6E0 /* CFNetwork.framework in Frameworks */,
 				4A6B783D1CDCA81F0062111F /* libxml2.tbd in Frameworks */,
@@ -236,7 +236,6 @@
 				4A9114081CF0702900641789 /* ViewController.h */,
 				4A9114091CF0702900641789 /* ViewController.m */,
 				4A91142E1CF0702900641789 /* XMLDictionary */,
-				4A9114311CF0702900641789 /* 融云 */,
 				4AD05E221D2B9453001CE689 /* TrueHouseRuleController.h */,
 				4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */,
 				4AA1940A1D4CB2070008ABD3 /* NSSHTest.h */,
@@ -261,15 +260,6 @@
 				4A9114301CF0702900641789 /* XMLDictionary.m */,
 			);
 			path = XMLDictionary;
-			sourceTree = "<group>";
-		};
-		4A9114311CF0702900641789 /* 融云 */ = {
-			isa = PBXGroup;
-			children = (
-				4A9114321CF0702900641789 /* RongClouldMessageControllerViewController.h */,
-				4A9114331CF0702900641789 /* RongClouldMessageControllerViewController.m */,
-			);
-			path = "融云";
 			sourceTree = "<group>";
 		};
 		4AD05DF41D2A8D9E001CE689 /* Categrory */ = {
@@ -309,6 +299,7 @@
 		8511C120A58AE682EA956E94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A0986591D50D1C100D0802C /* Reveal.framework */,
 				4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */,
 				4A3CE3861CDD953C0084E6E0 /* Security.framework */,
 				4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */,
@@ -345,7 +336,7 @@
 		EB8AE3F81CD36CF200B0DD29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB8AE3F71CD36CF200B0DD29 /* SHBasePro.app */,
+				EB8AE3F71CD36CF200B0DD29 /* 有意思.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -370,7 +361,7 @@
 			);
 			name = SHBasePro;
 			productName = NetWork;
-			productReference = EB8AE3F71CD36CF200B0DD29 /* SHBasePro.app */;
+			productReference = EB8AE3F71CD36CF200B0DD29 /* 有意思.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -482,7 +473,6 @@
 				4AD05E241D2B9453001CE689 /* TrueHouseRuleController.m in Sources */,
 				4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */,
 				4A91145B1CF0702900641789 /* JsonBaseModel.m in Sources */,
-				4A91147C1CF0702900641789 /* RongClouldMessageControllerViewController.m in Sources */,
 				4AD05E061D2A8D9E001CE689 /* NSString+XTSize.m in Sources */,
 				4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				4A9114551CF0702900641789 /* HitTestView.m in Sources */,
@@ -613,6 +603,7 @@
 			baseConfigurationReference = 4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -653,9 +644,13 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
-				PRODUCT_NAME = SHBasePro;
+				PRODUCT_NAME = "有意思";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -665,6 +660,7 @@
 			baseConfigurationReference = A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -705,9 +701,13 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
-				PRODUCT_NAME = SHBasePro;
+				PRODUCT_NAME = "有意思";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB8AE3F61CD36CF200B0DD29"
-               BuildableName = "SHBasePro.app"
+               BuildableName = "&#x6709;&#x610f;&#x601d;.app"
                BlueprintName = "SHBasePro"
                ReferencedContainer = "container:SHBasePro.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB8AE3F61CD36CF200B0DD29"
-            BuildableName = "SHBasePro.app"
+            BuildableName = "&#x6709;&#x610f;&#x601d;.app"
             BlueprintName = "SHBasePro"
             ReferencedContainer = "container:SHBasePro.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB8AE3F61CD36CF200B0DD29"
-            BuildableName = "SHBasePro.app"
+            BuildableName = "&#x6709;&#x610f;&#x601d;.app"
             BlueprintName = "SHBasePro"
             ReferencedContainer = "container:SHBasePro.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB8AE3F61CD36CF200B0DD29"
-            BuildableName = "SHBasePro.app"
+            BuildableName = "&#x6709;&#x610f;&#x601d;.app"
             BlueprintName = "SHBasePro"
             ReferencedContainer = "container:SHBasePro.xcodeproj">
          </BuildableReference>
