@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HcdGuideViewManager.h"
 #import "Reachability.h"
 #import "RDVTabBarItem.h"
 
@@ -25,12 +25,10 @@
     
     [NSThread sleepForTimeInterval:2.0];
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     
-    
-//    ViewController *VC = [[ViewController alloc]init];
-//    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
-//    
-//    self.window.rootViewController = nav;
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
@@ -41,8 +39,30 @@
     // 创建3DTouch
     [self create3DTouch];
     
+    //根据版本号来判断是否需要显示引导页，一般来说每更新一个版本引导页都会有相应的修改
+    BOOL show = [userDefaults boolForKey:[NSString stringWithFormat:@"version_%@", version]];
     
+    if (show) {
+        [self showWelcomePage];
+        //[userDefaults setBool:YES forKey:[NSString stringWithFormat:@"version_%@", version]];
+        //[userDefaults synchronize];
+    }
+
     return YES;
+}
+
+- (void) showWelcomePage
+{
+    NSMutableArray *images = [NSMutableArray new];
+    
+    [images addObject:[UIImage imageNamed:@"1"]];
+    [images addObject:[UIImage imageNamed:@"2"]];
+    [images addObject:[UIImage imageNamed:@"3"]];
+    
+    [[HcdGuideViewManager sharedInstance] showGuideViewWithImages:images andButtonTitle:@"立即体验"
+                                              andButtonTitleColor:[UIColor whiteColor]
+                                                 andButtonBGColor:[UIColor clearColor]
+                                             andButtonBorderColor:[UIColor whiteColor]];
 }
 
 - (void) setRDVTabBarRootViewController
@@ -59,9 +79,13 @@
     UIViewController *thirdNavigationController = [[UINavigationController alloc]
                                                    initWithRootViewController:thirdViewController];
     
+    UIViewController *fouthViewController = [[UIViewController alloc] init];
+    UIViewController *fouthNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:fouthViewController];
+    
     self.tabbarController = [[RDVTabBarController alloc] init];
     [self.tabbarController setViewControllers:@[firstNavigationController, secondNavigationController,
-                                           thirdNavigationController]];
+                                           thirdNavigationController, fouthNavigationController]];
     
     
     
@@ -74,19 +98,34 @@
 }
 
 - (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
-    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
-    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
+    UIImage *finishedImage = [UIImage imageNamed:@"tabback"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabback"];
+    NSArray *tabBarItemImages = @[@"home", @"data",  @"msg", @"mine"];
+    NSArray *tabBarItemNames = @[@"首页", @"数据", @"消息", @"我的"];
     
     NSInteger index = 0;
-    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items])
+    {
+        if (index == 2)
+        {
+            finishedImage = [UIImage imageNamed:@"tabback"];
+            unfinishedImage = [UIImage imageNamed:@"tabback"];
+        }
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
         UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
                                                       [tabBarItemImages objectAtIndex:index]]];
         UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
                                                         [tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
-        
+        item.title = tabBarItemNames[index];
+        item.selectedTitleAttributes = @{
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+                                         NSForegroundColorAttributeName:kColor(79, 170, 248),
+                                         };
+        item.unselectedTitleAttributes = @{
+                                           NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+                                           NSForegroundColorAttributeName: kColor(200, 200, 200),
+                                           };
         index++;
     }
 }
