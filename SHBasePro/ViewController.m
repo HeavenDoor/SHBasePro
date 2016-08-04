@@ -11,10 +11,8 @@
 #import "MBProgressHUD.h"
 #import "UIImageView+WebCache.h"
 #import "PhoneVerificationView.h"
-#import "RongClouldMessageControllerViewController.h"
 #import "HitTestView.h"
 #import "QRCodeScanViewController.h"
-#import <RongIMKit/RongIMKit.h>
 #import "VRSourceViewController.h"
 #import "SocketIO.h"
 #import "SocketIOPacket.h"

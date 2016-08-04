@@ -55,4 +55,13 @@
 //---------------------- 适配界面时字体缩放比例 ----------------------
 #define kFontScaleSize(ScaleSize) ((ScaleSize)+(kScaleWidth>1.0?1:(kScaleWidth<1.0?-1:0)))
 
+/** 是否为iOS7 */
+#define IOS_VER_7 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) ? YES : NO)
+
+/** 是否为iOS8 */
+#define IOS_VER_8 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) ? YES : NO)
+
+/** 是否为iOS9 */
+#define IOS_VER_9 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) ? YES : NO)
+
 #endif /* PrefixHeader_pch */

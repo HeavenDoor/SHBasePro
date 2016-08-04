@@ -32,11 +32,31 @@
     [_reachability startNotifier];
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [NSThread sleepForTimeInterval:2.0];
-    [self setup3DTouch];
+    
+    
+    // 创建3DTouch
+    [self create3DTouch];
+    
+    
     return YES;
 }
 
-- (void)setup3DTouch
+// 创建3Dtouch
+- (void)create3DTouch
+{
+    // 系统版本为IOS 9.0以上才会支持3d Touch
+    if (IOS_VER_9)
+    {
+        NSArray *items = [UIApplication sharedApplication].shortcutItems;
+        // 判断是不是已经创建了3d Touch
+        if (items.count == 0)
+        {
+            [self setup3DTouch];
+        }
+    }
+}
+
+- (void) setup3DTouch
 {
     UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"fx_3DTouch_AdorableStar"];
     UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"fx_3DTouch_Search_brand"];
@@ -48,33 +68,36 @@
     UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.51fanxing.receiptOfGoods" localizedTitle:@"查物流" localizedSubtitle:nil icon:icon3 userInfo:nil];
     UIMutableApplicationShortcutItem *item4 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.51fanxing.starTicket" localizedTitle:@"摇星券" localizedSubtitle:nil icon:icon4 userInfo:nil];
     
-    NSArray *items = @[item1, item2, item3,item4];
+    NSArray *items = [NSArray arrayWithObjects:item1,item2,item3,item4, nil];
     NSArray *existingItems = [UIApplication sharedApplication].shortcutItems;
     NSArray *updatedItems = [existingItems arrayByAddingObjectsFromArray:items];
     [UIApplication sharedApplication].shortcutItems = updatedItems;
 }
 
+// 3Dtouch 响应事件
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler
 {
     // 判断先前我们设置的唯一标识
     if([shortcutItem.type isEqualToString:@"com.51fanxing.adorableStar"])
     {
-        
-        
-        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"第一条" message:@"萌星说" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
     }
     else if ([shortcutItem.type isEqualToString:@"com.51fanxing.searchBrand"])
     {
-        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"第二条" message:@"搜品牌" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
         
     }
     else if ([shortcutItem.type isEqualToString:@"com.51fanxing.receiptOfGoods"])
     {
-        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"第三条" message:@"查物流" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
     }
     else if ([shortcutItem.type isEqualToString:@"com.51fanxing.starTicket"])
     {
-        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"第四条" message:@"摇星券" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
         
     }
 }
