@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "Reachability.h"
+#import "RDVTabBarItem.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) Reachability* reachability;
@@ -19,26 +20,106 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
-    ViewController *VC = [[ViewController alloc]init];
-    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
-    [self.window makeKeyAndVisible];
-    self.window.rootViewController = nav;
+    self.window.backgroundColor = [UIColor whiteColor];
     
-
+    [NSThread sleepForTimeInterval:2.0];
+    
+    
+    
+//    ViewController *VC = [[ViewController alloc]init];
+//    UINavigationController*nav=[[UINavigationController alloc]initWithRootViewController:VC];
+//    
+//    self.window.rootViewController = nav;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [_reachability startNotifier];
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-    [NSThread sleepForTimeInterval:2.0];
     
-    
+    [self setRDVTabBarRootViewController];
     // 创建3DTouch
     [self create3DTouch];
     
     
     return YES;
+}
+
+- (void) setRDVTabBarRootViewController
+{
+    UIViewController *firstViewController = [[UIViewController alloc] init];
+    UIViewController *firstNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:firstViewController];
+    
+    UIViewController *secondViewController = [[UIViewController alloc] init];
+    UIViewController *secondNavigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:secondViewController];
+    
+    UIViewController *thirdViewController = [[UIViewController alloc] init];
+    UIViewController *thirdNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:thirdViewController];
+    
+    self.tabbarController = [[RDVTabBarController alloc] init];
+    [self.tabbarController setViewControllers:@[firstNavigationController, secondNavigationController,
+                                           thirdNavigationController]];
+    
+    
+    
+    
+    [self customizeTabBarForController:self.tabbarController];
+    
+    [self.window setRootViewController:self.tabbarController];
+    [self.window makeKeyAndVisible];
+    [self customizeInterface];
+}
+
+- (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
+    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
+    NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
+    
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
+                                                      [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
+                                                        [tabBarItemImages objectAtIndex:index]]];
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        
+        index++;
+    }
+}
+
+- (void)customizeInterface {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    
+    UIImage *backgroundImage = nil;
+    NSDictionary *textAttributes = nil;
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background_tall"];
+        
+        textAttributes = @{
+                           NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName: [UIColor blackColor],
+                           };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background"];
+        
+        textAttributes = @{
+                           UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
+                           UITextAttributeTextColor: [UIColor blackColor],
+                           UITextAttributeTextShadowColor: [UIColor clearColor],
+                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
+                           };
+#endif
+    }
+    
+    [navigationBarAppearance setBackgroundImage:backgroundImage
+                                  forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
 // 创建3Dtouch

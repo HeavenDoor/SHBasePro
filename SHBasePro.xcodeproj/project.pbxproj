@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
 		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
+		4A09866E1D536C8000D0802C /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0986691D536C8000D0802C /* RDVTabBar.m */; };
+		4A09866F1D536C8000D0802C /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09866B1D536C8000D0802C /* RDVTabBarController.m */; };
+		4A0986701D536C8000D0802C /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A09866D1D536C8000D0802C /* RDVTabBarItem.m */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
 		4A3BE51F1CDC7684005DBC90 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51E1CDC7684005DBC90 /* MapKit.framework */; };
@@ -62,6 +65,12 @@
 /* Begin PBXFileReference section */
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0986591D50D1C100D0802C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		4A0986681D536C8000D0802C /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
+		4A0986691D536C8000D0802C /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
+		4A09866A1D536C8000D0802C /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
+		4A09866B1D536C8000D0802C /* RDVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarController.m; sourceTree = "<group>"; };
+		4A09866C1D536C8000D0802C /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
+		4A09866D1D536C8000D0802C /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4A3BE51E1CDC7684005DBC90 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -170,6 +179,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0986671D536C8000D0802C /* RDVTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				4A0986681D536C8000D0802C /* RDVTabBar.h */,
+				4A0986691D536C8000D0802C /* RDVTabBar.m */,
+				4A09866A1D536C8000D0802C /* RDVTabBarController.h */,
+				4A09866B1D536C8000D0802C /* RDVTabBarController.m */,
+				4A09866C1D536C8000D0802C /* RDVTabBarItem.h */,
+				4A09866D1D536C8000D0802C /* RDVTabBarItem.m */,
+			);
+			path = RDVTabBarController;
+			sourceTree = "<group>";
+		};
 		4A57DD841CF2A3FD00174FC8 /* QRCodeScaner */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +213,7 @@
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				4A0986671D536C8000D0802C /* RDVTabBarController */,
 				4A57DDEB1CF2F66F00174FC8 /* UIWebView+TS_JAVAScriptContent */,
 			);
 			path = Lib;
@@ -478,12 +501,15 @@
 				4A9114551CF0702900641789 /* HitTestView.m in Sources */,
 				4A91145E1CF0702900641789 /* PhoneVerificationView.m in Sources */,
 				4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */,
+				4A09866F1D536C8000D0802C /* RDVTabBarController.m in Sources */,
 				4A572EB41D18D94100C46D36 /* BondRechargeViewController.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				4AD05E0A1D2A8D9E001CE689 /* UILabel+Tool.m in Sources */,
 				4AD05E071D2A8D9E001CE689 /* UIButton+Layout.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				4AD05E091D2A8D9E001CE689 /* UIImageView+Tool.m in Sources */,
+				4A09866E1D536C8000D0802C /* RDVTabBar.m in Sources */,
+				4A0986701D536C8000D0802C /* RDVTabBarItem.m in Sources */,
 				4A57DD871CF2A3FD00174FC8 /* QRCodeScanViewController.m in Sources */,
 				4AA1940C1D4CB2070008ABD3 /* NSSHTest.m in Sources */,
 				4A57DDE61CF2D78900174FC8 /* VRSourceViewController.m in Sources */,
