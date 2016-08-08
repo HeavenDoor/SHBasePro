@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042224341D5390E7008FE514 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042224311D5390E7008FE514 /* HcdGuideViewCell.m */; };
+		042224351D5390E7008FE514 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 042224331D5390E7008FE514 /* HcdGuideViewManager.m */; };
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
 		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
 		4A09866E1D536C8000D0802C /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0986691D536C8000D0802C /* RDVTabBar.m */; };
@@ -65,6 +67,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042224301D5390E7008FE514 /* HcdGuideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewCell.h; sourceTree = "<group>"; };
+		042224311D5390E7008FE514 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
+		042224321D5390E7008FE514 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
+		042224331D5390E7008FE514 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0986591D50D1C100D0802C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		4A0986681D536C8000D0802C /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
@@ -185,6 +191,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0422242F1D5390E7008FE514 /* HcdGuideView */ = {
+			isa = PBXGroup;
+			children = (
+				042224301D5390E7008FE514 /* HcdGuideViewCell.h */,
+				042224311D5390E7008FE514 /* HcdGuideViewCell.m */,
+				042224321D5390E7008FE514 /* HcdGuideViewManager.h */,
+				042224331D5390E7008FE514 /* HcdGuideViewManager.m */,
+			);
+			path = HcdGuideView;
+			sourceTree = "<group>";
+		};
 		4A0986671D536C8000D0802C /* RDVTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +254,7 @@
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
 			isa = PBXGroup;
 			children = (
+				0422242F1D5390E7008FE514 /* HcdGuideView */,
 				4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */,
 				4AD05DF41D2A8D9E001CE689 /* Categrory */,
 				4AD05DF11D2A8C07001CE689 /* ContactMethodAlertView.h */,
@@ -510,7 +528,9 @@
 				4A91145E1CF0702900641789 /* PhoneVerificationView.m in Sources */,
 				4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */,
 				4A09866F1D536C8000D0802C /* RDVTabBarController.m in Sources */,
+				042224341D5390E7008FE514 /* HcdGuideViewCell.m in Sources */,
 				4A572EB41D18D94100C46D36 /* BondRechargeViewController.m in Sources */,
+				042224351D5390E7008FE514 /* HcdGuideViewManager.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				4AD05E0A1D2A8D9E001CE689 /* UILabel+Tool.m in Sources */,
 				4AD05E071D2A8D9E001CE689 /* UIButton+Layout.m in Sources */,
