@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "Reachability.h"
 #import "RDVTabBarItem.h"
+#import "JSPatch/JSPatch.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) Reachability* reachability;
@@ -19,6 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [JSPatch startWithAppKey:@"70d1d8bd41b2a351"];
+    [JSPatch sync];
+    
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
     self.window.backgroundColor = [UIColor whiteColor];
