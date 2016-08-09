@@ -145,10 +145,12 @@
  *  @param sender sender
  */
 - (void)nextButtonHandler:(id)sender {
-    
+    [_pageControl removeFromSuperview];
+    _pageControl = nil;
     [self.view removeFromSuperview];
     [self setWindow:nil];
     [self setView:nil];
+    
 }
 
 @end
