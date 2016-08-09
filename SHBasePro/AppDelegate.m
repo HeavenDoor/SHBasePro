@@ -11,22 +11,8 @@
 #import "Reachability.h"
 #import "RDVTabBarItem.h"
 
-#import "HomeViewController.h"
-#import "DataViewController.h"
-#import "MessageViewController.h"
-#import "MineViewController.h"
-
 @interface AppDelegate ()
 @property (nonatomic, strong) Reachability* reachability;
-@property (nonatomic, strong) HomeViewController *homeViewController;
-@property (nonatomic, strong) DataViewController *dataViewController;
-@property (nonatomic, strong) MessageViewController *msgViewController;
-@property (nonatomic, strong) MineViewController *mineViewController;
-
-@property (nonatomic, strong) UINavigationController *homeNavigationController;
-@property (nonatomic, strong) UINavigationController *dataNavigationController;
-@property (nonatomic, strong) UINavigationController *msgNavigationController;
-@property (nonatomic, strong) UINavigationController *mineNavigationController;
 @end
 
 @implementation AppDelegate
@@ -81,26 +67,29 @@
 
 - (void) setRDVTabBarRootViewController
 {
-    self.homeViewController = [[HomeViewController alloc] init];
-    self.homeNavigationController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
-    self.homeNavigationController.navigationBar.hidden = YES;
+    UIViewController *firstViewController = [[UIViewController alloc] init];
+    UIViewController *firstNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:firstViewController];
     
-    self.dataViewController = [[DataViewController alloc] init];
-    self.dataNavigationController = [[UINavigationController alloc] initWithRootViewController:self.dataViewController];
-    self.dataNavigationController.navigationBar.hidden = YES;
+    UIViewController *secondViewController = [[UIViewController alloc] init];
+    UIViewController *secondNavigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:secondViewController];
     
-    self.msgViewController = [[MessageViewController alloc] init];
-    self.msgNavigationController = [[UINavigationController alloc] initWithRootViewController:self.msgViewController];
-    self.msgNavigationController.navigationBar.hidden = YES;
+    UIViewController *thirdViewController = [[UIViewController alloc] init];
+    UIViewController *thirdNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:thirdViewController];
     
-    self.mineViewController = [[MineViewController alloc] init];
-    self.mineNavigationController = [[UINavigationController alloc] initWithRootViewController:self.mineViewController];
-    self.mineNavigationController.navigationBar.hidden = YES;
+    UIViewController *fouthViewController = [[UIViewController alloc] init];
+    UIViewController *fouthNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:fouthViewController];
     
     self.tabbarController = [[RDVTabBarController alloc] init];
-    [self.tabbarController setViewControllers:@[self.homeNavigationController, self.dataNavigationController, self.msgNavigationController, self.mineNavigationController]];
+    [self.tabbarController setViewControllers:@[firstNavigationController, secondNavigationController,
+                                           thirdNavigationController, fouthNavigationController]];
     
-
+    
+    
+    
     [self customizeTabBarForController:self.tabbarController];
     
     [self.window setRootViewController:self.tabbarController];
@@ -130,11 +119,11 @@
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         item.title = tabBarItemNames[index];
         item.selectedTitleAttributes = @{
-                                         NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                         NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
                                          NSForegroundColorAttributeName:kColor(79, 170, 248),
                                          };
         item.unselectedTitleAttributes = @{
-                                           NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                           NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
                                            NSForegroundColorAttributeName: kColor(200, 200, 200),
                                            };
         index++;
