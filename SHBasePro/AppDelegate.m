@@ -13,8 +13,22 @@
 #import "JSPatch/JSPatch.h"
 #import "Jspatch/JPEngine.h"
 #import "TestViewController.h"
+#import "HomeViewController.h"
+#import "MessageViewController.h"
+#import "DataViewController.h"
+#import "MineViewController.h"
+
 @interface AppDelegate ()
 @property (nonatomic, strong) Reachability* reachability;
+@property (nonatomic, strong) HomeViewController* homeViewController;
+@property (nonatomic, strong) MessageViewController* messageViewController;
+@property (nonatomic, strong) DataViewController* dataViewController;
+@property (nonatomic, strong) MineViewController* mineViewController;
+
+@property (nonatomic, strong) UINavigationController* homeNavigationController;
+@property (nonatomic, strong) UINavigationController* dataNavigationController;
+@property (nonatomic, strong) UINavigationController* msgNavigationController;
+@property (nonatomic, strong) UINavigationController* mineNavigationController;
 @end
 
 @implementation AppDelegate
@@ -89,20 +103,24 @@
 
 - (void) setRDVTabBarRootViewController
 {
-    TestViewController *firstViewController = [[TestViewController alloc] init];
-    UIViewController *firstNavigationController = [[UINavigationController alloc] initWithRootViewController:firstViewController];
+    _homeViewController = [[HomeViewController alloc] init];
+    _homeNavigationController = [[UINavigationController alloc] initWithRootViewController:_homeViewController];
+    _homeNavigationController.navigationBar.hidden = YES;
     
-    UIViewController *secondViewController = [[UIViewController alloc] init];
-    UIViewController *secondNavigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
+    _dataViewController = [[DataViewController alloc] init];
+    _dataNavigationController = [[UINavigationController alloc] initWithRootViewController:_dataViewController];
+    _dataNavigationController.navigationBar.hidden = YES;
     
-    UIViewController *thirdViewController = [[UIViewController alloc] init];
-    UIViewController *thirdNavigationController = [[UINavigationController alloc] initWithRootViewController:thirdViewController];
+    _messageViewController = [[MessageViewController alloc] init];
+    _msgNavigationController = [[UINavigationController alloc] initWithRootViewController:_messageViewController];
+    _msgNavigationController.navigationBar.hidden = YES;
     
-    UIViewController *fouthViewController = [[UIViewController alloc] init];
-    UIViewController *fouthNavigationController = [[UINavigationController alloc] initWithRootViewController:fouthViewController];
+    _mineViewController = [[MineViewController alloc] init];
+    _mineNavigationController = [[UINavigationController alloc] initWithRootViewController:_mineViewController];
+    _mineNavigationController.navigationBar.hidden = YES;
     
     self.tabbarController = [[RDVTabBarController alloc] init];
-    [self.tabbarController setViewControllers:@[firstNavigationController, secondNavigationController, thirdNavigationController, fouthNavigationController]];
+    [self.tabbarController setViewControllers:@[_homeNavigationController, _dataNavigationController, _msgNavigationController, _mineNavigationController]];
 
     [self customizeTabBarForController:self.tabbarController];
     

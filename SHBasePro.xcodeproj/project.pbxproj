@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		042224341D5390E7008FE514 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042224311D5390E7008FE514 /* HcdGuideViewCell.m */; };
 		042224351D5390E7008FE514 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 042224331D5390E7008FE514 /* HcdGuideViewManager.m */; };
+		0427679E1D5B857500C483C8 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042767941D5B857500C483C8 /* DataViewController.m */; };
+		0427679F1D5B857500C483C8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042767971D5B857500C483C8 /* HomeViewController.m */; };
+		042767A01D5B857500C483C8 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427679A1D5B857500C483C8 /* MessageViewController.m */; };
+		042767A11D5B857500C483C8 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427679D1D5B857500C483C8 /* MineViewController.m */; };
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
 		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
 		4A09866E1D536C8000D0802C /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0986691D536C8000D0802C /* RDVTabBar.m */; };
@@ -74,6 +78,14 @@
 		042224311D5390E7008FE514 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
 		042224321D5390E7008FE514 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
 		042224331D5390E7008FE514 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
+		042767931D5B857500C483C8 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		042767941D5B857500C483C8 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		042767961D5B857500C483C8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		042767971D5B857500C483C8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		042767991D5B857500C483C8 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		0427679A1D5B857500C483C8 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		0427679C1D5B857500C483C8 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		0427679D1D5B857500C483C8 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0986591D50D1C100D0802C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		4A0986681D536C8000D0802C /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
@@ -210,6 +222,42 @@
 			path = HcdGuideView;
 			sourceTree = "<group>";
 		};
+		042767921D5B857500C483C8 /* DataViewController */ = {
+			isa = PBXGroup;
+			children = (
+				042767931D5B857500C483C8 /* DataViewController.h */,
+				042767941D5B857500C483C8 /* DataViewController.m */,
+			);
+			path = DataViewController;
+			sourceTree = "<group>";
+		};
+		042767951D5B857500C483C8 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				042767961D5B857500C483C8 /* HomeViewController.h */,
+				042767971D5B857500C483C8 /* HomeViewController.m */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		042767981D5B857500C483C8 /* MessageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				042767991D5B857500C483C8 /* MessageViewController.h */,
+				0427679A1D5B857500C483C8 /* MessageViewController.m */,
+			);
+			path = MessageViewController;
+			sourceTree = "<group>";
+		};
+		0427679B1D5B857500C483C8 /* MineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0427679C1D5B857500C483C8 /* MineViewController.h */,
+				0427679D1D5B857500C483C8 /* MineViewController.m */,
+			);
+			path = MineViewController;
+			sourceTree = "<group>";
+		};
 		4A0986671D536C8000D0802C /* RDVTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +310,10 @@
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
 			isa = PBXGroup;
 			children = (
+				042767921D5B857500C483C8 /* DataViewController */,
+				042767951D5B857500C483C8 /* HomeViewController */,
+				042767981D5B857500C483C8 /* MessageViewController */,
+				0427679B1D5B857500C483C8 /* MineViewController */,
 				4AB6A3C01D5B6E9A00460300 /* main.js */,
 				4AB6A3A81D59C4BF00460300 /* IMSendhouseTips.h */,
 				4AB6A3A71D59C4BF00460300 /* IMSendhouseTips.m */,
@@ -537,17 +589,21 @@
 				4AD05E241D2B9453001CE689 /* TrueHouseRuleController.m in Sources */,
 				4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */,
 				4A91145B1CF0702900641789 /* JsonBaseModel.m in Sources */,
+				0427679E1D5B857500C483C8 /* DataViewController.m in Sources */,
 				4AD05E061D2A8D9E001CE689 /* NSString+XTSize.m in Sources */,
 				4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				4A9114551CF0702900641789 /* HitTestView.m in Sources */,
 				4A91145E1CF0702900641789 /* PhoneVerificationView.m in Sources */,
 				4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */,
+				042767A01D5B857500C483C8 /* MessageViewController.m in Sources */,
 				4A09866F1D536C8000D0802C /* RDVTabBarController.m in Sources */,
 				042224341D5390E7008FE514 /* HcdGuideViewCell.m in Sources */,
 				4AB6A3A91D59C4BF00460300 /* IMSendhouseTips.m in Sources */,
+				0427679F1D5B857500C483C8 /* HomeViewController.m in Sources */,
 				4A572EB41D18D94100C46D36 /* BondRechargeViewController.m in Sources */,
 				042224351D5390E7008FE514 /* HcdGuideViewManager.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
+				042767A11D5B857500C483C8 /* MineViewController.m in Sources */,
 				4AD05E0A1D2A8D9E001CE689 /* UILabel+Tool.m in Sources */,
 				4AD05E071D2A8D9E001CE689 /* UIButton+Layout.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
