@@ -33,7 +33,7 @@
 #import "UIViewExt.h"
 #endif
 
-
+#define WEAK_TYPES(instance) __weak typeof(instance) weak##instance = instance;
 //---------------------- int型转换为string ----------------------
 #define INT_To_STRING(intValue) ([NSString stringWithFormat:@"%d",(int)intValue])
 //---------------------- float型转换为string ----------------------

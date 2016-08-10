@@ -11,7 +11,8 @@
 #import "Reachability.h"
 #import "RDVTabBarItem.h"
 #import "JSPatch/JSPatch.h"
-
+#import "Jspatch/JPEngine.h"
+#import "TestViewController.h"
 @interface AppDelegate ()
 @property (nonatomic, strong) Reachability* reachability;
 @end
@@ -19,10 +20,21 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
+
     [JSPatch startWithAppKey:@"70d1d8bd41b2a351"];
     [JSPatch sync];
+    
+    [JPEngine startEngine];
+    
+    NSMutableString *sourcePath = [NSMutableString string];
+    [sourcePath appendString:[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"/JSPatch/1.0/main.js"]];
+
+
+    
+//    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+
+    [JPEngine evaluateScript:script];
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
@@ -52,8 +64,13 @@
         //[userDefaults setBool:YES forKey:[NSString stringWithFormat:@"version_%@", version]];
         //[userDefaults synchronize];
     }
-
+    //[self.window addSubview:[self genView]];
     return YES;
+}
+
+- (UIView *)genView
+{
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
 }
 
 - (void) showWelcomePage
@@ -72,29 +89,21 @@
 
 - (void) setRDVTabBarRootViewController
 {
-    UIViewController *firstViewController = [[UIViewController alloc] init];
-    UIViewController *firstNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:firstViewController];
+    TestViewController *firstViewController = [[TestViewController alloc] init];
+    UIViewController *firstNavigationController = [[UINavigationController alloc] initWithRootViewController:firstViewController];
     
     UIViewController *secondViewController = [[UIViewController alloc] init];
-    UIViewController *secondNavigationController = [[UINavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
+    UIViewController *secondNavigationController = [[UINavigationController alloc] initWithRootViewController:secondViewController];
     
     UIViewController *thirdViewController = [[UIViewController alloc] init];
-    UIViewController *thirdNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:thirdViewController];
+    UIViewController *thirdNavigationController = [[UINavigationController alloc] initWithRootViewController:thirdViewController];
     
     UIViewController *fouthViewController = [[UIViewController alloc] init];
-    UIViewController *fouthNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:fouthViewController];
+    UIViewController *fouthNavigationController = [[UINavigationController alloc] initWithRootViewController:fouthViewController];
     
     self.tabbarController = [[RDVTabBarController alloc] init];
-    [self.tabbarController setViewControllers:@[firstNavigationController, secondNavigationController,
-                                           thirdNavigationController, fouthNavigationController]];
-    
-    
-    
-    
+    [self.tabbarController setViewControllers:@[firstNavigationController, secondNavigationController, thirdNavigationController, fouthNavigationController]];
+
     [self customizeTabBarForController:self.tabbarController];
     
     [self.window setRootViewController:self.tabbarController];

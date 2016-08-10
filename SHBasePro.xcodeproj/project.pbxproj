@@ -51,7 +51,10 @@
 		4A91147B1CF0702900641789 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114301CF0702900641789 /* XMLDictionary.m */; };
 		4AA1940C1D4CB2070008ABD3 /* NSSHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */; };
 		4AB6A33C1D58C42C00460300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33B1D58C42C00460300 /* libz.tbd */; };
-		4AB6A33E1D58C5D600460300 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33D1D58C5D600460300 /* JSPatch.framework */; };
+		4AB6A3401D58C85F00460300 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33F1D58C85F00460300 /* JSPatch.framework */; };
+		4AB6A3A91D59C4BF00460300 /* IMSendhouseTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A3A71D59C4BF00460300 /* IMSendhouseTips.m */; };
+		4AB6A3BF1D5B5FAE00460300 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6A3BE1D5B5FAE00460300 /* TestViewController.m */; };
+		4AB6A3C11D5B6E9A00460300 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4AB6A3C01D5B6E9A00460300 /* main.js */; };
 		4AD05DF31D2A8C07001CE689 /* ContactMethodAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */; };
 		4AD05E051D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF61D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.m */; };
 		4AD05E061D2A8D9E001CE689 /* NSString+XTSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD05DF81D2A8D9E001CE689 /* NSString+XTSize.m */; };
@@ -129,7 +132,12 @@
 		4AA1940A1D4CB2070008ABD3 /* NSSHTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSHTest.h; sourceTree = "<group>"; };
 		4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSHTest.m; sourceTree = "<group>"; };
 		4AB6A33B1D58C42C00460300 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		4AB6A33D1D58C5D600460300 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
+		4AB6A33F1D58C85F00460300 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
+		4AB6A3A71D59C4BF00460300 /* IMSendhouseTips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSendhouseTips.m; sourceTree = "<group>"; };
+		4AB6A3A81D59C4BF00460300 /* IMSendhouseTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSendhouseTips.h; sourceTree = "<group>"; };
+		4AB6A3BD1D5B5FAE00460300 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4AB6A3BE1D5B5FAE00460300 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4AB6A3C01D5B6E9A00460300 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		4AD05DF11D2A8C07001CE689 /* ContactMethodAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMethodAlertView.h; sourceTree = "<group>"; };
 		4AD05DF21D2A8C07001CE689 /* ContactMethodAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMethodAlertView.m; sourceTree = "<group>"; };
 		4AD05DF51D2A8D9E001CE689 /* NSAttributedString+XTAttributionSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+XTAttributionSize.h"; sourceTree = "<group>"; };
@@ -173,11 +181,11 @@
 				4A3CE37D1CDD94A90084E6E0 /* libc++abi.tbd in Frameworks */,
 				4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */,
 				4A3CE37B1CDD94300084E6E0 /* libresolv.tbd in Frameworks */,
-				4AB6A33E1D58C5D600460300 /* JSPatch.framework in Frameworks */,
 				4A3CE3791CDD94020084E6E0 /* CFNetwork.framework in Frameworks */,
 				4A6B783D1CDCA81F0062111F /* libxml2.tbd in Frameworks */,
 				4A3BE5291CDC76B0005DBC90 /* libicucore.tbd in Frameworks */,
 				4A3BE5271CDC76A6005DBC90 /* libsqlite3.tbd in Frameworks */,
+				4AB6A3401D58C85F00460300 /* JSPatch.framework in Frameworks */,
 				4A3BE5251CDC769D005DBC90 /* AVFoundation.framework in Frameworks */,
 				4A3BE5231CDC7696005DBC90 /* MobileCoreServices.framework in Frameworks */,
 				4A3BE5211CDC768F005DBC90 /* AssetsLibrary.framework in Frameworks */,
@@ -254,6 +262,9 @@
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
 			isa = PBXGroup;
 			children = (
+				4AB6A3C01D5B6E9A00460300 /* main.js */,
+				4AB6A3A81D59C4BF00460300 /* IMSendhouseTips.h */,
+				4AB6A3A71D59C4BF00460300 /* IMSendhouseTips.m */,
 				0422242F1D5390E7008FE514 /* HcdGuideView */,
 				4AD05E251D2B9ABA001CE689 /* truehouse_agreement.html */,
 				4AD05DF41D2A8D9E001CE689 /* Categrory */,
@@ -287,6 +298,8 @@
 				4AD05E231D2B9453001CE689 /* TrueHouseRuleController.m */,
 				4AA1940A1D4CB2070008ABD3 /* NSSHTest.h */,
 				4AA1940B1D4CB2070008ABD3 /* NSSHTest.m */,
+				4AB6A3BD1D5B5FAE00460300 /* TestViewController.h */,
+				4AB6A3BE1D5B5FAE00460300 /* TestViewController.m */,
 			);
 			path = SHBasePro;
 			sourceTree = "<group>";
@@ -346,7 +359,7 @@
 		8511C120A58AE682EA956E94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4AB6A33D1D58C5D600460300 /* JSPatch.framework */,
+				4AB6A33F1D58C85F00460300 /* JSPatch.framework */,
 				4AB6A33B1D58C42C00460300 /* libz.tbd */,
 				4A0986591D50D1C100D0802C /* Reveal.framework */,
 				4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */,
@@ -455,6 +468,7 @@
 				4A9114351CF0702900641789 /* Assets.xcassets in Resources */,
 				4AD05E261D2B9ABA001CE689 /* truehouse_agreement.html in Resources */,
 				4A91145F1CF0702900641789 /* PhoneVerificationView.xib in Resources */,
+				4AB6A3C11D5B6E9A00460300 /* main.js in Resources */,
 				4A91143B1CF0702900641789 /* LaunchScreen.storyboard in Resources */,
 				4A9114561CF0702900641789 /* Info.plist in Resources */,
 			);
@@ -517,6 +531,7 @@
 			files = (
 				4A572EAE1D17E7FA00C46D36 /* TrueHouseDepositsView.m in Sources */,
 				4AD05DF31D2A8C07001CE689 /* ContactMethodAlertView.m in Sources */,
+				4AB6A3BF1D5B5FAE00460300 /* TestViewController.m in Sources */,
 				4A9114601CF0702900641789 /* ViewController.m in Sources */,
 				4AD05E0C1D2A8D9E001CE689 /* UIWindow+Category.m in Sources */,
 				4AD05E241D2B9453001CE689 /* TrueHouseRuleController.m in Sources */,
@@ -529,6 +544,7 @@
 				4AD05E161D2A8EEB001CE689 /* UIViewExt.m in Sources */,
 				4A09866F1D536C8000D0802C /* RDVTabBarController.m in Sources */,
 				042224341D5390E7008FE514 /* HcdGuideViewCell.m in Sources */,
+				4AB6A3A91D59C4BF00460300 /* IMSendhouseTips.m in Sources */,
 				4A572EB41D18D94100C46D36 /* BondRechargeViewController.m in Sources */,
 				042224351D5390E7008FE514 /* HcdGuideViewManager.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,

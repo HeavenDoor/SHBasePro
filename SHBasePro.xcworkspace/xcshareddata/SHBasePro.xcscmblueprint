@@ -1,28 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EA7011E54FC03AA5FDE5EB585B3FC8676C529567+++9ED4894",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EA7011E54FC03AA5FDE5EB585B3FC8676C529567",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++BF59CFB" : {
-
-    },
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++98866C9" : {
-
-    },
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++1FB374F" : {
+    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++98866C9" : 0,
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++1FB374F" : 0,
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++BF59CFB" : 0,
-    "EA7011E54FC03AA5FDE5EB585B3FC8676C529567+++9ED4894" : 0
+    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503" : 0,
+    "EA7011E54FC03AA5FDE5EB585B3FC8676C529567" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "324FD604-58AD-4393-9FA2-13C7910F380B",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "18BB72DF-A3D4-4641-B1D2-A6417545431A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++98866C9" : "SHBasePro\/SHBasePro\/QRCodeScaner\/",
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++1FB374F" : "SHBasePro\/SHBasePro\/QRCodeScaner\/",
-    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++BF59CFB" : "SHBasePro\/SHBasePro\/Lib\/UIWebView+TS_JAVAScriptContent\/",
-    "EA7011E54FC03AA5FDE5EB585B3FC8676C529567+++9ED4894" : "SHBasePro\/"
+    "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503" : "SHBasePro\/SHBasePro\/Lib\/UIWebView+TS_JAVAScriptContent\/",
+    "EA7011E54FC03AA5FDE5EB585B3FC8676C529567" : "SHBasePro\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SHBasePro",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -31,22 +21,12 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/HeavenDoor\/SHBasePro.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA7011E54FC03AA5FDE5EB585B3FC8676C529567+++9ED4894"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA7011E54FC03AA5FDE5EB585B3FC8676C529567"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.0.241:9001\/svndata\/mobileProduct",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++1FB374F"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.0.241:9001\/svndata\/mobileProduct",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++98866C9"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.0.241:9001\/svndata\/mobileProduct",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503+++BF59CFB"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "e2786251-8c15-ce49-9f14-9e84e36fa9ce++503"
     }
   ]
 }
