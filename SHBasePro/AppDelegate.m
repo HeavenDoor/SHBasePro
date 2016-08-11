@@ -35,26 +35,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [JSPatch startWithAppKey:@"70d1d8bd41b2a351"];
-    [JSPatch sync];
-    
-    [JPEngine startEngine];
-    
-    NSMutableString *sourcePath = [NSMutableString string];
-    [sourcePath appendString:[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"/JSPatch/1.0/main.js"]];
-
-
-    
-//    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
-    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-
-    [JPEngine evaluateScript:script];
+//    [JSPatch startWithAppKey:@"70d1d8bd41b2a351"];
+//    [JSPatch sync];
+//    
+//    [JPEngine startEngine];
+//    
+//    NSMutableString *sourcePath = [NSMutableString string];
+//    [sourcePath appendString:[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"/JSPatch/1.0/main.js"]];
+//
+//
+//    
+////    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
+//    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+//
+//    [JPEngine evaluateScript:script];
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [NSThread sleepForTimeInterval:2.0];
+    [NSThread sleepForTimeInterval:0.5];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
@@ -75,8 +75,8 @@
     
     if (show) {
         [self showWelcomePage];
-        //[userDefaults setBool:YES forKey:[NSString stringWithFormat:@"version_%@", version]];
-        //[userDefaults synchronize];
+        [userDefaults setBool:NO forKey:[NSString stringWithFormat:@"version_%@", version]];
+        [userDefaults synchronize];
     }
     //[self.window addSubview:[self genView]];
     return YES;
