@@ -17,7 +17,7 @@
 #import "MessageViewController.h"
 #import "DataViewController.h"
 #import "MineViewController.h"
-
+#import <objc/runtime.h>// 导入运行时文件
 @interface AppDelegate ()
 @property (nonatomic, strong) Reachability* reachability;
 @property (nonatomic, strong) HomeViewController* homeViewController;
@@ -35,20 +35,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    [JSPatch startWithAppKey:@"70d1d8bd41b2a351"];
-//    [JSPatch sync];
+    [JSPatch startWithAppKey:@"70d1d8bd41b2a351"];
+//    [JSPatch setupDevelopment];
+//    NSString* publicKey = @"-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCJsbsysFHGgWbHSjWd8hyBXuK+Bz0Oa5q9uiBCGGjIxqo2KOs3+jR9yfShI1wIPJhU+6K0N8pl9DbEPSfzYa1e2L+wCcHO4VBR7CNIqNHsDhn/zvTw9kUk1QMDPWn2ALXgLxzA2F65erPv6iLWXxHJP046xuvi3SzmhBqW80sewIDAQAB-----END PUBLIC KEY-----";
+//    [JSPatch setupRSAPublicKey: publicKey];
+//    
+    [JSPatch sync];
 //    
 //    [JPEngine startEngine];
 //    
 //    NSMutableString *sourcePath = [NSMutableString string];
 //    [sourcePath appendString:[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"/JSPatch/1.0/main.js"]];
-//
-//
-//    
-////    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
-//    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-//
-//    [JPEngine evaluateScript:script];
+
+
+    
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+
+    [JPEngine evaluateScript:script];
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
@@ -78,7 +82,20 @@
         [userDefaults setBool:NO forKey:[NSString stringWithFormat:@"version_%@", version]];
         [userDefaults synchronize];
     }
-    //[self.window addSubview:[self genView]];
+    [self.window addSubview:[self genView]];
+    
+    
+//    unsigned int count;
+//    objc_property_t *properties = class_copyPropertyList([AppDelegate class], &count);
+//    for(int i = 0; i < count; i++)
+//    {
+//        objc_property_t property = properties[i];
+//        
+//        NSLog(@"name:%s",property_getName(property));
+//        NSLog(@"attributes:%s",property_getAttributes(property));
+//        
+//    }
+    
     return YES;
 }
 
