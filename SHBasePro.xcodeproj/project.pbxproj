@@ -66,6 +66,8 @@
 		4A83CEAE1D798D5C002CA71C /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEA81D798D5C002CA71C /* RDVTabBarController.m */; };
 		4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEAA1D798D5C002CA71C /* RDVTabBarItem.m */; };
 		4A83CEB01D798D5C002CA71C /* RDVTabBarJifItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEAC1D798D5C002CA71C /* RDVTabBarJifItem.m */; };
+		4A83CEB41D7997D1002CA71C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEB31D7997D1002CA71C /* BaseViewController.m */; };
+		4A83CEB81D7998A4002CA71C /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEB71D7998A4002CA71C /* CenterViewController.m */; };
 		4A9114341CF0702900641789 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A91138C1CF0702900641789 /* AppDelegate.m */; };
 		4A9114351CF0702900641789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A91138D1CF0702900641789 /* Assets.xcassets */; };
 		4A91143B1CF0702900641789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9113991CF0702900641789 /* LaunchScreen.storyboard */; };
@@ -171,6 +173,10 @@
 		4A83CEAA1D798D5C002CA71C /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
 		4A83CEAB1D798D5C002CA71C /* RDVTabBarJifItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarJifItem.h; sourceTree = "<group>"; };
 		4A83CEAC1D798D5C002CA71C /* RDVTabBarJifItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarJifItem.m; sourceTree = "<group>"; };
+		4A83CEB21D7997D1002CA71C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4A83CEB31D7997D1002CA71C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4A83CEB61D7998A4002CA71C /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		4A83CEB71D7998A4002CA71C /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		4A91138B1CF0702900641789 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A91138C1CF0702900641789 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4A91138D1CF0702900641789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 		040D0AEA1D5CCC9A00A178B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4A83CEB11D7997B6002CA71C /* Base */,
 				040D0AEB1D5CCC9A00A178B6 /* Category */,
 			);
 			path = Common;
@@ -256,6 +263,7 @@
 		040D0AFE1D5CCC9A00A178B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4A83CEB51D799881002CA71C /* CenterViewController */,
 				040D0AFF1D5CCC9A00A178B6 /* DataViewController */,
 				040D0B021D5CCC9A00A178B6 /* HcdGuideView */,
 				040D0B071D5CCC9A00A178B6 /* HomeViewController */,
@@ -379,6 +387,24 @@
 				4A83CEAC1D798D5C002CA71C /* RDVTabBarJifItem.m */,
 			);
 			path = RDVTabBarController;
+			sourceTree = "<group>";
+		};
+		4A83CEB11D7997B6002CA71C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4A83CEB21D7997D1002CA71C /* BaseViewController.h */,
+				4A83CEB31D7997D1002CA71C /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4A83CEB51D799881002CA71C /* CenterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A83CEB61D7998A4002CA71C /* CenterViewController.h */,
+				4A83CEB71D7998A4002CA71C /* CenterViewController.m */,
+			);
+			path = CenterViewController;
 			sourceTree = "<group>";
 		};
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
@@ -628,6 +654,7 @@
 				040D0B4E1D5CCCAE00A178B6 /* HitTestView.m in Sources */,
 				040D0B121D5CCC9A00A178B6 /* UIButton+Layout.m in Sources */,
 				040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */,
+				4A83CEB81D7998A4002CA71C /* CenterViewController.m in Sources */,
 				040D0B551D5CCCAE00A178B6 /* PhoneVerificationView.m in Sources */,
 				040D0B161D5CCC9A00A178B6 /* UINavigationController+Push.m in Sources */,
 				040D0B591D5CCCAE00A178B6 /* TestViewController.m in Sources */,
@@ -639,6 +666,7 @@
 				4A83CEB01D798D5C002CA71C /* RDVTabBarJifItem.m in Sources */,
 				4A83CEAE1D798D5C002CA71C /* RDVTabBarController.m in Sources */,
 				040D0B1B1D5CCC9A00A178B6 /* HcdGuideViewManager.m in Sources */,
+				4A83CEB41D7997D1002CA71C /* BaseViewController.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,
 				040D0B541D5CCCAE00A178B6 /* NSSHTest.m in Sources */,

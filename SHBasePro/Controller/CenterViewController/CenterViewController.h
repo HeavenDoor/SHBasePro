@@ -1,14 +1,13 @@
 //
-//  HomeViewController.h
+//  CenterViewController.h
 //  SHBasePro
-//  首页窗口控制器
-//  Created by mac on 16/8/5.
+//
+//  Created by shenghai on 16/9/2.
 //  Copyright © 2016年 ren. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-
-@interface HomeViewController : BaseViewController
+@interface CenterViewController : BaseViewController
 
 @end
