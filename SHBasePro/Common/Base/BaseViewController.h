@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
+
 @property (nonatomic, copy) void(^userDefineBlock)();
 @end
