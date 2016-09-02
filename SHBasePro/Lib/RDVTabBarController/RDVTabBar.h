@@ -22,7 +22,11 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-
+typedef NS_ENUM (NSUInteger, RDVTabType)  // shenghai edit
+{
+    RDVTabType_Normal = 0,
+    RDVTabType_Custom = 1,
+};
 @class RDVTabBar, RDVTabBarItem;
 
 @protocol RDVTabBarDelegate <NSObject>
@@ -41,6 +45,7 @@
 
 @interface RDVTabBar : UIView
 
+@property (nonatomic, assign) RDVTabType tabbarType;  // shenghai edit
 /**
  * The tab bar’s delegate object.
  */

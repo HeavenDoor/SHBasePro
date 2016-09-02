@@ -9,10 +9,13 @@
 #import "MineViewController.h"
 #import "HFTSettlementView.h"
 #import "HFTReceivablesView.h"
+#import "UIImage+GIF.h"
 
 @interface MineViewController ()
 @property (strong, nonatomic) UIImageView* bgImg;
 @property (nonatomic, strong) UIButton* sayHelloButton;
+
+@property (strong, nonatomic) UIImageView* kkImageView;
 @end
 
 @implementation MineViewController
@@ -30,6 +33,11 @@
     [self.sayHelloButton setTitle: @"sayHello" forState:UIControlStateNormal];
     [self.sayHelloButton addTarget:self action:@selector(sayHello) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.sayHelloButton];
+    
+    UIImage* img = [UIImage sd_animatedGIFNamed:@"yyqiangdan"];
+    self.kkImageView = [[UIImageView alloc] initWithFrame: CGRectMake(100, SCREEN_HEIGHT -  200, 50,50)];
+    self.kkImageView.image = img;
+    [self.view addSubview:self.kkImageView];
 }
 
 - (void) sayHello

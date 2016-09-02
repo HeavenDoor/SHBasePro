@@ -28,6 +28,7 @@
 
 @interface RDVTabBarController : UIViewController <RDVTabBarDelegate>
 
+@property (nonatomic, assign) RDVTabType tabbarType;  // shenghai edit
 /**
  * The tab bar controller’s delegate object.
  */
@@ -63,6 +64,10 @@
  */
 - (void)setTabBarHidden:(BOOL)hidden animated:(BOOL)animated;
 
+// 开始 停止抢单动画
+- (void) startJDAnimation;
+- (void) stopJDAnimation;
+
 @end
 
 @protocol RDVTabBarControllerDelegate <NSObject>
@@ -76,6 +81,12 @@
  * Tells the delegate that the user selected an item in the tab bar.
  */
 - (void)tabBarController:(RDVTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController;
+
+/**
+ * 中间不规则抢单按钮点击
+ * shenghai 2016-8-22
+ */
+- (void) grabButtonTriggered;
 
 @end
 

@@ -84,6 +84,16 @@
         [item setFrame:CGRectMake(self.contentEdgeInsets.left + (index * self.itemWidth),
                                   roundf(frameSize.height - itemHeight) - self.contentEdgeInsets.top,
                                   self.itemWidth, itemHeight - self.contentEdgeInsets.bottom)];
+        
+        // edit shenghai 2016-8-22 中间添加一个突出的按钮 高度增大
+        if (self.tabbarType == RDVTabType_Custom) {
+            if (index == 2)
+            {
+                item.itemHeight = 50.0f;
+                [self bringSubviewToFront:item];
+            }
+        }
+
         [item setNeedsDisplay];
         
         index++;
@@ -108,6 +118,18 @@
         [item addTarget:self action:@selector(tabBarItemWasSelected:) forControlEvents:UIControlEventTouchDown];
         [self addSubview:item];
     }
+}
+
+#pragma mark shenghai Edit 添加不规则按钮 优优抢单
+- (UIView*) hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if (self.tabbarType == RDVTabType_Custom) {
+        CGPoint pt = [self.items[2] convertPoint:point fromView:self];
+        if ( [self.items[2] pointInside:pt withEvent:event] ) {
+            return self.items[2];
+        }
+    }
+    return [super hitTest:point withEvent:event];
 }
 
 - (void)setHeight:(CGFloat)height {
@@ -163,9 +185,9 @@
     
     CGFloat alpha = (translucent ? 0.9 : 1.0);
     
-    [_backgroundView setBackgroundColor:[UIColor colorWithRed:245/255.0
-                                                        green:245/255.0
-                                                         blue:245/255.0
+    [_backgroundView setBackgroundColor:[UIColor colorWithRed:247/255.0
+                                                        green:247/255.0
+                                                         blue:247/255.0
                                                         alpha:alpha]];
 }
 

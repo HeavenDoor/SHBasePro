@@ -22,7 +22,7 @@
 // THE SOFTWARE.
 
 #import "RDVTabBarController.h"
-#import "RDVTabBarItem.h"
+#import "RDVTabBarJifItem.h"
 #import <objc/runtime.h>
 
 @interface UIViewController (RDVTabBarControllerItemInternal)
@@ -34,7 +34,7 @@
 @interface RDVTabBarController () {
     UIView *_contentView;
 }
-
+@property (nonatomic, weak) RDVTabBarJifItem* jifBarItem;
 @property (nonatomic, readwrite) RDVTabBar *tabBar;
 
 @end
@@ -116,7 +116,19 @@
     }
     
     _selectedIndex = selectedIndex;
-    [[self tabBar] setSelectedItem:[[self tabBar] items][selectedIndex]];
+    
+    // edit by shenghai 2016-8-22 就是为了添加一个啥也不干的抢单按钮
+    if (self.tabbarType == RDVTabType_Custom) {
+        if(selectedIndex >= 2)
+        {
+            [[self tabBar] setSelectedItem:[[self tabBar] items][selectedIndex + 1]];
+        }
+        else
+        {
+            [[self tabBar] setSelectedItem:[[self tabBar] items][selectedIndex]];
+        }
+    }
+    //=====================================
     
     [self setSelectedViewController:[[self viewControllers] objectAtIndex:selectedIndex]];
     [self addChildViewController:[self selectedViewController]];
@@ -147,6 +159,13 @@
             [tabBarItems addObject:tabBarItem];
             [viewController rdv_setTabBarController:self];
         }
+        // edit shenghai 2016-8-22 增加抢单按钮
+        if (self.tabbarType == RDVTabType_Custom) {
+            RDVTabBarJifItem *tabBarItem = [[RDVTabBarJifItem alloc] init];
+            self.jifBarItem = tabBarItem;
+            [tabBarItem setTitle:@"  "];
+            [tabBarItems insertObject:tabBarItem atIndex:2];
+        }
         
         [[self tabBar] setItems:tabBarItems];
     } else {
@@ -155,6 +174,22 @@
         }
         
         _viewControllers = nil;
+    }
+}
+
+- (void) startJDAnimation
+{
+    if(self.jifBarItem != nil)
+    {
+        [self.jifBarItem showJifType];
+    }
+}
+
+- (void) stopJDAnimation
+{
+    if(self.jifBarItem != nil)
+    {
+        [self.jifBarItem showNormalType];
     }
 }
 
@@ -169,6 +204,7 @@
 - (RDVTabBar *)tabBar {
     if (!_tabBar) {
         _tabBar = [[RDVTabBar alloc] init];
+        _tabBar.tabbarType = self.tabbarType;  // shenghai edit
         [_tabBar setBackgroundColor:[UIColor clearColor]];
         [_tabBar setAutoresizingMask:(UIViewAutoresizingFlexibleWidth|
                                       UIViewAutoresizingFlexibleTopMargin|
@@ -238,6 +274,23 @@
 #pragma mark - RDVTabBarDelegate
 
 - (BOOL)tabBar:(RDVTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index {
+    // edit by shenghai 2016-8-22 添加抢单按钮
+    if (self.tabbarType == RDVTabType_Custom) {
+        if (index == 2)
+        {
+            NSLog(@"点击了抢单按钮");
+            if ([self.delegate respondsToSelector:@selector(grabButtonTriggered)]) {
+                [self.delegate grabButtonTriggered];
+            }
+            return NO;
+        }
+        else if (index > 2)
+        {
+            index = index - 1;
+        }
+    }
+    //======================================================
+    
     if ([[self delegate] respondsToSelector:@selector(tabBarController:shouldSelectViewController:)]) {
         if (![[self delegate] tabBarController:self shouldSelectViewController:[self viewControllers][index]]) {
             return NO;
@@ -260,6 +313,19 @@
 }
 
 - (void)tabBar:(RDVTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index {
+    // edit by shenghai 2016-8-22 添加抢单按钮
+    if (self.tabbarType == RDVTabType_Custom) {
+        if (index == 2)
+        {
+            NSLog(@"点击了抢单按钮");
+            return;
+        }
+        else if (index > 2)
+        {
+            index = index - 1;
+        }
+    }
+    //======================================================
     if (index < 0 || index >= [[self viewControllers] count]) {
         return;
     }
