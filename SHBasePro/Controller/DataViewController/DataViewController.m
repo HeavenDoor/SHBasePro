@@ -7,6 +7,7 @@
 //
 
 #import "DataViewController.h"
+#import "DataModelRequest.h"
 
 @interface DataViewController ()
 @property (strong, nonatomic) UIImageView* bgImg;
@@ -19,7 +20,12 @@
     self.bgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"databg"]];
     self.bgImg.frame = self.view.frame;
     [self.view addSubview:self.bgImg];
-    // Do any additional setup after loading the view.
+    
+    [DataModelRequest requestVMovieList:@"1" succeedBlock:^(id model) {
+        
+    } failerBlock:^(id model) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backBtn setBackgroundImage:[UIImage imageNamed:bIsiOS7?@"back_btn_ios7.png":@"back_btn.png"] forState:UIControlStateNormal];
+    [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_ios7"] forState:UIControlStateNormal];
     [backBtn setFrame:CGRectMake(0, 0, 44, 44)];
     [backBtn addTarget:self action:@selector(backBtnPre:) forControlEvents:UIControlEventTouchUpInside];
     

@@ -31,6 +31,8 @@
 #import <UIKit/UIKit.h>
 #import "UIColor+Tool.h"
 #import "UIViewExt.h"
+#import "HttpManager.h"
+#import "MJExtension.h"
 #endif
 
 #define WEAK_TYPES(instance) __weak typeof(instance) weak##instance = instance;
