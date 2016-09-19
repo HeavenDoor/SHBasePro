@@ -49,8 +49,9 @@
 //    
 //    NSMutableString *sourcePath = [NSMutableString string];
 //    [sourcePath appendString:[[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"/JSPatch/1.0/main.js"]];
-
-
+NSLog(@"%@", @(99.99));
+    NSString* ss = [NSString stringWithFormat:@"%@",@(5.10)];
+    //CGFloat tt = @(5.0);
     
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
     NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];

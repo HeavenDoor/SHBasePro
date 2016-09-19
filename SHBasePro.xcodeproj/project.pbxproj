@@ -43,6 +43,7 @@
 		040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */; };
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
 		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
+		4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
 		4A3BE51F1CDC7684005DBC90 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51E1CDC7684005DBC90 /* MapKit.framework */; };
@@ -59,6 +60,7 @@
 		4A3CE3831CDD950C0084E6E0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3821CDD950C0084E6E0 /* ImageIO.framework */; };
 		4A3CE3851CDD95170084E6E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */; };
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
+		4A4D9B361D7D5F6C00D10CD4 /* MongoliaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */; };
 		4A57DDE91CF2F5D200174FC8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */; };
 		4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57DDED1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m */; };
 		4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A655B821D7AD990007BCF39 /* HttpManager.m */; };
@@ -148,6 +150,8 @@
 		040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0986591D50D1C100D0802C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		4A3641A21D84187F0054F227 /* UIControl+SequenceClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SequenceClick.h"; sourceTree = "<group>"; };
+		4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SequenceClick.m"; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4A3BE51E1CDC7684005DBC90 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -164,6 +168,8 @@
 		4A3CE3821CDD950C0084E6E0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4A3CE3861CDD953C0084E6E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A4D9B341D7D5F6C00D10CD4 /* MongoliaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongoliaView.h; sourceTree = "<group>"; };
+		4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MongoliaView.m; sourceTree = "<group>"; };
 		4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		4A57DDEC1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TS_JavaScriptContext.h"; sourceTree = "<group>"; };
 		4A57DDED1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
@@ -247,6 +253,8 @@
 		040D0AEB1D5CCC9A00A178B6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4A3641A21D84187F0054F227 /* UIControl+SequenceClick.h */,
+				4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */,
 				040D0AEC1D5CCC9A00A178B6 /* NSAttributedString+XTAttributionSize.h */,
 				040D0AED1D5CCC9A00A178B6 /* NSAttributedString+XTAttributionSize.m */,
 				040D0AEE1D5CCC9A00A178B6 /* NSString+XTSize.h */,
@@ -514,6 +522,8 @@
 				040D0B411D5CCCAE00A178B6 /* TrueHouseRuleController.m */,
 				040D0B441D5CCCAE00A178B6 /* VRSourceView */,
 				040D0B471D5CCCAE00A178B6 /* XMLDictionary */,
+				4A4D9B341D7D5F6C00D10CD4 /* MongoliaView.h */,
+				4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */,
 			);
 			path = TestCode;
 			sourceTree = "<group>";
@@ -722,6 +732,7 @@
 				4A83CEAE1D798D5C002CA71C /* RDVTabBarController.m in Sources */,
 				040D0B1B1D5CCC9A00A178B6 /* HcdGuideViewManager.m in Sources */,
 				4A83CEB41D7997D1002CA71C /* BaseViewController.m in Sources */,
+				4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,
 				040D0B541D5CCCAE00A178B6 /* NSSHTest.m in Sources */,
@@ -737,6 +748,7 @@
 				040D0B5B1D5CCCAE00A178B6 /* TrueHouseDepositsView.m in Sources */,
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
 				040D0B4B1D5CCCAE00A178B6 /* ContactMethodAlertView.m in Sources */,
+				4A4D9B361D7D5F6C00D10CD4 /* MongoliaView.m in Sources */,
 				040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */,
 				4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */,
 				040D0B4D1D5CCCAE00A178B6 /* HFTSettlementView.m in Sources */,
