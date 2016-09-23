@@ -9,5 +9,13 @@ defineClass('TestViewController', {
     label.setTextAlignment(1);
     view.addSubview(label);
     return view;
+  },
+            
+  sayHello: function(){
+    self.ORIGsayShenghai();
+  },
+            
+  sayShenghai: function(){
+    self.ORIGsayHello();
   }
 });

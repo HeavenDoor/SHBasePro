@@ -21,6 +21,14 @@
     self.bgImg.frame = self.view.frame;
     [self.view addSubview:self.bgImg];
     // Do any additional setup after loading the view.
+    
+    
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+    effectview.frame = self.bgImg.frame;
+    
+    [self.bgImg addSubview:effectview];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated

@@ -40,6 +40,14 @@
     self.kkImageView = [[UIImageView alloc] initWithFrame: CGRectMake(100, SCREEN_HEIGHT -  200, 50,50)];
     self.kkImageView.image = img;
     [self.view addSubview:self.kkImageView];
+    
+    
+    
+//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+//    effectview.frame = self.bgImg.frame;
+//    
+//    [self.view addSubview:effectview];
 }
 
 - (void) sayHello

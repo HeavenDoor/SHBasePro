@@ -18,7 +18,7 @@
     [params setObject:@"latest" forKey:@"tab"];
     
     [[HttpManager instance] post:url Params:params SuccessfulBlock:^(id model) {
-        MovieDatasModel* responseModel = [model mj_objectWithKeyValues: model];
+        MovieDatasModel* responseModel = [MovieDatasModel mj_objectWithKeyValues: model];
         EXECUTE_BLOCK(succeedBlock, responseModel.data);
     } FailBlock:^(id model) {
         EXECUTE_BLOCK(failerBlock, @"出错了");

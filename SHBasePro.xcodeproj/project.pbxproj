@@ -43,6 +43,14 @@
 		040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */; };
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
 		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
+		4A0D26D81D9380FD00CAB38B /* AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26C91D9380FD00CAB38B /* AES.m */; };
+		4A0D26D91D9380FD00CAB38B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26CB1D9380FD00CAB38B /* NSData+Base64.m */; };
+		4A0D26DA1D9380FD00CAB38B /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26CD1D9380FD00CAB38B /* NSData+CommonCrypto.m */; };
+		4A0D26DB1D9380FD00CAB38B /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26CF1D9380FD00CAB38B /* NSString+Base64.m */; };
+		4A0D26DC1D9380FD00CAB38B /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D21D9380FD00CAB38B /* MD5.m */; };
+		4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D51D9380FD00CAB38B /* Base64.m */; };
+		4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D71D9380FD00CAB38B /* RSA.m */; };
+		4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26E01D94D3D700CAB38B /* AppHelper.m */; };
 		4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
@@ -150,6 +158,22 @@
 		040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0986591D50D1C100D0802C /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		4A0D26C81D9380FD00CAB38B /* AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES.h; sourceTree = "<group>"; };
+		4A0D26C91D9380FD00CAB38B /* AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AES.m; sourceTree = "<group>"; };
+		4A0D26CA1D9380FD00CAB38B /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		4A0D26CB1D9380FD00CAB38B /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		4A0D26CC1D9380FD00CAB38B /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		4A0D26CD1D9380FD00CAB38B /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		4A0D26CE1D9380FD00CAB38B /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		4A0D26CF1D9380FD00CAB38B /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		4A0D26D11D9380FD00CAB38B /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		4A0D26D21D9380FD00CAB38B /* MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
+		4A0D26D41D9380FD00CAB38B /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		4A0D26D51D9380FD00CAB38B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		4A0D26D61D9380FD00CAB38B /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		4A0D26D71D9380FD00CAB38B /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		4A0D26DF1D94D3D700CAB38B /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
+		4A0D26E01D94D3D700CAB38B /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
 		4A3641A21D84187F0054F227 /* UIControl+SequenceClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SequenceClick.h"; sourceTree = "<group>"; };
 		4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SequenceClick.m"; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -243,6 +267,7 @@
 		040D0AEA1D5CCC9A00A178B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4A0D26C61D9380FD00CAB38B /* Encrypt */,
 				4A655B801D7AD990007BCF39 /* NetworkManager */,
 				4A83CEB11D7997B6002CA71C /* Base */,
 				040D0AEB1D5CCC9A00A178B6 /* Category */,
@@ -376,6 +401,51 @@
 			path = XMLDictionary;
 			sourceTree = "<group>";
 		};
+		4A0D26C61D9380FD00CAB38B /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D26C71D9380FD00CAB38B /* AES */,
+				4A0D26D01D9380FD00CAB38B /* MD5 */,
+				4A0D26D31D9380FD00CAB38B /* RSA */,
+			);
+			path = Encrypt;
+			sourceTree = "<group>";
+		};
+		4A0D26C71D9380FD00CAB38B /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D26C81D9380FD00CAB38B /* AES.h */,
+				4A0D26C91D9380FD00CAB38B /* AES.m */,
+				4A0D26CA1D9380FD00CAB38B /* NSData+Base64.h */,
+				4A0D26CB1D9380FD00CAB38B /* NSData+Base64.m */,
+				4A0D26CC1D9380FD00CAB38B /* NSData+CommonCrypto.h */,
+				4A0D26CD1D9380FD00CAB38B /* NSData+CommonCrypto.m */,
+				4A0D26CE1D9380FD00CAB38B /* NSString+Base64.h */,
+				4A0D26CF1D9380FD00CAB38B /* NSString+Base64.m */,
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
+		4A0D26D01D9380FD00CAB38B /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D26D11D9380FD00CAB38B /* MD5.h */,
+				4A0D26D21D9380FD00CAB38B /* MD5.m */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		4A0D26D31D9380FD00CAB38B /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D26D41D9380FD00CAB38B /* Base64.h */,
+				4A0D26D51D9380FD00CAB38B /* Base64.m */,
+				4A0D26D61D9380FD00CAB38B /* RSA.h */,
+				4A0D26D71D9380FD00CAB38B /* RSA.m */,
+			);
+			path = RSA;
+			sourceTree = "<group>";
+		};
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +547,8 @@
 				040D0AFE1D5CCC9A00A178B6 /* Controller */,
 				4AB6A3C31D5C2D3D00460300 /* TestCode */,
 				4A57DDEA1CF2F66F00174FC8 /* Lib */,
+				4A0D26DF1D94D3D700CAB38B /* AppHelper.h */,
+				4A0D26E01D94D3D700CAB38B /* AppHelper.m */,
 				4A91138B1CF0702900641789 /* AppDelegate.h */,
 				4A91138C1CF0702900641789 /* AppDelegate.m */,
 				4A91138D1CF0702900641789 /* Assets.xcassets */,
@@ -726,6 +798,7 @@
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				040D0B511D5CCCAE00A178B6 /* JsonBaseModel.m in Sources */,
+				4A0D26D81D9380FD00CAB38B /* AES.m in Sources */,
 				040D0B191D5CCC9A00A178B6 /* DataViewController.m in Sources */,
 				040D0B141D5CCC9A00A178B6 /* UIImageView+Tool.m in Sources */,
 				4A83CEB01D798D5C002CA71C /* RDVTabBarJifItem.m in Sources */,
@@ -738,6 +811,7 @@
 				040D0B541D5CCCAE00A178B6 /* NSSHTest.m in Sources */,
 				4A83CEAD1D798D5C002CA71C /* RDVTabBar.m in Sources */,
 				4A655B8D1D7ADF09007BCF39 /* DataModelRequest.m in Sources */,
+				4A0D26DA1D9380FD00CAB38B /* NSData+CommonCrypto.m in Sources */,
 				040D0B4C1D5CCCAE00A178B6 /* HFTReceivablesView.m in Sources */,
 				040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */,
 				040D0B111D5CCC9A00A178B6 /* NSString+XTSize.m in Sources */,
@@ -745,16 +819,22 @@
 				040D0B4A1D5CCCAE00A178B6 /* BondRechargeViewController.m in Sources */,
 				040D0B5C1D5CCCAE00A178B6 /* TrueHouseRuleController.m in Sources */,
 				040D0B101D5CCC9A00A178B6 /* NSAttributedString+XTAttributionSize.m in Sources */,
+				4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */,
+				4A0D26DB1D9380FD00CAB38B /* NSString+Base64.m in Sources */,
 				040D0B5B1D5CCCAE00A178B6 /* TrueHouseDepositsView.m in Sources */,
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
 				040D0B4B1D5CCCAE00A178B6 /* ContactMethodAlertView.m in Sources */,
 				4A4D9B361D7D5F6C00D10CD4 /* MongoliaView.m in Sources */,
 				040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */,
 				4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */,
+				4A0D26D91D9380FD00CAB38B /* NSData+Base64.m in Sources */,
+				4A0D26DC1D9380FD00CAB38B /* MD5.m in Sources */,
 				040D0B4D1D5CCCAE00A178B6 /* HFTSettlementView.m in Sources */,
 				040D0B131D5CCC9A00A178B6 /* UIColor+Tool.m in Sources */,
+				4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */,
 				040D0B571D5CCCAE00A178B6 /* QRCodeScanViewController.m in Sources */,
 				040D0B5E1D5CCCAE00A178B6 /* VRSourceViewController.m in Sources */,
+				4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
