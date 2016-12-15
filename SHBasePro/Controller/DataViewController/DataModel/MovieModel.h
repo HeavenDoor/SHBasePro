@@ -33,7 +33,8 @@
 @property (nonatomic, copy) NSString* publish_time;
 @property (nonatomic, copy) NSString* like_num;
 @property (nonatomic, copy) NSString* share_num;
-@property (nonatomic, strong) NSArray<MovieExtraModel*>* cates;
+@property (nonatomic, strong) MovieExtraModel* cates;
+@property (nonatomic, copy) NSString* request_url;
 @end
 
 // 列表外层

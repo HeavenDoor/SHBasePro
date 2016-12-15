@@ -9,62 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-//IOS7以上或以下版本判断
-#define bIsiOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
-#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
-
-#define kColor(a,b,c) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:1]
-#define RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
-
-#ifdef __cplusplus
-
-//#import <opencv2/opencv.hpp>
-//#import <opencv2/stitching/detail/blenders.hpp>
-//#import <opencv2/stitching/detail/exposure_compensate.hpp>
-#endif
-
-#ifdef __OBJC__
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "UIColor+Tool.h"
-#import "UIViewExt.h"
-#import "HttpManager.h"
-#import "MJExtension.h"
-#endif
-
-#define WEAK_TYPES(instance) __weak typeof(instance) weak##instance = instance;
-//---------------------- int型转换为string ----------------------
-#define INT_To_STRING(intValue) ([NSString stringWithFormat:@"%d",(int)intValue])
-//---------------------- float型转换为string ----------------------
-#define FLOAT_To_STRING(floatValue) ([NSString stringWithFormat:@"%.4f",floatValue])
-//---------------------- 屏幕宽度 ----------------------
-#define SCREENWIDTH ([UIScreen mainScreen].bounds.size.width)
-//---------------------- 屏幕高度 ----------------------
-#define SCREENHEIGHT ([UIScreen mainScreen].bounds.size.height)
-
-#define kScaleHeight ([UIScreen mainScreen].bounds.size.width / 375.f)
-
-#define kScaleWidth ([UIScreen mainScreen].bounds.size.width / 320.f)
-
-#define kScaleHeights ([UIScreen mainScreen].bounds.size.height / 667.f)
-
-//---------------------- 适配界面时frame缩放比例 ----------------------
-#define kUIScaleSize(ScaleSize) ((ScaleSize)*(kScaleWidth>1.0?1.05:(kScaleWidth<1.0?0.95:1.0)))
-
-//---------------------- 适配界面时字体缩放比例 ----------------------
-#define kFontScaleSize(ScaleSize) ((ScaleSize)+(kScaleWidth>1.0?1:(kScaleWidth<1.0?-1:0)))
-
-/** 是否为iOS7 */
-#define IOS_VER_7 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) ? YES : NO)
-
-/** 是否为iOS8 */
-#define IOS_VER_8 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) ? YES : NO)
-
-/** 是否为iOS9 */
-#define IOS_VER_9 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) ? YES : NO)
+#import "CommonDefine.h"
+#import "CommonHeader.h"
 
 #endif /* PrefixHeader_pch */

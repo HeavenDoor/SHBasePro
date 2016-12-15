@@ -51,6 +51,7 @@
 		4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D51D9380FD00CAB38B /* Base64.m */; };
 		4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D71D9380FD00CAB38B /* RSA.m */; };
 		4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26E01D94D3D700CAB38B /* AppHelper.m */; };
+		4A217C741E026B500027C82D /* DataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C721E026B500027C82D /* DataCell.m */; };
 		4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
@@ -174,6 +175,10 @@
 		4A0D26D71D9380FD00CAB38B /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		4A0D26DF1D94D3D700CAB38B /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
 		4A0D26E01D94D3D700CAB38B /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
+		4A217C721E026B500027C82D /* DataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCell.m; sourceTree = "<group>"; };
+		4A217C731E026B500027C82D /* DataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCell.h; sourceTree = "<group>"; };
+		4A217C751E026CEF0027C82D /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		4A217C761E026CEF0027C82D /* CommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
 		4A3641A21D84187F0054F227 /* UIControl+SequenceClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SequenceClick.h"; sourceTree = "<group>"; };
 		4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SequenceClick.m"; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -267,6 +272,8 @@
 		040D0AEA1D5CCC9A00A178B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4A217C751E026CEF0027C82D /* CommonDefine.h */,
+				4A217C761E026CEF0027C82D /* CommonHeader.h */,
 				4A0D26C61D9380FD00CAB38B /* Encrypt */,
 				4A655B801D7AD990007BCF39 /* NetworkManager */,
 				4A83CEB11D7997B6002CA71C /* Base */,
@@ -476,6 +483,8 @@
 		4A655B841D7ADB33007BCF39 /* DataView */ = {
 			isa = PBXGroup;
 			children = (
+				4A217C721E026B500027C82D /* DataCell.m */,
+				4A217C731E026B500027C82D /* DataCell.h */,
 			);
 			path = DataView;
 			sourceTree = "<group>";
@@ -805,6 +814,7 @@
 				4A83CEAE1D798D5C002CA71C /* RDVTabBarController.m in Sources */,
 				040D0B1B1D5CCC9A00A178B6 /* HcdGuideViewManager.m in Sources */,
 				4A83CEB41D7997D1002CA71C /* BaseViewController.m in Sources */,
+				4A217C741E026B500027C82D /* DataCell.m in Sources */,
 				4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,

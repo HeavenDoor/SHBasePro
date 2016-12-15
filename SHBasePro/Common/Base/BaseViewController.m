@@ -26,6 +26,8 @@
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     [self.navigationItem setLeftBarButtonItem:backItem];
+    //    [self.navigationController.navigationBar setUserInteractionEnabled:YES];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bg_64"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void) viewWillAppear:(BOOL)animated
