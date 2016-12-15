@@ -9,7 +9,7 @@
 #import "DataViewController.h"
 #import "DataModelRequest.h"
 #import "DataCell.h"
-
+#import "AppDelegate.h"
 
 static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
@@ -28,8 +28,8 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
     self.bgImg.frame = self.view.frame;
     [self.view addSubview:self.bgImg];
     self.pageIndex = 1;
-    //self.automaticallyAdjustsScrollViewInsets = NO;
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 40) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

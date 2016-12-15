@@ -318,4 +318,8 @@
     [controller pushViewController:vc animated:YES];
 }
 
++ (AppDelegate*) sharedInstance
+{
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
 @end

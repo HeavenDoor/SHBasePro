@@ -16,5 +16,7 @@
 @property (strong, nonatomic) RDVTabBarController* tabbarController;
 
 - (void) setRDVTabBarRootViewController;
+
++ (AppDelegate*) sharedInstance;
 @end
 
