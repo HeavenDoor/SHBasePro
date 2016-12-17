@@ -91,6 +91,10 @@
 		4A91145D1CF0702900641789 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114031CF0702900641789 /* main.m */; };
 		4AB6A33C1D58C42C00460300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33B1D58C42C00460300 /* libz.tbd */; };
 		4AB6A3401D58C85F00460300 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33F1D58C85F00460300 /* JSPatch.framework */; };
+		4AF2B6171E05175300714667 /* NSObject+ApiServiceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */; };
+		4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */; };
+		4AF2B6211E05334400714667 /* GetApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61F1E05334400714667 /* GetApiService.m */; };
+		4AF2B6241E0540C700714667 /* PostApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B6231E0540C700714667 /* PostApiService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -235,6 +239,15 @@
 		4A9114071CF0702900641789 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4AB6A33B1D58C42C00460300 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4AB6A33F1D58C85F00460300 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
+		4AF2B6151E05175300714667 /* NSObject+ApiServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ApiServiceProtocol.h"; sourceTree = "<group>"; };
+		4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ApiServiceProtocol.m"; sourceTree = "<group>"; };
+		4AF2B6181E0517FF00714667 /* ObjectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectionProtocol.h; sourceTree = "<group>"; };
+		4AF2B61C1E05301300714667 /* ApiServicePassthrouth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiServicePassthrouth.h; sourceTree = "<group>"; };
+		4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiServicePassthrouth.m; sourceTree = "<group>"; };
+		4AF2B61F1E05334400714667 /* GetApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetApiService.m; sourceTree = "<group>"; };
+		4AF2B6201E05334400714667 /* GetApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetApiService.h; sourceTree = "<group>"; };
+		4AF2B6221E0540C700714667 /* PostApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostApiService.h; sourceTree = "<group>"; };
+		4AF2B6231E0540C700714667 /* PostApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostApiService.m; sourceTree = "<group>"; };
 		A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.release.xcconfig"; sourceTree = "<group>"; };
 		D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHBasePro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8AE3F71CD36CF200B0DD29 /* 有意思.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有意思.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -596,6 +609,7 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4AF2B6111E0514D300714667 /* Objection */,
 				040D0B1F1D5CCCAE00A178B6 /* BondRechargeViewController.h */,
 				040D0B201D5CCCAE00A178B6 /* BondRechargeViewController.m */,
 				040D0B211D5CCCAE00A178B6 /* ContactMethodAlertView.h */,
@@ -630,6 +644,22 @@
 				4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */,
 			);
 			path = TestCode;
+			sourceTree = "<group>";
+		};
+		4AF2B6111E0514D300714667 /* Objection */ = {
+			isa = PBXGroup;
+			children = (
+				4AF2B6201E05334400714667 /* GetApiService.h */,
+				4AF2B61F1E05334400714667 /* GetApiService.m */,
+				4AF2B6221E0540C700714667 /* PostApiService.h */,
+				4AF2B6231E0540C700714667 /* PostApiService.m */,
+				4AF2B6151E05175300714667 /* NSObject+ApiServiceProtocol.h */,
+				4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */,
+				4AF2B6181E0517FF00714667 /* ObjectionProtocol.h */,
+				4AF2B61C1E05301300714667 /* ApiServicePassthrouth.h */,
+				4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */,
+			);
+			path = Objection;
 			sourceTree = "<group>";
 		};
 		746F532D732D7AA210F6AA29 /* Pods */ = {
@@ -815,6 +845,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AF2B6171E05175300714667 /* NSObject+ApiServiceProtocol.m in Sources */,
 				040D0B171D5CCC9A00A178B6 /* UIViewExt.m in Sources */,
 				040D0B181D5CCC9A00A178B6 /* UIWindow+Category.m in Sources */,
 				040D0B4F1D5CCCAE00A178B6 /* IMSendhouseTips.m in Sources */,
@@ -842,6 +873,7 @@
 				4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,
+				4AF2B6211E05334400714667 /* GetApiService.m in Sources */,
 				040D0B541D5CCCAE00A178B6 /* NSSHTest.m in Sources */,
 				4A83CEAD1D798D5C002CA71C /* RDVTabBar.m in Sources */,
 				4A655B8D1D7ADF09007BCF39 /* DataModelRequest.m in Sources */,
@@ -866,6 +898,8 @@
 				040D0B4D1D5CCCAE00A178B6 /* HFTSettlementView.m in Sources */,
 				040D0B131D5CCC9A00A178B6 /* UIColor+Tool.m in Sources */,
 				4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */,
+				4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */,
+				4AF2B6241E0540C700714667 /* PostApiService.m in Sources */,
 				040D0B571D5CCCAE00A178B6 /* QRCodeScanViewController.m in Sources */,
 				040D0B5E1D5CCCAE00A178B6 /* VRSourceViewController.m in Sources */,
 				4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */,

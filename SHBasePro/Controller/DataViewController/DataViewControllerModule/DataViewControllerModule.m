@@ -11,9 +11,9 @@
 @implementation DataViewControllerModule
 
 + (void) load {
-    JSObjectionInjector *injector = [JSObjection defaultInjector]; // [1]
-    injector = injector ? : [JSObjection createInjector]; // [2]
-    injector = [injector withModule:[[self alloc] init]]; // [3]
+    JSObjectionInjector *injector = [JSObjection defaultInjector];
+    injector = injector ? : [JSObjection createInjector];
+    injector = [injector withModule:[[self alloc] init]];
     [JSObjection setDefaultInjector:injector];
 }
 

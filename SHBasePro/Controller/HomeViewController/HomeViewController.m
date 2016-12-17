@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 //#import "DataViewController.h"
 
+#import "NSObject+ApiServiceProtocol.h"
+
 @interface HomeViewController ()
 
 @property (strong, nonatomic) UIImageView* bgImg;
@@ -22,7 +24,13 @@
     self.bgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homebg"]];
     self.bgImg.frame = self.view.frame;
     [self.view addSubview:self.bgImg];
-    // Do any additional setup after loading the view.
+    
+    
+    {
+        [self requestGetNetWithUrl:[NSURL URLWithString:@"http://www.baidu.com"] Param:@{@"KEY1": @"sheng", @"KEY2": @"hai"}];
+        
+        [self requestPostNetWithUrl:[NSURL URLWithString:@"http://www.baidu.com"] Param:@{@"KEY1": @"sheng", @"KEY2": @"hai"}];
+    }
     
     
     self.msgBtn = [[UIButton alloc] init];
