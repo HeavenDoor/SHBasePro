@@ -52,6 +52,7 @@
 		4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D71D9380FD00CAB38B /* RSA.m */; };
 		4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26E01D94D3D700CAB38B /* AppHelper.m */; };
 		4A217C741E026B500027C82D /* DataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C721E026B500027C82D /* DataCell.m */; };
+		4A217C7B1E02930B0027C82D /* DataViewControllerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C7A1E02930B0027C82D /* DataViewControllerModule.m */; };
 		4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
@@ -179,6 +180,8 @@
 		4A217C731E026B500027C82D /* DataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCell.h; sourceTree = "<group>"; };
 		4A217C751E026CEF0027C82D /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		4A217C761E026CEF0027C82D /* CommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.h; sourceTree = "<group>"; };
+		4A217C791E02930B0027C82D /* DataViewControllerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewControllerModule.h; sourceTree = "<group>"; };
+		4A217C7A1E02930B0027C82D /* DataViewControllerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewControllerModule.m; sourceTree = "<group>"; };
 		4A3641A21D84187F0054F227 /* UIControl+SequenceClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SequenceClick.h"; sourceTree = "<group>"; };
 		4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SequenceClick.m"; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -197,6 +200,7 @@
 		4A3CE3821CDD950C0084E6E0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4A3CE3861CDD953C0084E6E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		4A4D9B341D7D5F6C00D10CD4 /* MongoliaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongoliaView.h; sourceTree = "<group>"; };
 		4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MongoliaView.m; sourceTree = "<group>"; };
 		4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -326,6 +330,7 @@
 		040D0AFF1D5CCC9A00A178B6 /* DataViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4A217C781E0292EF0027C82D /* DataViewControllerModule */,
 				4A655B841D7ADB33007BCF39 /* DataView */,
 				4A655B851D7ADB33007BCF39 /* DataModel */,
 				040D0B001D5CCC9A00A178B6 /* DataViewController.h */,
@@ -453,6 +458,23 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
+		4A217C781E0292EF0027C82D /* DataViewControllerModule */ = {
+			isa = PBXGroup;
+			children = (
+				4A217C791E02930B0027C82D /* DataViewControllerModule.h */,
+				4A217C7A1E02930B0027C82D /* DataViewControllerModule.m */,
+			);
+			path = DataViewControllerModule;
+			sourceTree = "<group>";
+		};
+		4A47FD1C1E040D480099811E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4A47FD1D1E040D550099811E /* Protocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +573,7 @@
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
 			isa = PBXGroup;
 			children = (
+				4A47FD1C1E040D480099811E /* Protocol */,
 				4A655B891D7ADE7F007BCF39 /* NetworkRequest */,
 				040D0AEA1D5CCC9A00A178B6 /* Common */,
 				040D0AFE1D5CCC9A00A178B6 /* Controller */,
@@ -806,6 +829,7 @@
 				040D0B591D5CCCAE00A178B6 /* TestViewController.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
+				4A217C7B1E02930B0027C82D /* DataViewControllerModule.m in Sources */,
 				040D0B511D5CCCAE00A178B6 /* JsonBaseModel.m in Sources */,
 				4A0D26D81D9380FD00CAB38B /* AES.m in Sources */,
 				040D0B191D5CCC9A00A178B6 /* DataViewController.m in Sources */,

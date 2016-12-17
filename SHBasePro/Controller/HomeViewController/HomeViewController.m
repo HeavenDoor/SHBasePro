@@ -7,10 +7,12 @@
 //
 
 #import "HomeViewController.h"
+//#import "DataViewController.h"
 
 @interface HomeViewController ()
 
 @property (strong, nonatomic) UIImageView* bgImg;
+@property (strong, nonatomic) UIButton* msgBtn;
 @end
 
 @implementation HomeViewController
@@ -23,11 +25,20 @@
     // Do any additional setup after loading the view.
     
     
-    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
-    effectview.frame = self.bgImg.frame;
-    
-    [self.bgImg addSubview:effectview];
+    self.msgBtn = [[UIButton alloc] init];
+    self.msgBtn.backgroundColor = [UIColor grayColor];
+    self.msgBtn.layer.borderWidth = 1;
+    self.msgBtn.layer.borderColor = [UIColor greenColor].CGColor;
+    self.msgBtn.layer.cornerRadius = 4;
+    [self.msgBtn setTitle:@"objection" forState:UIControlStateNormal];
+    [self.msgBtn addTarget:self action:@selector(objectionAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.msgBtn];
+    [self.msgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.width.mas_equalTo(@200);
+        make.height.mas_equalTo(@100);
+    }];
     
 }
 
@@ -41,15 +52,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) objectionAction: (UIButton*) sender {
+    //JSObjectionInjector* injector = [JSObjection defaultInjector];
+    //UIViewController<DataViewControllerProtocol>* dataVC = [injector getObject:@protocol(DataViewControllerProtocol)];
+    
+    UIViewController <DataViewControllerProtocol> *tagsViewController = [[JSObjection defaultInjector] getObject:@protocol(DataViewControllerProtocol)];
+    tagsViewController.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:tagsViewController animated:YES];
 }
-*/
 
 @end

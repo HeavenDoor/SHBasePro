@@ -11,10 +11,12 @@
 #import "DataCell.h"
 #import "AppDelegate.h"
 
+#import "DataViewControllerModule.h"
+
 static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
 @interface DataViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UIImageView* bgImg;
+//@property (nonatomic, strong) UIImageView* bgImg;
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray* dataArray;
 @property (nonatomic, assign) NSInteger pageIndex;
@@ -22,29 +24,35 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
 @implementation DataViewController 
 
+
+- (void) setBackgroundColor: (UIColor*) bgColor {
+    self.view.backgroundColor = bgColor;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.bgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"databg"]];
-    self.bgImg.frame = self.view.frame;
-    [self.view addSubview:self.bgImg];
+//    self.bgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"databg"]];
+//    self.bgImg.frame = self.view.frame;
+//    [self.view addSubview:self.bgImg];
     self.pageIndex = 1;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 40) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     self.dataArray = [NSMutableArray array];
     WEAK_SELF;
-    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf requestDataList:NO];
     }];
     
-    //self.tableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
-    self.tableView.mj_footer =  [MJRefreshFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer =  [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [weakSelf requestDataList:YES];
     }];
-    self.tableView.mj_header.state = MJRefreshStateIdle;
+    
+    self.tableView.tableFooterView.hidden = YES;
     [self requestDataList:NO];
 }
 

@@ -23,6 +23,8 @@
 #import "Masonry.h"
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
+#import "Objection.h"
+#import "Protocol.h"
 #endif
 
 #endif /* CommonHeader_h */

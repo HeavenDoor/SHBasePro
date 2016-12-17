@@ -26,8 +26,8 @@
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     [self.navigationItem setLeftBarButtonItem:backItem];
-    //    [self.navigationController.navigationBar setUserInteractionEnabled:YES];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bg_64"] forBarMetrics:UIBarMetricsDefault];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bg_64.png"]forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -35,31 +35,31 @@
     [super viewWillAppear:animated];
     
     //自动判断如果是第一次导航栏隐藏否则显示，联动的标签控制栏要另外处理
-    //if (self.navigationController.viewControllers.count == 1)
-    //{
-    //    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    //    [self.rdv_tabBarController setTabBarHidden:NO animated:NO];
-    //}
-    //else
-    //{
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    if (self.navigationController.viewControllers.count == 1)
+    {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
         [self.rdv_tabBarController setTabBarHidden:NO animated:NO];
-    //}
+    }
+    else
+    {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [self.rdv_tabBarController setTabBarHidden:YES animated:NO];
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
-//    [super viewDidAppear:animated];
-//    if ([self.navigationController.viewControllers count] > 1)
-//    {
-//        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-//        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-//    }
-//    else
-//    {
-//        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-//    }
+    [super viewDidAppear:animated];
+    if ([self.navigationController.viewControllers count] > 1)
+    {
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
+    else
+    {
+        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
 }
 
 - (void) backBtnPre : (UIButton*) sender
