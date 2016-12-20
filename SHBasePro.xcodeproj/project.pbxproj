@@ -51,6 +51,11 @@
 		4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D51D9380FD00CAB38B /* Base64.m */; };
 		4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26D71D9380FD00CAB38B /* RSA.m */; };
 		4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26E01D94D3D700CAB38B /* AppHelper.m */; };
+		4A159AE71E08E14A00549EEE /* DataViewControllerMVVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A159AE51E08E14A00549EEE /* DataViewControllerMVVM.m */; };
+		4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A159AE81E08EFCA00549EEE /* DataCellMvvm.m */; };
+		4A159AED1E08F1C000549EEE /* PresentableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A159AEC1E08F1C000549EEE /* PresentableViewModel.m */; };
+		4A159AF51E0930ED00549EEE /* NavigationPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A159AF41E0930ED00549EEE /* NavigationPresenter.m */; };
+		4A159AF81E09410200549EEE /* UIImage+SkinnedImagePrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A159AF71E09410200549EEE /* UIImage+SkinnedImagePrivate.m */; };
 		4A217C741E026B500027C82D /* DataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C721E026B500027C82D /* DataCell.m */; };
 		4A217C7B1E02930B0027C82D /* DataViewControllerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C7A1E02930B0027C82D /* DataViewControllerModule.m */; };
 		4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3641A31D84187F0054F227 /* UIControl+SequenceClick.m */; };
@@ -181,6 +186,18 @@
 		4A0D26D71D9380FD00CAB38B /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		4A0D26DF1D94D3D700CAB38B /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
 		4A0D26E01D94D3D700CAB38B /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
+		4A159AE41E08DF2500549EEE /* PresentableProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentableProtocol.h; sourceTree = "<group>"; };
+		4A159AE51E08E14A00549EEE /* DataViewControllerMVVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewControllerMVVM.m; sourceTree = "<group>"; };
+		4A159AE61E08E14A00549EEE /* DataViewControllerMVVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewControllerMVVM.h; sourceTree = "<group>"; };
+		4A159AE81E08EFCA00549EEE /* DataCellMvvm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCellMvvm.m; sourceTree = "<group>"; };
+		4A159AE91E08EFCA00549EEE /* DataCellMvvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCellMvvm.h; sourceTree = "<group>"; };
+		4A159AEB1E08F1C000549EEE /* PresentableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentableViewModel.h; sourceTree = "<group>"; };
+		4A159AEC1E08F1C000549EEE /* PresentableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentableViewModel.m; sourceTree = "<group>"; };
+		4A159AF21E0928D000549EEE /* NavigationPresenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationPresenterProtocol.h; sourceTree = "<group>"; };
+		4A159AF31E0930ED00549EEE /* NavigationPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationPresenter.h; sourceTree = "<group>"; };
+		4A159AF41E0930ED00549EEE /* NavigationPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationPresenter.m; sourceTree = "<group>"; };
+		4A159AF61E09410200549EEE /* UIImage+SkinnedImagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SkinnedImagePrivate.h"; sourceTree = "<group>"; };
+		4A159AF71E09410200549EEE /* UIImage+SkinnedImagePrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SkinnedImagePrivate.m"; sourceTree = "<group>"; };
 		4A217C721E026B500027C82D /* DataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCell.m; sourceTree = "<group>"; };
 		4A217C731E026B500027C82D /* DataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCell.h; sourceTree = "<group>"; };
 		4A217C751E026CEF0027C82D /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
@@ -346,11 +363,14 @@
 		040D0AFF1D5CCC9A00A178B6 /* DataViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4A159AE31E08DEEC00549EEE /* ViewModel */,
 				4A217C781E0292EF0027C82D /* DataViewControllerModule */,
 				4A655B841D7ADB33007BCF39 /* DataView */,
 				4A655B851D7ADB33007BCF39 /* DataModel */,
 				040D0B001D5CCC9A00A178B6 /* DataViewController.h */,
 				040D0B011D5CCC9A00A178B6 /* DataViewController.m */,
+				4A159AE61E08E14A00549EEE /* DataViewControllerMVVM.h */,
+				4A159AE51E08E14A00549EEE /* DataViewControllerMVVM.m */,
 			);
 			path = DataViewController;
 			sourceTree = "<group>";
@@ -474,6 +494,16 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
+		4A159AE31E08DEEC00549EEE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A159AE41E08DF2500549EEE /* PresentableProtocol.h */,
+				4A159AEB1E08F1C000549EEE /* PresentableViewModel.h */,
+				4A159AEC1E08F1C000549EEE /* PresentableViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4A217C781E0292EF0027C82D /* DataViewControllerModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				4A47FD1D1E040D550099811E /* Protocol.h */,
+				4A159AF21E0928D000549EEE /* NavigationPresenterProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -521,8 +552,10 @@
 		4A655B841D7ADB33007BCF39 /* DataView */ = {
 			isa = PBXGroup;
 			children = (
-				4A217C721E026B500027C82D /* DataCell.m */,
+				4A159AE91E08EFCA00549EEE /* DataCellMvvm.h */,
+				4A159AE81E08EFCA00549EEE /* DataCellMvvm.m */,
 				4A217C731E026B500027C82D /* DataCell.h */,
+				4A217C721E026B500027C82D /* DataCell.m */,
 			);
 			path = DataView;
 			sourceTree = "<group>";
@@ -573,6 +606,8 @@
 			children = (
 				4A83CEB21D7997D1002CA71C /* BaseViewController.h */,
 				4A83CEB31D7997D1002CA71C /* BaseViewController.m */,
+				4A159AF31E0930ED00549EEE /* NavigationPresenter.h */,
+				4A159AF41E0930ED00549EEE /* NavigationPresenter.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -645,6 +680,8 @@
 				040D0B471D5CCCAE00A178B6 /* XMLDictionary */,
 				4A4D9B341D7D5F6C00D10CD4 /* MongoliaView.h */,
 				4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */,
+				4A159AF61E09410200549EEE /* UIImage+SkinnedImagePrivate.h */,
+				4A159AF71E09410200549EEE /* UIImage+SkinnedImagePrivate.m */,
 			);
 			path = TestCode;
 			sourceTree = "<group>";
@@ -851,11 +888,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AF2B6171E05175300714667 /* NSObject+ApiServiceProtocol.m in Sources */,
+				4A159AF51E0930ED00549EEE /* NavigationPresenter.m in Sources */,
 				040D0B171D5CCC9A00A178B6 /* UIViewExt.m in Sources */,
 				040D0B181D5CCC9A00A178B6 /* UIWindow+Category.m in Sources */,
 				040D0B4F1D5CCCAE00A178B6 /* IMSendhouseTips.m in Sources */,
 				040D0B151D5CCC9A00A178B6 /* UILabel+Tool.m in Sources */,
 				4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */,
+				4A159AE71E08E14A00549EEE /* DataViewControllerMVVM.m in Sources */,
 				040D0B4E1D5CCCAE00A178B6 /* HitTestView.m in Sources */,
 				040D0B121D5CCC9A00A178B6 /* UIButton+Layout.m in Sources */,
 				040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */,
@@ -863,6 +902,7 @@
 				040D0B551D5CCCAE00A178B6 /* PhoneVerificationView.m in Sources */,
 				040D0B161D5CCC9A00A178B6 /* UINavigationController+Push.m in Sources */,
 				040D0B591D5CCCAE00A178B6 /* TestViewController.m in Sources */,
+				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				4A217C7B1E02930B0027C82D /* DataViewControllerModule.m in Sources */,
@@ -893,11 +933,13 @@
 				4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */,
 				4A0D26DB1D9380FD00CAB38B /* NSString+Base64.m in Sources */,
 				040D0B5B1D5CCCAE00A178B6 /* TrueHouseDepositsView.m in Sources */,
+				4A159AF81E09410200549EEE /* UIImage+SkinnedImagePrivate.m in Sources */,
 				4AFC7C3D1E065E590079ECA5 /* HostFetcher.m in Sources */,
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
 				040D0B4B1D5CCCAE00A178B6 /* ContactMethodAlertView.m in Sources */,
 				4A4D9B361D7D5F6C00D10CD4 /* MongoliaView.m in Sources */,
 				040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */,
+				4A159AED1E08F1C000549EEE /* PresentableViewModel.m in Sources */,
 				4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */,
 				4A0D26D91D9380FD00CAB38B /* NSData+Base64.m in Sources */,
 				4A0D26DC1D9380FD00CAB38B /* MD5.m in Sources */,

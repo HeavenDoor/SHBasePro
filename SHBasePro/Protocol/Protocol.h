@@ -6,7 +6,11 @@
 //  Copyright © 2016年 ren. All rights reserved.
 //
 
+
+
 @protocol DataViewControllerProtocol <NSObject>
+
 @property (nonatomic) UIColor *backgroundColor;
+
 @end
 

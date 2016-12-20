@@ -1,22 +1,23 @@
 //
-//  DataCell.m
+//  DataCellMvvm.m
 //  SHBasePro
 //
 //  Created by mac on 16/9/4.
 //  Copyright © 2016年 ren. All rights reserved.
 //
 
-#import "DataCell.h"
+#import "DataCellMvvm.h"
 #import "UIImageView+WebCache.h"
 #import "masonry.h"
 
-@interface DataCell()
+
+@interface DataCellMvvm()
 @property (nonatomic, strong) UIImageView* movieImageView;
 @property (nonatomic, strong) UILabel* titleLabel;
 @property (nonatomic, strong) UILabel* subTitleLabel;
 @end
 
-@implementation DataCell
+@implementation DataCellMvvm
 
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -26,12 +27,10 @@
     return self;
 }
 
-- (void) setCellData:(MovieModel *)cellData
-{
-    _cellData = cellData;
-    self.titleLabel.text = cellData.title;
-    [self.movieImageView sd_setImageWithURL:[NSURL URLWithString:cellData.image] placeholderImage:[UIImage imageNamed:@"picture_"] options:SDWebImageRefreshCached];
-    // 接下来这个 View中可能会有一些给予MovieModel的逻辑处理  ...
+- (void) updateWithPresenter: (id<PresentableProtocol>) presenter{
+    [presenter updateTitleLabel: self.titleLabel];
+    
+    [presenter updateImageView: self.movieImageView];
 }
 
 - (void) configSubViews
@@ -58,7 +57,7 @@
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+    //[super setSelected:selected animated:animated];
 }
 
 @end

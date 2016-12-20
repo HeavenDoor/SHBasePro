@@ -1,34 +1,34 @@
 //
-//  DataViewController.m
+//  DataViewControllerMVVM.m
 //  SHBasePro
 //  数据窗口控制器
 //  Created by mac on 16/8/5.
 //  Copyright © 2016年 ren. All rights reserved.
 //
 
-#import "DataViewController.h"
+#import "DataViewControllerMVVM.h"
 #import "DataModelRequest.h"
-#import "DataCell.h"
+#import "DataCellMvvm.h"
 #import "AppDelegate.h"
 
 #import "DataViewControllerModule.h"
+#import "PresentableViewModel.h"
 
-static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
+static NSString* DataViewCellIdentifierMVVM = @"DataViewCellIdentifierMVVM";
 
-@interface DataViewController () <UITableViewDataSource, UITableViewDelegate>
-//@property (nonatomic, strong) UIImageView* bgImg;
+@interface DataViewControllerMVVM () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray* dataArray;
 @property (nonatomic, assign) NSInteger pageIndex;
 @end
 
-@implementation DataViewController 
+@implementation DataViewControllerMVVM
 
 
-- (void) setBackgroundColor: (UIColor*) bgColor {
-    self.view.backgroundColor = bgColor;
-    
-}
+//- (void) setBackgroundColor: (UIColor*) bgColor {
+//    self.view.backgroundColor = bgColor;
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,8 +42,11 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.tableView registerClass:[DataCellMvvm class] forCellReuseIdentifier:DataViewCellIdentifierMVVM];
     
     self.dataArray = [NSMutableArray array];
+    
+    
     WEAK_SELF;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf requestDataList:NO];
@@ -106,13 +109,15 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DataCell* cell = [tableView dequeueReusableCellWithIdentifier:DataViewCellIdentifier];
-    if (cell == nil) {
-        cell = [[DataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DataViewCellIdentifier];
-    }
+    DataCellMvvm* cell = [tableView dequeueReusableCellWithIdentifier:DataViewCellIdentifierMVVM];
+
     if (self.dataArray.count > indexPath.row) {
-        cell.cellData = [self.dataArray objectAtIndex:indexPath.row];
+        // 这里 PresentableViewModel 有耦合
+        PresentableViewModel* model = [[PresentableViewModel alloc] initWithData:[self.dataArray objectAtIndex:indexPath.row]];
+        //[model setTitle:@"掌上好房通，赚钱更轻松"];
+        [cell updateWithPresenter: model];
     }
+    
     return cell;
 }
 

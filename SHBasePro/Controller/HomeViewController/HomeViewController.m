@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-//#import "DataViewController.h"
+#import "DataViewControllerMVVM.h"
 
 #import "NSObject+ApiServiceProtocol.h"
 
@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) UIImageView* bgImg;
 @property (strong, nonatomic) UIButton* msgBtn;
+
+@property (strong, nonatomic) UIButton* mvvmBtn;
 @end
 
 @implementation HomeViewController
@@ -42,12 +44,26 @@
     [self.msgBtn addTarget:self action:@selector(objectionAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.msgBtn];
     [self.msgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(0.5);
         make.centerY.equalTo(self.view.mas_centerY);
-        make.width.mas_equalTo(@200);
-        make.height.mas_equalTo(@100);
+        make.width.mas_equalTo(@130);
+        make.height.mas_equalTo(@75);
     }];
     
+    self.mvvmBtn = [[UIButton alloc] init];
+    self.mvvmBtn.backgroundColor = [UIColor grayColor];
+    self.mvvmBtn.layer.borderWidth = 1;
+    self.mvvmBtn.layer.borderColor = [UIColor greenColor].CGColor;
+    self.mvvmBtn.layer.cornerRadius = 4;
+    [self.mvvmBtn setTitle:@"MVVM" forState:UIControlStateNormal];
+    [self.mvvmBtn addTarget:self action:@selector(mvvmAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.mvvmBtn];
+    [self.mvvmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.5);
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.width.mas_equalTo(@130);
+        make.height.mas_equalTo(@75);
+    }];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -61,12 +77,14 @@
 }
 
 - (void) objectionAction: (UIButton*) sender {
-    //JSObjectionInjector* injector = [JSObjection defaultInjector];
-    //UIViewController<DataViewControllerProtocol>* dataVC = [injector getObject:@protocol(DataViewControllerProtocol)];
-    
     UIViewController <DataViewControllerProtocol> *tagsViewController = [[JSObjection defaultInjector] getObject:@protocol(DataViewControllerProtocol)];
     tagsViewController.backgroundColor = [UIColor redColor];
     [self.navigationController pushViewController:tagsViewController animated:YES];
+}
+
+- (void) mvvmAction: (UIButton*) sender {
+    DataViewControllerMVVM* mvvmVC = [[DataViewControllerMVVM alloc] init];
+    [self.navigationController pushViewController:mvvmVC animated:YES];
 }
 
 @end
