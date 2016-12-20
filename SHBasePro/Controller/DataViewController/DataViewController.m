@@ -27,6 +27,7 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
 - (void) setBackgroundColor: (UIColor*) bgColor {
     self.view.backgroundColor = bgColor;
+    
 }
 
 - (void)viewDidLoad {

@@ -20,6 +20,8 @@ PODS:
   - Masonry (0.6.4)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.10)
+  - MJRefresh (3.1.9)
+  - Objection (1.6.1)
   - Reachability (3.2)
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
@@ -32,6 +34,8 @@ DEPENDENCIES:
   - Masonry (~> 0.6.4)
   - MBProgressHUD (~> 0.9.2)
   - MJExtension (~> 3.0.10)
+  - MJRefresh (~> 3.1.0)
+  - Objection (~> 1.6)
   - Reachability (~> 3.2)
   - SDWebImage (~> 3.7.5)
   - ZBarSDK (~> 1.3.1)
@@ -42,10 +46,12 @@ SPEC CHECKSUMS:
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-PODFILE CHECKSUM: 59f0b6d71a985276926c2d177ab91d503c32d4ba
+PODFILE CHECKSUM: 9b5ac7f6a9b4fc57d19d2e96da83266928a30a9e
 
 COCOAPODS: 1.0.1

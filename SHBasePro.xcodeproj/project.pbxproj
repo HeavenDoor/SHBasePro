@@ -95,6 +95,7 @@
 		4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */; };
 		4AF2B6211E05334400714667 /* GetApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61F1E05334400714667 /* GetApiService.m */; };
 		4AF2B6241E0540C700714667 /* PostApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B6231E0540C700714667 /* PostApiService.m */; };
+		4AFC7C3D1E065E590079ECA5 /* HostFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC7C3C1E065E590079ECA5 /* HostFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -248,6 +249,8 @@
 		4AF2B6201E05334400714667 /* GetApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetApiService.h; sourceTree = "<group>"; };
 		4AF2B6221E0540C700714667 /* PostApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostApiService.h; sourceTree = "<group>"; };
 		4AF2B6231E0540C700714667 /* PostApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostApiService.m; sourceTree = "<group>"; };
+		4AFC7C3B1E065E590079ECA5 /* HostFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostFetcher.h; sourceTree = "<group>"; };
+		4AFC7C3C1E065E590079ECA5 /* HostFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostFetcher.m; sourceTree = "<group>"; };
 		A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.release.xcconfig"; sourceTree = "<group>"; };
 		D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHBasePro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8AE3F71CD36CF200B0DD29 /* 有意思.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有意思.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -658,6 +661,8 @@
 				4AF2B6181E0517FF00714667 /* ObjectionProtocol.h */,
 				4AF2B61C1E05301300714667 /* ApiServicePassthrouth.h */,
 				4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */,
+				4AFC7C3B1E065E590079ECA5 /* HostFetcher.h */,
+				4AFC7C3C1E065E590079ECA5 /* HostFetcher.m */,
 			);
 			path = Objection;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */,
 				4A0D26DB1D9380FD00CAB38B /* NSString+Base64.m in Sources */,
 				040D0B5B1D5CCCAE00A178B6 /* TrueHouseDepositsView.m in Sources */,
+				4AFC7C3D1E065E590079ECA5 /* HostFetcher.m in Sources */,
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
 				040D0B4B1D5CCCAE00A178B6 /* ContactMethodAlertView.m in Sources */,
 				4A4D9B361D7D5F6C00D10CD4 /* MongoliaView.m in Sources */,
