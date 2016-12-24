@@ -20,6 +20,10 @@
 #import "CenterViewController.h"
 #import "AppHelper.h"
 
+
+#import "SHLibra.h"
+#import "FSFr/TestFrameWork.h"
+
 @interface AppDelegate () <RDVTabBarControllerDelegate>
 @property (nonatomic, strong) AppHelper* appHelper;
 @property (nonatomic, strong) Reachability* reachability;
@@ -38,6 +42,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    SHLibra* ss = [[SHLibra alloc] init];
+    NSInteger gg = [ss testSHLibra:65];
+    
+    TestFrameWork* test = [[TestFrameWork alloc] init];
+    gg = [test testFrameWork];
+    
     self.appHelper = [[AppHelper alloc] init];
     [self.appHelper startJSPatch];
     
