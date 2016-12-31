@@ -11,4 +11,9 @@
 @interface NSSHTest : NSObject
 
 @property (nonatomic, strong) NSString* text;
+
+- (void) shTestInstanceFunc;
+
++ (void) shTestSayClassFunc;
+
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-@interface CenterViewController : BaseViewController
+@interface CenterViewController : UIViewController
 
 @end

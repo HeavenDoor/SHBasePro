@@ -315,17 +315,11 @@
     [self.tabbarController stopJDAnimation];
     
     UINavigationController* controller = (UINavigationController*)self.tabbarController.selectedViewController;
-    //CenterViewController* vc = [[CenterViewController alloc] init];
-    
-    TestViewController* vc = [[TestViewController alloc] init];
-    
-    
+    CenterViewController* vc = [[CenterViewController alloc] init];
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-//    [controller presentViewController: vc animated:YES completion:^{
-//        
-//    }];
-    
-    [controller pushViewController:vc animated:YES];
+    [controller presentViewController: vc animated:YES completion:^{
+        
+    }];
 }
 
 + (AppDelegate*) sharedInstance

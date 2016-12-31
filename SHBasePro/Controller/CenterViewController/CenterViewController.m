@@ -9,52 +9,94 @@
 #import "CenterViewController.h"
 #import "masonry.h"
 @interface CenterViewController()
+
+@property (nonatomic, strong) UIView* navigationView;
 @property (nonatomic, strong) UIView* centerview;
-@property (nonatomic, strong) UIButton* btn;
+
+@property (strong, nonatomic) UIButton* preTestBtn;
+@property (strong, nonatomic) UIButton* backTestBtn;
+
 @end
+
+
 @implementation CenterViewController
 
-- (void) viewDidLoad
-{
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
-    
-    self.centerview = [[UIView alloc] init];
-    self.centerview.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.centerview];
-    [self.centerview mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left).offset(20);
-        make.right.equalTo(self.view.mas_right).offset(-20);
-        make.top.equalTo(self.view.mas_top).offset(150);
-        make.height.mas_equalTo(@200);
-    }];
-    
-    self.btn = [[UIButton alloc] init];
-    self.btn.backgroundColor = [UIColor whiteColor];
-    [self.centerview addSubview:self.btn];
-    [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.centerview.mas_centerX);
-        make.centerY.equalTo(self.centerview.mas_centerY);
-        make.width.mas_equalTo(@100);
-        make.height.mas_equalTo(@50);
-    }];
-    
-    [self.btn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (void) btnClicked: (UIButton*) btn
-{
-    [self.centerview mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view.mas_left).offset(20);
-        make.right.equalTo(self.view.mas_right).offset(-20);
-        make.top.equalTo(self.view.mas_top).offset(150);
-        make.height.mas_equalTo(self.centerview.height + 20);
-    }];
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
+- (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
+
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    self.navigationView = [[UIView alloc] init];
+    [self.view addSubview:self.navigationView];
+    [self.navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.equalTo(self.view);
+        make.height.mas_equalTo(@64);
+    }];
+    
+    UIImageView* imageView = [[UIImageView alloc] init];
+    [imageView setImage:[UIImage imageNamed:@"navi_bg_64.png"]];
+    [self.navigationView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.bottom.equalTo(self.navigationView);
+    }];
+
+    UIButton *backBtn = [[UIButton alloc] init];
+    [self.navigationView addSubview: backBtn];
+    [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_ios7"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backBtnPre:) forControlEvents:UIControlEventTouchUpInside];
+    [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.navigationView);
+        make.left.equalTo(self.navigationView.mas_left).offset(10);
+        make.top.equalTo(self.navigationView.mas_top).offset(20);
+        make.height.mas_equalTo(@44);
+        make.width.mas_equalTo(@44);
+    }];
+    
+    self.preTestBtn = [[UIButton alloc] init];
+    self.preTestBtn.backgroundColor = [UIColor grayColor];
+    self.preTestBtn.layer.borderWidth = 1;
+    self.preTestBtn.layer.borderColor = [UIColor greenColor].CGColor;
+    self.preTestBtn.layer.cornerRadius = 4;
+    [self.preTestBtn setTitle:@"AAA" forState:UIControlStateNormal];
+    [self.preTestBtn addTarget:self action:@selector(preTestBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.preTestBtn];
+    [self.preTestBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(0.5);
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.width.mas_equalTo(@130);
+        make.height.mas_equalTo(@75);
+    }];
+    
+    self.backTestBtn = [[UIButton alloc] init];
+    self.backTestBtn.backgroundColor = [UIColor grayColor];
+    self.backTestBtn.layer.borderWidth = 1;
+    self.backTestBtn.layer.borderColor = [UIColor greenColor].CGColor;
+    self.backTestBtn.layer.cornerRadius = 4;
+    [self.backTestBtn setTitle:@"BBB" forState:UIControlStateNormal];
+    [self.backTestBtn addTarget:self action:@selector(backTestBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.backTestBtn];
+    [self.backTestBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX).multipliedBy(1.5);
+        make.centerY.equalTo(self.view.mas_centerY);
+        make.width.mas_equalTo(@130);
+        make.height.mas_equalTo(@75);
+    }];
+}
+
+- (void) backBtnPre: (UIButton*) btn {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) preTestBtnAction: (UIButton*) sender {
+    
+}
+
+- (void) backTestBtnAction: (UIButton*) sender {
+    
+}
+
 
 @end

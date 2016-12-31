@@ -10,8 +10,17 @@
 
 @implementation NSSHTest
 
-- (void) setText:(NSString *)text
-{
+- (void) setText:(NSString *)text {
 
 }
+
+
+- (void) shTestInstanceFunc {
+    NSLog(@"shTestInstanceFunc");
+}
+
++ (void) shTestSayClassFunc {
+    NSLog(@"shTestSayClassFunc");
+}
+
 @end

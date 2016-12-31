@@ -49,6 +49,7 @@
         make.width.mas_equalTo(@130);
         make.height.mas_equalTo(@75);
     }];
+    self.msgBtn.enabled = NO;
     
     self.mvvmBtn = [[UIButton alloc] init];
     self.mvvmBtn.backgroundColor = [UIColor grayColor];
