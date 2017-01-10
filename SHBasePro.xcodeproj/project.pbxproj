@@ -22,24 +22,10 @@
 		040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B091D5CCC9A00A178B6 /* HomeViewController.m */; };
 		040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B0C1D5CCC9A00A178B6 /* MessageViewController.m */; };
 		040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B0F1D5CCC9A00A178B6 /* MineViewController.m */; };
-		040D0B4A1D5CCCAE00A178B6 /* BondRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B201D5CCCAE00A178B6 /* BondRechargeViewController.m */; };
-		040D0B4B1D5CCCAE00A178B6 /* ContactMethodAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B221D5CCCAE00A178B6 /* ContactMethodAlertView.m */; };
-		040D0B4C1D5CCCAE00A178B6 /* HFTReceivablesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B241D5CCCAE00A178B6 /* HFTReceivablesView.m */; };
-		040D0B4D1D5CCCAE00A178B6 /* HFTSettlementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B261D5CCCAE00A178B6 /* HFTSettlementView.m */; };
 		040D0B4E1D5CCCAE00A178B6 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B291D5CCCAE00A178B6 /* HitTestView.m */; };
-		040D0B4F1D5CCCAE00A178B6 /* IMSendhouseTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B2B1D5CCCAE00A178B6 /* IMSendhouseTips.m */; };
-		040D0B511D5CCCAE00A178B6 /* JsonBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B2F1D5CCCAE00A178B6 /* JsonBaseModel.m */; };
 		040D0B531D5CCCAE00A178B6 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 040D0B311D5CCCAE00A178B6 /* main.js */; };
 		040D0B541D5CCCAE00A178B6 /* NSSHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B331D5CCCAE00A178B6 /* NSSHTest.m */; };
-		040D0B551D5CCCAE00A178B6 /* PhoneVerificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B351D5CCCAE00A178B6 /* PhoneVerificationView.m */; };
-		040D0B561D5CCCAE00A178B6 /* PhoneVerificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040D0B361D5CCCAE00A178B6 /* PhoneVerificationView.xib */; };
-		040D0B571D5CCCAE00A178B6 /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B391D5CCCAE00A178B6 /* QRCodeScanViewController.m */; };
-		040D0B581D5CCCAE00A178B6 /* SosoDetailInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040D0B3A1D5CCCAE00A178B6 /* SosoDetailInfoViewController.storyboard */; };
 		040D0B591D5CCCAE00A178B6 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B3C1D5CCCAE00A178B6 /* TestViewController.m */; };
-		040D0B5A1D5CCCAE00A178B6 /* truehouse_agreement.html in Resources */ = {isa = PBXBuildFile; fileRef = 040D0B3D1D5CCCAE00A178B6 /* truehouse_agreement.html */; };
-		040D0B5B1D5CCCAE00A178B6 /* TrueHouseDepositsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B3F1D5CCCAE00A178B6 /* TrueHouseDepositsView.m */; };
-		040D0B5C1D5CCCAE00A178B6 /* TrueHouseRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B411D5CCCAE00A178B6 /* TrueHouseRuleController.m */; };
-		040D0B5E1D5CCCAE00A178B6 /* VRSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B461D5CCCAE00A178B6 /* VRSourceViewController.m */; };
 		040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */; };
 		442951392E93E85D53CFE672 /* libPods-SHBasePro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36CF12ADD6542B657595C75 /* libPods-SHBasePro.a */; };
 		4A09865A1D50D1C100D0802C /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0986591D50D1C100D0802C /* Reveal.framework */; };
@@ -141,38 +127,13 @@
 		040D0B0C1D5CCC9A00A178B6 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		040D0B0E1D5CCC9A00A178B6 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		040D0B0F1D5CCC9A00A178B6 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		040D0B1F1D5CCCAE00A178B6 /* BondRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BondRechargeViewController.h; sourceTree = "<group>"; };
-		040D0B201D5CCCAE00A178B6 /* BondRechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondRechargeViewController.m; sourceTree = "<group>"; };
-		040D0B211D5CCCAE00A178B6 /* ContactMethodAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMethodAlertView.h; sourceTree = "<group>"; };
-		040D0B221D5CCCAE00A178B6 /* ContactMethodAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMethodAlertView.m; sourceTree = "<group>"; };
-		040D0B231D5CCCAE00A178B6 /* HFTReceivablesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTReceivablesView.h; sourceTree = "<group>"; };
-		040D0B241D5CCCAE00A178B6 /* HFTReceivablesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFTReceivablesView.m; sourceTree = "<group>"; };
-		040D0B251D5CCCAE00A178B6 /* HFTSettlementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTSettlementView.h; sourceTree = "<group>"; };
-		040D0B261D5CCCAE00A178B6 /* HFTSettlementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFTSettlementView.m; sourceTree = "<group>"; };
 		040D0B281D5CCCAE00A178B6 /* HitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
 		040D0B291D5CCCAE00A178B6 /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
-		040D0B2A1D5CCCAE00A178B6 /* IMSendhouseTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSendhouseTips.h; sourceTree = "<group>"; };
-		040D0B2B1D5CCCAE00A178B6 /* IMSendhouseTips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSendhouseTips.m; sourceTree = "<group>"; };
-		040D0B2E1D5CCCAE00A178B6 /* JsonBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonBaseModel.h; sourceTree = "<group>"; };
-		040D0B2F1D5CCCAE00A178B6 /* JsonBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonBaseModel.m; sourceTree = "<group>"; };
 		040D0B311D5CCCAE00A178B6 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		040D0B321D5CCCAE00A178B6 /* NSSHTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSHTest.h; sourceTree = "<group>"; };
 		040D0B331D5CCCAE00A178B6 /* NSSHTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSHTest.m; sourceTree = "<group>"; };
-		040D0B341D5CCCAE00A178B6 /* PhoneVerificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneVerificationView.h; sourceTree = "<group>"; };
-		040D0B351D5CCCAE00A178B6 /* PhoneVerificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneVerificationView.m; sourceTree = "<group>"; };
-		040D0B361D5CCCAE00A178B6 /* PhoneVerificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneVerificationView.xib; sourceTree = "<group>"; };
-		040D0B381D5CCCAE00A178B6 /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
-		040D0B391D5CCCAE00A178B6 /* QRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanViewController.m; sourceTree = "<group>"; };
-		040D0B3A1D5CCCAE00A178B6 /* SosoDetailInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SosoDetailInfoViewController.storyboard; sourceTree = "<group>"; };
 		040D0B3B1D5CCCAE00A178B6 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		040D0B3C1D5CCCAE00A178B6 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		040D0B3D1D5CCCAE00A178B6 /* truehouse_agreement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = truehouse_agreement.html; sourceTree = "<group>"; };
-		040D0B3E1D5CCCAE00A178B6 /* TrueHouseDepositsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueHouseDepositsView.h; sourceTree = "<group>"; };
-		040D0B3F1D5CCCAE00A178B6 /* TrueHouseDepositsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueHouseDepositsView.m; sourceTree = "<group>"; };
-		040D0B401D5CCCAE00A178B6 /* TrueHouseRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueHouseRuleController.h; sourceTree = "<group>"; };
-		040D0B411D5CCCAE00A178B6 /* TrueHouseRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueHouseRuleController.m; sourceTree = "<group>"; };
-		040D0B451D5CCCAE00A178B6 /* VRSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRSourceViewController.h; sourceTree = "<group>"; };
-		040D0B461D5CCCAE00A178B6 /* VRSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRSourceViewController.m; sourceTree = "<group>"; };
 		040D0B481D5CCCAE00A178B6 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -446,24 +407,6 @@
 			path = Hittest;
 			sourceTree = "<group>";
 		};
-		040D0B371D5CCCAE00A178B6 /* QRCodeScaner */ = {
-			isa = PBXGroup;
-			children = (
-				040D0B381D5CCCAE00A178B6 /* QRCodeScanViewController.h */,
-				040D0B391D5CCCAE00A178B6 /* QRCodeScanViewController.m */,
-			);
-			path = QRCodeScaner;
-			sourceTree = "<group>";
-		};
-		040D0B441D5CCCAE00A178B6 /* VRSourceView */ = {
-			isa = PBXGroup;
-			children = (
-				040D0B451D5CCCAE00A178B6 /* VRSourceViewController.h */,
-				040D0B461D5CCCAE00A178B6 /* VRSourceViewController.m */,
-			);
-			path = VRSourceView;
-			sourceTree = "<group>";
-		};
 		040D0B471D5CCCAE00A178B6 /* XMLDictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,35 +630,12 @@
 				4AB7A7041E1FD49F00BCAF47 /* runtime */,
 				4A606A811E1E91A000161996 /* Aspects */,
 				4AF2B6111E0514D300714667 /* Objection */,
-				040D0B1F1D5CCCAE00A178B6 /* BondRechargeViewController.h */,
-				040D0B201D5CCCAE00A178B6 /* BondRechargeViewController.m */,
-				040D0B211D5CCCAE00A178B6 /* ContactMethodAlertView.h */,
-				040D0B221D5CCCAE00A178B6 /* ContactMethodAlertView.m */,
-				040D0B231D5CCCAE00A178B6 /* HFTReceivablesView.h */,
-				040D0B241D5CCCAE00A178B6 /* HFTReceivablesView.m */,
-				040D0B251D5CCCAE00A178B6 /* HFTSettlementView.h */,
-				040D0B261D5CCCAE00A178B6 /* HFTSettlementView.m */,
 				040D0B271D5CCCAE00A178B6 /* Hittest */,
-				040D0B2A1D5CCCAE00A178B6 /* IMSendhouseTips.h */,
-				040D0B2B1D5CCCAE00A178B6 /* IMSendhouseTips.m */,
-				040D0B2E1D5CCCAE00A178B6 /* JsonBaseModel.h */,
-				040D0B2F1D5CCCAE00A178B6 /* JsonBaseModel.m */,
 				040D0B311D5CCCAE00A178B6 /* main.js */,
 				040D0B321D5CCCAE00A178B6 /* NSSHTest.h */,
 				040D0B331D5CCCAE00A178B6 /* NSSHTest.m */,
-				040D0B341D5CCCAE00A178B6 /* PhoneVerificationView.h */,
-				040D0B351D5CCCAE00A178B6 /* PhoneVerificationView.m */,
-				040D0B361D5CCCAE00A178B6 /* PhoneVerificationView.xib */,
-				040D0B371D5CCCAE00A178B6 /* QRCodeScaner */,
-				040D0B3A1D5CCCAE00A178B6 /* SosoDetailInfoViewController.storyboard */,
 				040D0B3B1D5CCCAE00A178B6 /* TestViewController.h */,
 				040D0B3C1D5CCCAE00A178B6 /* TestViewController.m */,
-				040D0B3D1D5CCCAE00A178B6 /* truehouse_agreement.html */,
-				040D0B3E1D5CCCAE00A178B6 /* TrueHouseDepositsView.h */,
-				040D0B3F1D5CCCAE00A178B6 /* TrueHouseDepositsView.m */,
-				040D0B401D5CCCAE00A178B6 /* TrueHouseRuleController.h */,
-				040D0B411D5CCCAE00A178B6 /* TrueHouseRuleController.m */,
-				040D0B441D5CCCAE00A178B6 /* VRSourceView */,
 				040D0B471D5CCCAE00A178B6 /* XMLDictionary */,
 				4A4D9B341D7D5F6C00D10CD4 /* MongoliaView.h */,
 				4A4D9B351D7D5F6C00D10CD4 /* MongoliaView.m */,
@@ -891,10 +811,7 @@
 				4A91143C1CF0702900641789 /* Main.storyboard in Resources */,
 				4A9114351CF0702900641789 /* Assets.xcassets in Resources */,
 				4A91143B1CF0702900641789 /* LaunchScreen.storyboard in Resources */,
-				040D0B581D5CCCAE00A178B6 /* SosoDetailInfoViewController.storyboard in Resources */,
 				4A9114561CF0702900641789 /* Info.plist in Resources */,
-				040D0B561D5CCCAE00A178B6 /* PhoneVerificationView.xib in Resources */,
-				040D0B5A1D5CCCAE00A178B6 /* truehouse_agreement.html in Resources */,
 				040D0B531D5CCCAE00A178B6 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -958,7 +875,6 @@
 				4A159AF51E0930ED00549EEE /* NavigationPresenter.m in Sources */,
 				040D0B171D5CCC9A00A178B6 /* UIViewExt.m in Sources */,
 				040D0B181D5CCC9A00A178B6 /* UIWindow+Category.m in Sources */,
-				040D0B4F1D5CCCAE00A178B6 /* IMSendhouseTips.m in Sources */,
 				040D0B151D5CCC9A00A178B6 /* UILabel+Tool.m in Sources */,
 				4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				4A159AE71E08E14A00549EEE /* DataViewControllerMVVM.m in Sources */,
@@ -966,14 +882,12 @@
 				040D0B121D5CCC9A00A178B6 /* UIButton+Layout.m in Sources */,
 				040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */,
 				4A83CEB81D7998A4002CA71C /* CenterViewController.m in Sources */,
-				040D0B551D5CCCAE00A178B6 /* PhoneVerificationView.m in Sources */,
 				040D0B161D5CCC9A00A178B6 /* UINavigationController+Push.m in Sources */,
 				040D0B591D5CCCAE00A178B6 /* TestViewController.m in Sources */,
 				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				4A217C7B1E02930B0027C82D /* DataViewControllerModule.m in Sources */,
-				040D0B511D5CCCAE00A178B6 /* JsonBaseModel.m in Sources */,
 				4A0D26D81D9380FD00CAB38B /* AES.m in Sources */,
 				040D0B191D5CCC9A00A178B6 /* DataViewController.m in Sources */,
 				040D0B141D5CCC9A00A178B6 /* UIImageView+Tool.m in Sources */,
@@ -990,22 +904,17 @@
 				4A83CEAD1D798D5C002CA71C /* RDVTabBar.m in Sources */,
 				4A655B8D1D7ADF09007BCF39 /* DataModelRequest.m in Sources */,
 				4A0D26DA1D9380FD00CAB38B /* NSData+CommonCrypto.m in Sources */,
-				040D0B4C1D5CCCAE00A178B6 /* HFTReceivablesView.m in Sources */,
 				040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */,
 				040D0B111D5CCC9A00A178B6 /* NSString+XTSize.m in Sources */,
 				4A655B881D7ADB59007BCF39 /* MovieModel.m in Sources */,
-				040D0B4A1D5CCCAE00A178B6 /* BondRechargeViewController.m in Sources */,
 				4AB7A6F41E1F433200BCAF47 /* AppDelegate+Push.m in Sources */,
-				040D0B5C1D5CCCAE00A178B6 /* TrueHouseRuleController.m in Sources */,
 				040D0B101D5CCC9A00A178B6 /* NSAttributedString+XTAttributionSize.m in Sources */,
 				4A0D26DD1D9380FD00CAB38B /* Base64.m in Sources */,
 				4A0D26DB1D9380FD00CAB38B /* NSString+Base64.m in Sources */,
-				040D0B5B1D5CCCAE00A178B6 /* TrueHouseDepositsView.m in Sources */,
 				4A159AF81E09410200549EEE /* UIImage+SkinnedImagePrivate.m in Sources */,
 				4AB7A7071E1FD4C200BCAF47 /* NSObject+RunTime.m in Sources */,
 				4AFC7C3D1E065E590079ECA5 /* HostFetcher.m in Sources */,
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
-				040D0B4B1D5CCCAE00A178B6 /* ContactMethodAlertView.m in Sources */,
 				4ADF989A1E17AA8A00B55502 /* UIImage+SHBasePro.m in Sources */,
 				4A4D9B361D7D5F6C00D10CD4 /* MongoliaView.m in Sources */,
 				040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */,
@@ -1013,13 +922,10 @@
 				4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */,
 				4A0D26D91D9380FD00CAB38B /* NSData+Base64.m in Sources */,
 				4A0D26DC1D9380FD00CAB38B /* MD5.m in Sources */,
-				040D0B4D1D5CCCAE00A178B6 /* HFTSettlementView.m in Sources */,
 				040D0B131D5CCC9A00A178B6 /* UIColor+Tool.m in Sources */,
 				4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */,
 				4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */,
 				4AF2B6241E0540C700714667 /* PostApiService.m in Sources */,
-				040D0B571D5CCCAE00A178B6 /* QRCodeScanViewController.m in Sources */,
-				040D0B5E1D5CCCAE00A178B6 /* VRSourceViewController.m in Sources */,
 				4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */,
 				4A606A841E1E91E800161996 /* UIViewController+ViewControl.m in Sources */,
 			);

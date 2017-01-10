@@ -7,8 +7,6 @@
 //
 
 #import "MineViewController.h"
-#import "HFTSettlementView.h"
-#import "HFTReceivablesView.h"
 #import "UIImage+GIF.h"
 #import "UIControl+SequenceClick.h"
 

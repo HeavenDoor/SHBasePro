@@ -10,8 +10,6 @@
 #import "HcdGuideViewManager.h"
 #import "HcdGuideViewCell.h"
 
-#import "IMSendhouseTips.h"
-
 @interface HcdGuideViewManager()<UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
@@ -148,25 +146,16 @@
  */
 - (void)nextButtonHandler:(id)sender {
 
-    IMSendhouseTips* tips =  [[IMSendhouseTips alloc] initWithFrame: CGRectMake(kUIScaleSize(40), SCREEN_HEIGHT/2 - 130, SCREEN_WIDTH - 2* kUIScaleSize(40), 260 )];
-    UIView* bkView = [[UIView alloc] initWithFrame: [UIScreen mainScreen].bounds];
-    bkView.backgroundColor = [UIColor blackColor];
-    bkView.alpha = 0.5;
-    [[[UIApplication sharedApplication] keyWindow] addSubview:bkView];
-    [[[UIApplication sharedApplication] keyWindow] addSubview:tips];
-    
-    WEAK_TYPES(tips);
+
     WEAK_TYPES(self);
-    tips.okBlock = ^{
-        [bkView removeFromSuperview];
-        [weaktips removeFromSuperview];
+
         [weakself.pageControl removeFromSuperview];
         weakself.pageControl = nil;
         [weakself.view removeFromSuperview];
         [weakself setWindow:nil];
         [weakself setView:nil];
         
-    };
+
 }
 
 @end
