@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  Test_Suteng3
+//  shenghai
 //
-//  Created by  suteng on 16/2/17.
-//  Copyright © 2016年 suteng. All rights reserved.
+//  Created by  shenghai on 16/2/17.
+//  Copyright © 2016年 shenghai. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
