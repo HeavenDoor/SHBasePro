@@ -12,6 +12,7 @@ pod 'MJRefresh', '~> 3.1.0'
 pod 'Objection', '~> 1.6'
 pod 'YTKKeyValueStore', '~> 0.1.2'
 pod 'PodSpec', '~> 1.0.2'
+pod 'Aspects', '~> 1.4.1'
 
 target "SHBasePro" do
     

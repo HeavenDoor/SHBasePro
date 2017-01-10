@@ -19,12 +19,20 @@
 #import <objc/runtime.h>// 导入运行时文件
 #import "CenterViewController.h"
 #import "AppHelper.h"
+#import "AppDelegate+Push.h"
+#import "Aspects.h"
+#import "NSObject+RunTime.h"
+#import <objc/runtime.h>
+//#import "SHLibra.h"
+//#import "FSFr/TestFrameWork.h"
 
 
-#import "SHLibra.h"
-#import "FSFr/TestFrameWork.h"
 
 @interface AppDelegate () <RDVTabBarControllerDelegate>
+{
+    NSString* aaa OBJC_ISA_AVAILABILITY;
+}
+
 @property (nonatomic, strong) AppHelper* appHelper;
 @property (nonatomic, strong) Reachability* reachability;
 @property (nonatomic, strong) HomeViewController* homeViewController;
@@ -42,11 +50,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    SHLibra* ss = [[SHLibra alloc] init];
+    unsigned int outCount = 0;
+    Method* method = class_copyMethodList(self.class, &outCount);
+    for (int i = 0; i < outCount; i++) {
+        Method* md = method[i];
+        NSString* mdName = [NSString stringWithCString:method_getName(md)];
+        NSLog(@"%@", mdName);
+    }
+    /*SHLibra* ss = [[SHLibra alloc] init];
     NSInteger gg = [ss testSHLibra:65];
     
     TestFrameWork* test = [[TestFrameWork alloc] init];
-    gg = [test testFrameWork];
+    gg = [test testFrameWork];*/
+    
+    NSObject* boj = [NSObject new];
+    boj.addString = @"123";
+    
+    NSLog(@"%@", boj.addString);
+    
+    boj.addBlock = ^{
+        NSLog(@"addBlock call");
+    };
+    
+    boj.addBlock();
     
     self.appHelper = [[AppHelper alloc] init];
     [self.appHelper startJSPatch];
@@ -77,6 +103,8 @@
         [userDefaults setBool:NO forKey:[NSString stringWithFormat:@"version_%@", version]];
         [userDefaults synchronize];
     }
+    
+    [self pushApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     return YES;
 }
@@ -326,4 +354,6 @@
 {
     return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
+
+
 @end

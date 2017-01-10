@@ -8,6 +8,8 @@
 
 #import "CenterViewController.h"
 #import "masonry.h"
+#import "UIImage+SHBasePro.h"
+
 @interface CenterViewController()
 
 @property (nonatomic, strong) UIView* navigationView;
@@ -15,6 +17,8 @@
 
 @property (strong, nonatomic) UIButton* preTestBtn;
 @property (strong, nonatomic) UIButton* backTestBtn;
+
+@property (nonatomic, strong) UIImageView* imgView;
 
 @end
 
@@ -84,6 +88,16 @@
         make.width.mas_equalTo(@130);
         make.height.mas_equalTo(@75);
     }];
+    
+    self.imgView = [[UIImageView alloc] init];
+    [self.view addSubview:self.imgView];
+    [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.width.equalTo(@100);
+        make.height.equalTo(@100);
+    }];
+    [self.imgView setImage:[[UIImage alloc] initWithContentsOfFile:@""]];
 }
 
 - (void) backBtnPre: (UIButton*) btn {
