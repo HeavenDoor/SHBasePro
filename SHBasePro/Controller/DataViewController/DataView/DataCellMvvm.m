@@ -29,7 +29,6 @@
 
 - (void) updateWithPresenter: (id<PresentableProtocol>) presenter{
     [presenter updateTitleLabel: self.titleLabel];
-    
     [presenter updateImageView: self.movieImageView];
 }
 

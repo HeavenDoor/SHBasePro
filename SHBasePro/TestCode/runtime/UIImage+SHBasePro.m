@@ -14,7 +14,7 @@
 + (void) load {
     static dispatch_once_t onceToken;
     
-    dispatch_once(&onceToken, ^{
+    /*dispatch_once(&onceToken, ^{
         Class class = [self class];
         BOOL isAdd;
         Method origMethod = class_getInstanceMethod([self class], @selector(initWithContentsOfFile:));
@@ -47,7 +47,7 @@
         else {
             method_exchangeImplementations(origMethod1, newMethod1);
         }
-    });
+    });*/
 }
 
 - (nullable instancetype)newInitWithContentsOfFile:(NSString *)path {

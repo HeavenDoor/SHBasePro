@@ -31,6 +31,7 @@
 		4A0BA1DF1E251CBA0002D79F /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BA1DA1E251CBA0002D79F /* main.js */; };
 		4A0BA1E01E251CBA0002D79F /* NSSHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BA1DC1E251CBA0002D79F /* NSSHTest.m */; };
 		4A0BA1E11E251CBA0002D79F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BA1DE1E251CBA0002D79F /* TestViewController.m */; };
+		4A0BA1E61E2520E00002D79F /* SHSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BA1E51E2520E00002D79F /* SHSearchView.m */; };
 		4A0D26D81D9380FD00CAB38B /* AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26C91D9380FD00CAB38B /* AES.m */; };
 		4A0D26D91D9380FD00CAB38B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26CB1D9380FD00CAB38B /* NSData+Base64.m */; };
 		4A0D26DA1D9380FD00CAB38B /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D26CD1D9380FD00CAB38B /* NSData+CommonCrypto.m */; };
@@ -141,6 +142,9 @@
 		4A0BA1DC1E251CBA0002D79F /* NSSHTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSHTest.m; sourceTree = "<group>"; };
 		4A0BA1DD1E251CBA0002D79F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4A0BA1DE1E251CBA0002D79F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4A0BA1E41E2520E00002D79F /* SHSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSearchView.h; sourceTree = "<group>"; };
+		4A0BA1E51E2520E00002D79F /* SHSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSearchView.m; sourceTree = "<group>"; };
+		4A0BA1E71E2521030002D79F /* SearchProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
 		4A0D26C81D9380FD00CAB38B /* AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES.h; sourceTree = "<group>"; };
 		4A0D26C91D9380FD00CAB38B /* AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AES.m; sourceTree = "<group>"; };
 		4A0D26CA1D9380FD00CAB38B /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -435,6 +439,24 @@
 			path = JSPatch;
 			sourceTree = "<group>";
 		};
+		4A0BA1E21E2520C40002D79F /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				4A0BA1E31E2520C40002D79F /* Interface */,
+				4A0BA1E41E2520E00002D79F /* SHSearchView.h */,
+				4A0BA1E51E2520E00002D79F /* SHSearchView.m */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		4A0BA1E31E2520C40002D79F /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4A0BA1E71E2521030002D79F /* SearchProtocol.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		4A0D26C61D9380FD00CAB38B /* Encrypt */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +668,7 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4A0BA1E21E2520C40002D79F /* SearchView */,
 				4A0BA1D91E251CBA0002D79F /* JSPatch */,
 				4AB7A7041E1FD49F00BCAF47 /* runtime */,
 				4A606A811E1E91A000161996 /* Aspects */,
@@ -909,6 +932,7 @@
 				4A217C741E026B500027C82D /* DataCell.m in Sources */,
 				4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
+				4A0BA1E61E2520E00002D79F /* SHSearchView.m in Sources */,
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,
 				4AF2B6211E05334400714667 /* GetApiService.m in Sources */,
 				4A83CEAD1D798D5C002CA71C /* RDVTabBar.m in Sources */,

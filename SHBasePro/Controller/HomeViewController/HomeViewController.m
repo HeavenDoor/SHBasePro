@@ -41,6 +41,7 @@
     self.msgBtn.layer.borderColor = [UIColor greenColor].CGColor;
     self.msgBtn.layer.cornerRadius = 4;
     [self.msgBtn setTitle:@"objection" forState:UIControlStateNormal];
+    [self.msgBtn setTitle:@"bbbb" forState:UIControlStateNormal];
     [self.msgBtn addTarget:self action:@selector(objectionAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.msgBtn];
     [self.msgBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,7 +55,7 @@
     self.mvvmBtn = [[UIButton alloc] init];
     self.mvvmBtn.backgroundColor = [UIColor grayColor];
     self.mvvmBtn.layer.borderWidth = 1;
-    self.mvvmBtn.layer.borderColor = [UIColor greenColor].CGColor;
+    self.mvvmBtn.layer.borderColor = [UIColor redColor].CGColor;
     self.mvvmBtn.layer.cornerRadius = 4;
     [self.mvvmBtn setTitle:@"MVVM" forState:UIControlStateNormal];
     [self.mvvmBtn addTarget:self action:@selector(mvvmAction:) forControlEvents:UIControlEventTouchUpInside];

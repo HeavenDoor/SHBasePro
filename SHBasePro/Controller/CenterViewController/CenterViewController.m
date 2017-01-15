@@ -62,7 +62,7 @@
     self.preTestBtn = [[UIButton alloc] init];
     self.preTestBtn.backgroundColor = [UIColor grayColor];
     self.preTestBtn.layer.borderWidth = 1;
-    self.preTestBtn.layer.borderColor = [UIColor greenColor].CGColor;
+    self.preTestBtn.layer.borderColor = [UIColor blackColor].CGColor;
     self.preTestBtn.layer.cornerRadius = 4;
     [self.preTestBtn setTitle:@"AAA" forState:UIControlStateNormal];
     [self.preTestBtn addTarget:self action:@selector(preTestBtnAction:) forControlEvents:UIControlEventTouchUpInside];
