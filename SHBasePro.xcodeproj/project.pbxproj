@@ -63,6 +63,7 @@
 		4A3CE3831CDD950C0084E6E0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3821CDD950C0084E6E0 /* ImageIO.framework */; };
 		4A3CE3851CDD95170084E6E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */; };
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
+		4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B8CDC1E2E334800124E65 /* SHSingleton.m */; };
 		4A57DDE91CF2F5D200174FC8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */; };
 		4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57DDED1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m */; };
 		4A606A841E1E91E800161996 /* UIViewController+ViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A606A831E1E91E800161996 /* UIViewController+ViewControl.m */; };
@@ -82,6 +83,7 @@
 		4A91143C1CF0702900641789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A91139B1CF0702900641789 /* Main.storyboard */; };
 		4A9114561CF0702900641789 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A9113F61CF0702900641789 /* Info.plist */; };
 		4A91145D1CF0702900641789 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114031CF0702900641789 /* main.m */; };
+		4A95B0151E2DEDFD008C8EF5 /* TestOpencv.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A95B0141E2DEDFD008C8EF5 /* TestOpencv.mm */; };
 		4AB6A33C1D58C42C00460300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33B1D58C42C00460300 /* libz.tbd */; };
 		4AB6A3401D58C85F00460300 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33F1D58C85F00460300 /* JSPatch.framework */; };
 		4AB7A6F41E1F433200BCAF47 /* AppDelegate+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A6F21E1F433200BCAF47 /* AppDelegate+Push.m */; };
@@ -89,6 +91,8 @@
 		4AB7A6FC1E1F4B0300BCAF47 /* libGeTuiSdk-1.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB7A6F81E1F4B0300BCAF47 /* libGeTuiSdk-1.5.3.a */; };
 		4AB7A6FD1E1F4B0300BCAF47 /* libGtExtensionSdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB7A6F91E1F4B0300BCAF47 /* libGtExtensionSdk-1.0.0.a */; };
 		4AB7A7071E1FD4C200BCAF47 /* NSObject+RunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A7061E1FD4C200BCAF47 /* NSObject+RunTime.m */; };
+		4ADB5A281E2B475F006349DF /* MessageSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB5A271E2B475F006349DF /* MessageSenderViewController.m */; };
+		4ADB5A2D1E2B668F006349DF /* MessageSenderLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB5A2C1E2B668F006349DF /* MessageSenderLogic.m */; };
 		4AF2B6171E05175300714667 /* NSObject+ApiServiceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */; };
 		4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */; };
 		4AF2B6211E05334400714667 /* GetApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61F1E05334400714667 /* GetApiService.m */; };
@@ -196,6 +200,8 @@
 		4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4A3CE3861CDD953C0084E6E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		4A4B8CDB1E2E334800124E65 /* SHSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSingleton.h; sourceTree = "<group>"; };
+		4A4B8CDC1E2E334800124E65 /* SHSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSingleton.m; sourceTree = "<group>"; };
 		4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		4A57DDEC1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TS_JavaScriptContext.h"; sourceTree = "<group>"; };
 		4A57DDED1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 		4A9113F61CF0702900641789 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A9114031CF0702900641789 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A9114071CF0702900641789 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4A95B0101E2DEDC1008C8EF5 /* TestOpencv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOpencv.h; sourceTree = "<group>"; };
+		4A95B0141E2DEDFD008C8EF5 /* TestOpencv.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestOpencv.mm; sourceTree = "<group>"; };
 		4AB6A33B1D58C42C00460300 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4AB6A33F1D58C85F00460300 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		4AB7A6F21E1F433200BCAF47 /* AppDelegate+Push.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Push.m"; sourceTree = "<group>"; };
@@ -240,6 +248,10 @@
 		4AB7A6FB1E1F4B0300BCAF47 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
 		4AB7A7051E1FD4C200BCAF47 /* NSObject+RunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunTime.h"; sourceTree = "<group>"; };
 		4AB7A7061E1FD4C200BCAF47 /* NSObject+RunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunTime.m"; sourceTree = "<group>"; };
+		4ADB5A261E2B475F006349DF /* MessageSenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSenderViewController.h; sourceTree = "<group>"; };
+		4ADB5A271E2B475F006349DF /* MessageSenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSenderViewController.m; sourceTree = "<group>"; };
+		4ADB5A2B1E2B668F006349DF /* MessageSenderLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSenderLogic.h; sourceTree = "<group>"; };
+		4ADB5A2C1E2B668F006349DF /* MessageSenderLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSenderLogic.m; sourceTree = "<group>"; };
 		4AF2B6151E05175300714667 /* NSObject+ApiServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ApiServiceProtocol.h"; sourceTree = "<group>"; };
 		4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ApiServiceProtocol.m"; sourceTree = "<group>"; };
 		4AF2B6181E0517FF00714667 /* ObjectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectionProtocol.h; sourceTree = "<group>"; };
@@ -445,6 +457,8 @@
 				4A0BA1E31E2520C40002D79F /* Interface */,
 				4A0BA1E41E2520E00002D79F /* SHSearchView.h */,
 				4A0BA1E51E2520E00002D79F /* SHSearchView.m */,
+				4A95B0101E2DEDC1008C8EF5 /* TestOpencv.h */,
+				4A95B0141E2DEDFD008C8EF5 /* TestOpencv.mm */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -528,6 +542,23 @@
 				4A159AF21E0928D000549EEE /* NavigationPresenterProtocol.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4A4B8CD91E2E325000124E65 /* DesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				4A4B8CDA1E2E325000124E65 /* Singleton */,
+			);
+			path = DesignPattern;
+			sourceTree = "<group>";
+		};
+		4A4B8CDA1E2E325000124E65 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				4A4B8CDB1E2E334800124E65 /* SHSingleton.h */,
+				4A4B8CDC1E2E334800124E65 /* SHSingleton.m */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
@@ -668,6 +699,9 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4ABE70371E336DD600E29C1E /* CompTest */,
+				4A4B8CD91E2E325000124E65 /* DesignPattern */,
+				4ADB5A221E2B4241006349DF /* MessageSender */,
 				4A0BA1E21E2520C40002D79F /* SearchView */,
 				4A0BA1D91E251CBA0002D79F /* JSPatch */,
 				4AB7A7041E1FD49F00BCAF47 /* runtime */,
@@ -699,6 +733,32 @@
 				4AB7A7061E1FD4C200BCAF47 /* NSObject+RunTime.m */,
 			);
 			path = runtime;
+			sourceTree = "<group>";
+		};
+		4ABE70371E336DD600E29C1E /* CompTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CompTest;
+			sourceTree = "<group>";
+		};
+		4ADB5A221E2B4241006349DF /* MessageSender */ = {
+			isa = PBXGroup;
+			children = (
+				4ADB5A2A1E2B6681006349DF /* MessageSenderLogic */,
+				4ADB5A261E2B475F006349DF /* MessageSenderViewController.h */,
+				4ADB5A271E2B475F006349DF /* MessageSenderViewController.m */,
+			);
+			path = MessageSender;
+			sourceTree = "<group>";
+		};
+		4ADB5A2A1E2B6681006349DF /* MessageSenderLogic */ = {
+			isa = PBXGroup;
+			children = (
+				4ADB5A2B1E2B668F006349DF /* MessageSenderLogic.h */,
+				4ADB5A2C1E2B668F006349DF /* MessageSenderLogic.m */,
+			);
+			path = MessageSenderLogic;
 			sourceTree = "<group>";
 		};
 		4AF2B6111E0514D300714667 /* Objection */ = {
@@ -930,6 +990,7 @@
 				040D0B1B1D5CCC9A00A178B6 /* HcdGuideViewManager.m in Sources */,
 				4A83CEB41D7997D1002CA71C /* BaseViewController.m in Sources */,
 				4A217C741E026B500027C82D /* DataCell.m in Sources */,
+				4ADB5A281E2B475F006349DF /* MessageSenderViewController.m in Sources */,
 				4A3641A41D84187F0054F227 /* UIControl+SequenceClick.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
 				4A0BA1E61E2520E00002D79F /* SHSearchView.m in Sources */,
@@ -952,13 +1013,16 @@
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
 				040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */,
 				4A159AED1E08F1C000549EEE /* PresentableViewModel.m in Sources */,
+				4A95B0151E2DEDFD008C8EF5 /* TestOpencv.mm in Sources */,
 				4A0BA1E01E251CBA0002D79F /* NSSHTest.m in Sources */,
 				4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */,
+				4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */,
 				4A0D26D91D9380FD00CAB38B /* NSData+Base64.m in Sources */,
 				4A0D26DC1D9380FD00CAB38B /* MD5.m in Sources */,
 				040D0B131D5CCC9A00A178B6 /* UIColor+Tool.m in Sources */,
 				4A0D26DE1D9380FD00CAB38B /* RSA.m in Sources */,
 				4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */,
+				4ADB5A2D1E2B668F006349DF /* MessageSenderLogic.m in Sources */,
 				4AF2B6241E0540C700714667 /* PostApiService.m in Sources */,
 				4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */,
 				4A606A841E1E91E800161996 /* UIViewController+ViewControl.m in Sources */,
@@ -1029,7 +1093,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "c566d9c0-b1c3-405d-8b56-7d44a52bc226";
+				PROVISIONING_PROFILE = "8d71eea1-d70f-4a54-9554-d8d58c805830";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1068,7 +1132,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "c566d9c0-b1c3-405d-8b56-7d44a52bc226";
+				PROVISIONING_PROFILE = "8d71eea1-d70f-4a54-9554-d8d58c805830";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1090,6 +1154,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SHBasePro/Lib",
+					"$(PROJECT_DIR)/SHBasePro/TestCode",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1111,6 +1176,7 @@
 					"$(PROJECT_DIR)/SHBasePro/Lib/QRCode/ZBarSDK",
 					"$(PROJECT_DIR)/SHBasePro/Lib",
 					"$(PROJECT_DIR)/SHBasePro/Lib/GtSdkLib",
+					"$(PROJECT_DIR)/SHBasePro/TestCode",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1133,8 +1199,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
 				PRODUCT_NAME = "有意思";
-				PROVISIONING_PROFILE = "c566d9c0-b1c3-405d-8b56-7d44a52bc226";
-				PROVISIONING_PROFILE_SPECIFIER = didiDev;
+				PROVISIONING_PROFILE = "51b01ccb-549d-4d63-82a5-f0acd7d34a39";
+				PROVISIONING_PROFILE_SPECIFIER = DevDiDiHaoFang;
 			};
 			name = Debug;
 		};
@@ -1153,6 +1219,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SHBasePro/Lib",
+					"$(PROJECT_DIR)/SHBasePro/TestCode",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1174,6 +1241,7 @@
 					"$(PROJECT_DIR)/SHBasePro/Lib/QRCode/ZBarSDK",
 					"$(PROJECT_DIR)/SHBasePro/Lib",
 					"$(PROJECT_DIR)/SHBasePro/Lib/GtSdkLib",
+					"$(PROJECT_DIR)/SHBasePro/TestCode",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1196,8 +1264,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
 				PRODUCT_NAME = "有意思";
-				PROVISIONING_PROFILE = "c566d9c0-b1c3-405d-8b56-7d44a52bc226";
-				PROVISIONING_PROFILE_SPECIFIER = didiDev;
+				PROVISIONING_PROFILE = "8d71eea1-d70f-4a54-9554-d8d58c805830";
+				PROVISIONING_PROFILE_SPECIFIER = DevDiDiHaoFang;
 			};
 			name = Release;
 		};

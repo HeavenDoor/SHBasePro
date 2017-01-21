@@ -25,13 +25,15 @@
 #import <objc/runtime.h>
 //#import "SHLibra.h"
 //#import "FSFr/TestFrameWork.h"
-
+#import "SHSingleton.h"
 
 
 @interface AppDelegate () <RDVTabBarControllerDelegate>
 {
     NSString* aaa OBJC_ISA_AVAILABILITY;
 }
+
+@property (nonatomic, strong) UINavigationController *rootViewController;
 
 @property (nonatomic, strong) AppHelper* appHelper;
 @property (nonatomic, strong) Reachability* reachability;
@@ -49,7 +51,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    SHSingleton *sig = [[SHSingleton alloc] init];
+    SHSingleton *ggg = [SHSingleton sharedInstance];
+    
     unsigned int outCount = 0;
     Method* method = class_copyMethodList(self.class, &outCount);
     for (int i = 0; i < outCount; i++) {
@@ -149,7 +153,9 @@
 
     [self customizeTabBarForController:self.tabbarController];
     
-    [self.window setRootViewController:self.tabbarController];
+    self.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.tabbarController];
+    [self.rootViewController setNavigationBarHidden:YES];
+    [self.window setRootViewController:self.rootViewController];
     [self.window makeKeyAndVisible];
     [self customizeInterface];
 }
@@ -288,9 +294,11 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ForGroundAction" object:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -342,12 +350,11 @@
 {
     [self.tabbarController stopJDAnimation];
     
-    UINavigationController* controller = (UINavigationController*)self.tabbarController.selectedViewController;
     CenterViewController* vc = [[CenterViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [nav setNavigationBarHidden:YES];
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [controller presentViewController: vc animated:YES completion:^{
-        
-    }];
+    [self.rootViewController presentViewController: nav animated:YES completion:nil];
 }
 
 + (AppDelegate*) sharedInstance

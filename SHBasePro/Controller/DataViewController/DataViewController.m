@@ -7,8 +7,10 @@
 //
 
 #import "DataViewController.h"
-#import "DataModelRequest.h"
+
 #import "DataCell.h"
+
+#import "DataModelRequest.h"
 #import "AppDelegate.h"
 
 #import "DataViewControllerModule.h"
@@ -111,7 +113,11 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
         cell = [[DataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DataViewCellIdentifier];
     }
     if (self.dataArray.count > indexPath.row) {
-        cell.cellData = [self.dataArray objectAtIndex:indexPath.row];
+        //cell.cellData = [self.dataArray objectAtIndex:indexPath.row];
+        
+        MovieModel *data = [self.dataArray objectAtIndex:indexPath.row];
+        cell.cellData = data;
+
     }
     return cell;
 }

@@ -9,9 +9,6 @@
 #ifndef CommonHeader_h
 #define CommonHeader_h
 
-#ifdef __cplusplus
-
-#endif
 
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>

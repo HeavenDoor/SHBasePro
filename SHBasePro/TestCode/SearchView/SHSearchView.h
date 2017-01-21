@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SearchProtocol.h"
 
+
 @interface SHSearchView : UIView <SearchProtocol>
 
 @end
