@@ -26,6 +26,7 @@
 //#import "SHLibra.h"
 //#import "FSFr/TestFrameWork.h"
 #import "SHSingleton.h"
+#import "UncaughtExceptionHandler.h"
 
 
 @interface AppDelegate () <RDVTabBarControllerDelegate>
@@ -51,6 +52,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    InstallUncaughtExceptionHandler();
+    
     SHSingleton *sig = [[SHSingleton alloc] init];
     SHSingleton *ggg = [SHSingleton sharedInstance];
     

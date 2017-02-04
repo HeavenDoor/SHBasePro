@@ -64,6 +64,8 @@
 		4A3CE3851CDD95170084E6E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */; };
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
 		4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B8CDC1E2E334800124E65 /* SHSingleton.m */; };
+		4A508BCD1E4603AE002268C6 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A508BCC1E4603AD002268C6 /* NSDictionary+NilSafe.m */; };
+		4A508BD11E4618E4002268C6 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A508BD01E4618E4002268C6 /* UncaughtExceptionHandler.m */; };
 		4A57DDE91CF2F5D200174FC8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */; };
 		4A57DDEE1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A57DDED1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m */; };
 		4A606A841E1E91E800161996 /* UIViewController+ViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A606A831E1E91E800161996 /* UIViewController+ViewControl.m */; };
@@ -202,6 +204,10 @@
 		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		4A4B8CDB1E2E334800124E65 /* SHSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSingleton.h; sourceTree = "<group>"; };
 		4A4B8CDC1E2E334800124E65 /* SHSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSingleton.m; sourceTree = "<group>"; };
+		4A508BCB1E4603AD002268C6 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
+		4A508BCC1E4603AD002268C6 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		4A508BCF1E4618E4002268C6 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		4A508BD01E4618E4002268C6 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		4A57DDE81CF2F5D200174FC8 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		4A57DDEC1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TS_JavaScriptContext.h"; sourceTree = "<group>"; };
 		4A57DDED1CF2F66F00174FC8 /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
@@ -309,6 +315,8 @@
 			children = (
 				4A217C751E026CEF0027C82D /* CommonDefine.h */,
 				4A217C761E026CEF0027C82D /* CommonHeader.h */,
+				4A508BCE1E4618E4002268C6 /* UncaughtExceptionHandler */,
+				4A508BCA1E4603AD002268C6 /* NSDictionary-NilSafe */,
 				4A0BA1D21E251BE70002D79F /* Tool */,
 				4A0D26C61D9380FD00CAB38B /* Encrypt */,
 				4A655B801D7AD990007BCF39 /* NetworkManager */,
@@ -559,6 +567,24 @@
 				4A4B8CDC1E2E334800124E65 /* SHSingleton.m */,
 			);
 			path = Singleton;
+			sourceTree = "<group>";
+		};
+		4A508BCA1E4603AD002268C6 /* NSDictionary-NilSafe */ = {
+			isa = PBXGroup;
+			children = (
+				4A508BCB1E4603AD002268C6 /* NSDictionary+NilSafe.h */,
+				4A508BCC1E4603AD002268C6 /* NSDictionary+NilSafe.m */,
+			);
+			path = "NSDictionary-NilSafe";
+			sourceTree = "<group>";
+		};
+		4A508BCE1E4618E4002268C6 /* UncaughtExceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				4A508BCF1E4618E4002268C6 /* UncaughtExceptionHandler.h */,
+				4A508BD01E4618E4002268C6 /* UncaughtExceptionHandler.m */,
+			);
+			path = UncaughtExceptionHandler;
 			sourceTree = "<group>";
 		};
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
@@ -1012,8 +1038,10 @@
 				4AFC7C3D1E065E590079ECA5 /* HostFetcher.m in Sources */,
 				4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */,
 				040D0B1C1D5CCC9A00A178B6 /* HomeViewController.m in Sources */,
+				4A508BD11E4618E4002268C6 /* UncaughtExceptionHandler.m in Sources */,
 				4A159AED1E08F1C000549EEE /* PresentableViewModel.m in Sources */,
 				4A95B0151E2DEDFD008C8EF5 /* TestOpencv.mm in Sources */,
+				4A508BCD1E4603AE002268C6 /* NSDictionary+NilSafe.m in Sources */,
 				4A0BA1E01E251CBA0002D79F /* NSSHTest.m in Sources */,
 				4A655B831D7AD990007BCF39 /* HttpManager.m in Sources */,
 				4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */,

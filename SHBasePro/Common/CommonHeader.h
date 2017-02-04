@@ -22,6 +22,7 @@
 #import "UIImageView+WebCache.h"
 #import "Objection.h"
 #import "Protocol.h"
+#import "NSDictionary+NilSafe.h"
 #endif
 
 #endif /* CommonHeader_h */
