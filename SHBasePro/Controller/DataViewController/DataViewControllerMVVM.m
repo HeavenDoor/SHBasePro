@@ -7,7 +7,6 @@
 //
 
 #import "DataViewControllerMVVM.h"
-#import "DataModelRequest.h"
 #import "DataCellMvvm.h"
 #import "AppDelegate.h"
 
@@ -62,7 +61,7 @@ static NSString* DataViewCellIdentifierMVVM = @"DataViewCellIdentifierMVVM";
 
 - (void) requestDataList: (BOOL) append
 {
-    NSString* currentIndex = @"1";
+    /*NSString* currentIndex = @"1";
     if (append == YES) {
         currentIndex = [NSString stringWithFormat:@"%ld", self.pageIndex + 1];
     }
@@ -89,7 +88,7 @@ static NSString* DataViewCellIdentifierMVVM = @"DataViewCellIdentifierMVVM";
     } failerBlock:^(id model) {
         [weakSelf.tableView.mj_header endRefreshing];
         [weakSelf.tableView.mj_footer endRefreshing];
-    }];
+    }];*/
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView

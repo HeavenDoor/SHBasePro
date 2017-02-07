@@ -41,5 +41,5 @@
 @interface MovieDatasModel : NSObject
 @property (nonatomic, copy) NSString* status;
 @property (nonatomic, copy) NSString* msg;
-@property (nonatomic, strong) NSArray<MovieModel*>* data;
+@property (nonatomic, strong) NSMutableArray<MovieModel*>* data;
 @end
