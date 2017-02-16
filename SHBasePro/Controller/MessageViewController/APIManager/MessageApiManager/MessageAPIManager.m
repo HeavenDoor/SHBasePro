@@ -46,7 +46,7 @@
     return resultParams;
 }
 
-#pragma mark - CTAPIManagerValidator
+#pragma mark - CTAPIManagerValidator 数据校验
 - (BOOL)manager:(CTAPIBaseManager *)manager isCorrectWithParamsData:(NSDictionary *)data {
     return YES;
 }
@@ -58,8 +58,13 @@
     return YES;
 }
 
-#pragma mark CTAPIManagerDataReformer protocol
+#pragma mark CTAPIManagerDataReformer protocol 数据转换
 - (id)manager:(CTAPIBaseManager *)manager reformData:(NSDictionary *)data {
+    // 这里可以实现去Model化  因为Model多了之后很难管理，而且要实现服用必须扯出Model 这里是耦合的，而使用NSDictionary之类的数据就不存在这种耦合
+    // 但是呢不用Model查看数据的时候又不直观 目前只有将就着用了
+    // 如果要做Model的转换  在这个函数里做  shenghai
+    
+    // 这里返回类型是(id)也就是说可以产出任意类型的东西 包括 NSDictionary UIview UITableviewCell...
     MovieDatasModel *models = [MovieDatasModel mj_objectWithKeyValues:data];
     return models.data;
 }

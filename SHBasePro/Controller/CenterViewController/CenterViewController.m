@@ -10,7 +10,7 @@
 #import "masonry.h"
 #import "UIImage+SHBasePro.h"
 #import "MessageSenderViewController.h"
-
+#import "SGScanningQRCodeVC.h"
 
 
 @interface CenterViewController()
@@ -119,14 +119,17 @@
 }
 
 - (void) backTestBtnAction: (UIButton*) sender {
-    NSString *gg = nil;
+    /*NSString *gg = nil;
     NSDictionary *dict = @{gg: @"ggwp", @"sheng": gg, @"AAA": @"ren"};
     
     NSString * pp = [dict objectForKey:@"sheng"];
     if (pp == [NSNull null]) {
         NSLog(@"null");
     }
-    _keyWindow = [[UIApplication sharedApplication] keyWindow];
+    _keyWindow = [[UIApplication sharedApplication] keyWindow];*/
+    
+    SGScanningQRCodeVC *vc = [[SGScanningQRCodeVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 

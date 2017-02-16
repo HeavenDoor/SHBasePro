@@ -28,6 +28,9 @@
 		4A159AED1E08F1C000549EEE /* PresentableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A159AEC1E08F1C000549EEE /* PresentableViewModel.m */; };
 		4A217C741E026B500027C82D /* DataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C721E026B500027C82D /* DataCell.m */; };
 		4A217C7B1E02930B0027C82D /* DataViewControllerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A217C7A1E02930B0027C82D /* DataViewControllerModule.m */; };
+		4A32E0361E5444CA00EEAC92 /* SGScanningQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A32E0301E5444CA00EEAC92 /* SGScanningQRCodeVC.m */; };
+		4A32E0371E5444CA00EEAC92 /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A32E0331E5444CA00EEAC92 /* SGQRCodeTool.m */; };
+		4A32E0381E5444CA00EEAC92 /* SGScanningQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A32E0351E5444CA00EEAC92 /* SGScanningQRCodeView.m */; };
 		4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */; };
 		4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */; };
 		4A3BE51F1CDC7684005DBC90 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3BE51E1CDC7684005DBC90 /* MapKit.framework */; };
@@ -162,6 +165,12 @@
 		4A217C731E026B500027C82D /* DataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCell.h; sourceTree = "<group>"; };
 		4A217C791E02930B0027C82D /* DataViewControllerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewControllerModule.h; sourceTree = "<group>"; };
 		4A217C7A1E02930B0027C82D /* DataViewControllerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewControllerModule.m; sourceTree = "<group>"; };
+		4A32E02F1E5444CA00EEAC92 /* SGScanningQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGScanningQRCodeVC.h; sourceTree = "<group>"; };
+		4A32E0301E5444CA00EEAC92 /* SGScanningQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGScanningQRCodeVC.m; sourceTree = "<group>"; };
+		4A32E0321E5444CA00EEAC92 /* SGQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeTool.h; sourceTree = "<group>"; };
+		4A32E0331E5444CA00EEAC92 /* SGQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeTool.m; sourceTree = "<group>"; };
+		4A32E0341E5444CA00EEAC92 /* SGScanningQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGScanningQRCodeView.h; sourceTree = "<group>"; };
+		4A32E0351E5444CA00EEAC92 /* SGScanningQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGScanningQRCodeView.m; sourceTree = "<group>"; };
 		4A3BE51A1CDC7667005DBC90 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A3BE51C1CDC7672005DBC90 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4A3BE51E1CDC7684005DBC90 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -497,6 +506,27 @@
 			path = DataViewControllerModule;
 			sourceTree = "<group>";
 		};
+		4A32E02E1E5442B100EEAC92 /* QRCodeScaner */ = {
+			isa = PBXGroup;
+			children = (
+				4A32E02F1E5444CA00EEAC92 /* SGScanningQRCodeVC.h */,
+				4A32E0301E5444CA00EEAC92 /* SGScanningQRCodeVC.m */,
+				4A32E0311E5444CA00EEAC92 /* Tool */,
+			);
+			path = QRCodeScaner;
+			sourceTree = "<group>";
+		};
+		4A32E0311E5444CA00EEAC92 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4A32E0321E5444CA00EEAC92 /* SGQRCodeTool.h */,
+				4A32E0331E5444CA00EEAC92 /* SGQRCodeTool.m */,
+				4A32E0341E5444CA00EEAC92 /* SGScanningQRCodeView.h */,
+				4A32E0351E5444CA00EEAC92 /* SGScanningQRCodeView.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		4A47FD1C1E040D480099811E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +656,7 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4A32E02E1E5442B100EEAC92 /* QRCodeScaner */,
 				4ABE70371E336DD600E29C1E /* CompTest */,
 				4A4B8CD91E2E325000124E65 /* DesignPattern */,
 				4ADB5A221E2B4241006349DF /* MessageSender */,
@@ -1222,6 +1253,7 @@
 				4AFB6BB41E48A7A600FF45B9 /* NSObject+AXNetworkingMethods.m in Sources */,
 				4AFB6BF51E48A7B400FF45B9 /* UIColor+Tool.m in Sources */,
 				4AFB6BF41E48A7B400FF45B9 /* UIButton+Layout.m in Sources */,
+				4A32E0361E5444CA00EEAC92 /* SGScanningQRCodeVC.m in Sources */,
 				040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */,
 				4A83CEB81D7998A4002CA71C /* CenterViewController.m in Sources */,
 				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
@@ -1242,7 +1274,9 @@
 				4AFB6BB21E48A7A600FF45B9 /* NSDictionary+AXNetworkingMethods.m in Sources */,
 				4A217C741E026B500027C82D /* DataCell.m in Sources */,
 				4ADB5A281E2B475F006349DF /* MessageSenderViewController.m in Sources */,
+				4A32E0381E5444CA00EEAC92 /* SGScanningQRCodeView.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
+				4A32E0371E5444CA00EEAC92 /* SGQRCodeTool.m in Sources */,
 				4AFB6BFE1E48A7B400FF45B9 /* MongoliaView.m in Sources */,
 				4A0BA1E61E2520E00002D79F /* SHSearchView.m in Sources */,
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,
@@ -1333,11 +1367,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = M484XA8424;
+				DEVELOPMENT_TEAM = E9S2492CT8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1358,7 +1392,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "07f42b71-c204-44d2-9f68-ea7fe0f1670b";
+				PROVISIONING_PROFILE = "8d71eea1-d70f-4a54-9554-d8d58c805830";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1380,11 +1414,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = M484XA8424;
+				DEVELOPMENT_TEAM = E9S2492CT8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1397,7 +1431,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "07f42b71-c204-44d2-9f68-ea7fe0f1670b";
+				PROVISIONING_PROFILE = "8d71eea1-d70f-4a54-9554-d8d58c805830";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1410,8 +1444,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = "SHBasePro/有意思.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = M484XA8424;
 				ENABLE_BITCODE = NO;
@@ -1464,8 +1498,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
 				PRODUCT_NAME = "有意思";
-				PROVISIONING_PROFILE = "07f42b71-c204-44d2-9f68-ea7fe0f1670b";
-				PROVISIONING_PROFILE_SPECIFIER = DiDiAdHoc;
+				PROVISIONING_PROFILE = "51b01ccb-549d-4d63-82a5-f0acd7d34a39";
+				PROVISIONING_PROFILE_SPECIFIER = DevDiDiHaoFang;
 			};
 			name = Debug;
 		};
@@ -1476,8 +1510,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = "SHBasePro/有意思.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chengdu Haofangtong Technologies Limited (M484XA8424)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1529,8 +1563,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haofangtong.didihaofang;
 				PRODUCT_NAME = "有意思";
-				PROVISIONING_PROFILE = "07f42b71-c204-44d2-9f68-ea7fe0f1670b";
-				PROVISIONING_PROFILE_SPECIFIER = DiDiAdHoc;
+				PROVISIONING_PROFILE = "8d71eea1-d70f-4a54-9554-d8d58c805830";
+				PROVISIONING_PROFILE_SPECIFIER = DevDiDiHaoFang;
 			};
 			name = Release;
 		};

@@ -52,8 +52,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 抓崩溃
     InstallUncaughtExceptionHandler();
-    
+    // 统计
+    //[self GGWPAnalyse];
     SHSingleton *sig = [[SHSingleton alloc] init];
     SHSingleton *ggg = [SHSingleton sharedInstance];
     
