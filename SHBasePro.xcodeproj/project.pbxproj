@@ -65,6 +65,13 @@
 		4A9114561CF0702900641789 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A9113F61CF0702900641789 /* Info.plist */; };
 		4A91145D1CF0702900641789 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9114031CF0702900641789 /* main.m */; };
 		4A95B0151E2DEDFD008C8EF5 /* TestOpencv.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A95B0141E2DEDFD008C8EF5 /* TestOpencv.mm */; };
+		4AADBB341E57DE3B00BAF66D /* NSString+LKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADBB2A1E57DE3B00BAF66D /* NSString+LKCategory.m */; };
+		4AADBB361E57DE3B00BAF66D /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADBB301E57DE3B00BAF66D /* UIButton+Block.m */; };
+		4AADBB371E57DE3B00BAF66D /* UITextField+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADBB331E57DE3B00BAF66D /* UITextField+Blocks.m */; };
+		4AADBB3A1E57DE6400BAF66D /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADBB391E57DE6400BAF66D /* NSTimer+Block.m */; };
+		4AADBB4B1E5848C200BAF66D /* QMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AADBB491E5848C200BAF66D /* QMapKit.framework */; };
+		4AADBB4C1E5848C200BAF66D /* QMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AADBB4A1E5848C200BAF66D /* QMapSearchKit.framework */; };
+		4AADBB551E584AA700BAF66D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADBB541E584AA700BAF66D /* MapViewController.m */; };
 		4AB6A33C1D58C42C00460300 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33B1D58C42C00460300 /* libz.tbd */; };
 		4AB6A3401D58C85F00460300 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6A33F1D58C85F00460300 /* JSPatch.framework */; };
 		4AB7A6F41E1F433200BCAF47 /* AppDelegate+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A6F21E1F433200BCAF47 /* AppDelegate+Push.m */; };
@@ -218,6 +225,18 @@
 		4A9114071CF0702900641789 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4A95B0101E2DEDC1008C8EF5 /* TestOpencv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOpencv.h; sourceTree = "<group>"; };
 		4A95B0141E2DEDFD008C8EF5 /* TestOpencv.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TestOpencv.mm; sourceTree = "<group>"; };
+		4AADBB291E57DE3B00BAF66D /* NSString+LKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LKCategory.h"; sourceTree = "<group>"; };
+		4AADBB2A1E57DE3B00BAF66D /* NSString+LKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LKCategory.m"; sourceTree = "<group>"; };
+		4AADBB2F1E57DE3B00BAF66D /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		4AADBB301E57DE3B00BAF66D /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		4AADBB321E57DE3B00BAF66D /* UITextField+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Blocks.h"; sourceTree = "<group>"; };
+		4AADBB331E57DE3B00BAF66D /* UITextField+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Blocks.m"; sourceTree = "<group>"; };
+		4AADBB381E57DE6400BAF66D /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
+		4AADBB391E57DE6400BAF66D /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		4AADBB491E5848C200BAF66D /* QMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QMapKit.framework; sourceTree = "<group>"; };
+		4AADBB4A1E5848C200BAF66D /* QMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QMapSearchKit.framework; sourceTree = "<group>"; };
+		4AADBB531E584AA700BAF66D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4AADBB541E584AA700BAF66D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4AB6A33B1D58C42C00460300 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4AB6A33F1D58C85F00460300 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		4AB7A6F21E1F433200BCAF47 /* AppDelegate+Push.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Push.m"; sourceTree = "<group>"; };
@@ -341,8 +360,10 @@
 			files = (
 				4AB7A6F61E1F482100BCAF47 /* CoreTelephony.framework in Frameworks */,
 				4AB6A33C1D58C42C00460300 /* libz.tbd in Frameworks */,
+				4AADBB4B1E5848C200BAF66D /* QMapKit.framework in Frameworks */,
 				4A57DDE91CF2F5D200174FC8 /* JavaScriptCore.framework in Frameworks */,
 				4AB7A6FD1E1F4B0300BCAF47 /* libGtExtensionSdk-1.0.0.a in Frameworks */,
+				4AADBB4C1E5848C200BAF66D /* QMapSearchKit.framework in Frameworks */,
 				4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */,
 				4A3CE3851CDD95170084E6E0 /* CoreGraphics.framework in Frameworks */,
 				4A3CE3831CDD950C0084E6E0 /* ImageIO.framework in Frameworks */,
@@ -373,6 +394,7 @@
 		040D0AFE1D5CCC9A00A178B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4AADBB521E584A6B00BAF66D /* MapViewController */,
 				4A83CEB51D799881002CA71C /* CenterViewController */,
 				040D0AFF1D5CCC9A00A178B6 /* DataViewController */,
 				040D0B021D5CCC9A00A178B6 /* HcdGuideView */,
@@ -556,6 +578,7 @@
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				4AADBB481E5848C200BAF66D /* TencentMap */,
 				4AFB6B6A1E48A7A600FF45B9 /* Network */,
 				4AB7A6EE1E1F430200BCAF47 /* GtSdkLib */,
 				4A83CEA41D798D5C002CA71C /* RDVTabBarController */,
@@ -651,6 +674,60 @@
 				4AB7A6F71E1F486100BCAF47 /* 有意思.entitlements */,
 			);
 			path = SHBasePro;
+			sourceTree = "<group>";
+		};
+		4AADBB281E57DE3B00BAF66D /* NSString+LKCategory */ = {
+			isa = PBXGroup;
+			children = (
+				4AADBB291E57DE3B00BAF66D /* NSString+LKCategory.h */,
+				4AADBB2A1E57DE3B00BAF66D /* NSString+LKCategory.m */,
+			);
+			path = "NSString+LKCategory";
+			sourceTree = "<group>";
+		};
+		4AADBB2B1E57DE3B00BAF66D /* NSTimer+Block */ = {
+			isa = PBXGroup;
+			children = (
+				4AADBB381E57DE6400BAF66D /* NSTimer+Block.h */,
+				4AADBB391E57DE6400BAF66D /* NSTimer+Block.m */,
+			);
+			path = "NSTimer+Block";
+			sourceTree = "<group>";
+		};
+		4AADBB2E1E57DE3B00BAF66D /* UIButton+Block */ = {
+			isa = PBXGroup;
+			children = (
+				4AADBB2F1E57DE3B00BAF66D /* UIButton+Block.h */,
+				4AADBB301E57DE3B00BAF66D /* UIButton+Block.m */,
+			);
+			path = "UIButton+Block";
+			sourceTree = "<group>";
+		};
+		4AADBB311E57DE3B00BAF66D /* UITextField+Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				4AADBB321E57DE3B00BAF66D /* UITextField+Blocks.h */,
+				4AADBB331E57DE3B00BAF66D /* UITextField+Blocks.m */,
+			);
+			path = "UITextField+Blocks";
+			sourceTree = "<group>";
+		};
+		4AADBB481E5848C200BAF66D /* TencentMap */ = {
+			isa = PBXGroup;
+			children = (
+				4AADBB491E5848C200BAF66D /* QMapKit.framework */,
+				4AADBB4A1E5848C200BAF66D /* QMapSearchKit.framework */,
+			);
+			path = TencentMap;
+			sourceTree = "<group>";
+		};
+		4AADBB521E584A6B00BAF66D /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AADBB531E584AA700BAF66D /* MapViewController.h */,
+				4AADBB541E584AA700BAF66D /* MapViewController.m */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
@@ -957,6 +1034,10 @@
 		4AFB6BCA1E48A7B400FF45B9 /* Categrory */ = {
 			isa = PBXGroup;
 			children = (
+				4AADBB281E57DE3B00BAF66D /* NSString+LKCategory */,
+				4AADBB2B1E57DE3B00BAF66D /* NSTimer+Block */,
+				4AADBB2E1E57DE3B00BAF66D /* UIButton+Block */,
+				4AADBB311E57DE3B00BAF66D /* UITextField+Blocks */,
 				4AFB6BCB1E48A7B400FF45B9 /* NSAttributedString+XTAttributionSize.h */,
 				4AFB6BCC1E48A7B400FF45B9 /* NSAttributedString+XTAttributionSize.m */,
 				4AFB6BCD1E48A7B400FF45B9 /* NSDictionary-NilSafe */,
@@ -1257,6 +1338,7 @@
 				040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */,
 				4A83CEB81D7998A4002CA71C /* CenterViewController.m in Sources */,
 				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
+				4AADBB371E57DE3B00BAF66D /* UITextField+Blocks.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				4AFB6BC01E48A7A600FF45B9 /* CTCommonParamsGenerator.m in Sources */,
@@ -1264,6 +1346,8 @@
 				4AFB6BC31E48A7A600FF45B9 /* CTUDIDGenerator.m in Sources */,
 				4AFB6BF61E48A7B400FF45B9 /* UIControl+SequenceClick.m in Sources */,
 				4AFB6BF91E48A7B400FF45B9 /* UINavigationController+Push.m in Sources */,
+				4AADBB3A1E57DE6400BAF66D /* NSTimer+Block.m in Sources */,
+				4AADBB341E57DE3B00BAF66D /* NSString+LKCategory.m in Sources */,
 				040D0B191D5CCC9A00A178B6 /* DataViewController.m in Sources */,
 				4A83CEB01D798D5C002CA71C /* RDVTabBarJifItem.m in Sources */,
 				4A83CEAE1D798D5C002CA71C /* RDVTabBarController.m in Sources */,
@@ -1282,6 +1366,7 @@
 				040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */,
 				4AFB6BF31E48A7B400FF45B9 /* NSString+XTSize.m in Sources */,
 				4AFB6BF81E48A7B400FF45B9 /* UILabel+Tool.m in Sources */,
+				4AADBB361E57DE3B00BAF66D /* UIButton+Block.m in Sources */,
 				4AF2B6211E05334400714667 /* GetApiService.m in Sources */,
 				4AFB6BBE1E48A7A600FF45B9 /* CTLogger.m in Sources */,
 				4AFB6BB71E48A7A600FF45B9 /* UIDevice+IdentifierAddition.m in Sources */,
@@ -1319,6 +1404,7 @@
 				4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */,
 				4ADB5A2D1E2B668F006349DF /* MessageSenderLogic.m in Sources */,
 				4AF2B6241E0540C700714667 /* PostApiService.m in Sources */,
+				4AADBB551E584AA700BAF66D /* MapViewController.m in Sources */,
 				4AFB6BBB1E48A7A600FF45B9 /* CTCachedObject.m in Sources */,
 				4AFB6BFC1E48A7B400FF45B9 /* BaseViewController.m in Sources */,
 				4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */,
@@ -1454,6 +1540,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SHBasePro/Lib",
 					"$(PROJECT_DIR)/SHBasePro/TestCode",
+					"$(PROJECT_DIR)/SHBasePro/Lib/TencentMap",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1519,6 +1606,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/SHBasePro/Lib",
 					"$(PROJECT_DIR)/SHBasePro/TestCode",
+					"$(PROJECT_DIR)/SHBasePro/Lib/TencentMap",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

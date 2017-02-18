@@ -23,11 +23,13 @@
 #import "Aspects.h"
 #import "NSObject+RunTime.h"
 #import <objc/runtime.h>
-//#import "SHLibra.h"
-//#import "FSFr/TestFrameWork.h"
 #import "SHSingleton.h"
 #import "UncaughtExceptionHandler.h"
-
+#import "Aspects.h"
+#import "MapViewController.h"
+#import "NSTimer+Block.h"
+#import <QMapKit/QMapKit.h>
+#import <QMapSearchKit/QMapSearchKit.h>
 
 @interface AppDelegate () <RDVTabBarControllerDelegate>
 {
@@ -52,10 +54,14 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+//    NSTimer *timer = [NSTimer handleTimerInterval:6 repeats:YES withBlock:^{
+//        NSLog(@"时间到");
+//    }];
     // 抓崩溃
     InstallUncaughtExceptionHandler();
     // 统计
-    //[self GGWPAnalyse];
+    [self GGWPAnalyse];
     SHSingleton *sig = [[SHSingleton alloc] init];
     SHSingleton *ggg = [SHSingleton sharedInstance];
     
@@ -85,6 +91,9 @@
     
     self.appHelper = [[AppHelper alloc] init];
     [self.appHelper startJSPatch];
+    
+    [QMapServices sharedServices].apiKey = @"QHGBZ-OYPLD-2RB4R-PEE3A-MGPJ2-UKBA4";
+    [QMSSearchServices sharedServices].apiKey = @"QHGBZ-OYPLD-2RB4R-PEE3A-MGPJ2-UKBA4";
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:screenBounds];
@@ -353,9 +362,17 @@
 
 - (void) grabButtonTriggered
 {
+//    [self.tabbarController stopJDAnimation];
+//    
+//    CenterViewController* vc = [[CenterViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [nav setNavigationBarHidden:YES];
+//    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [self.rootViewController presentViewController: nav animated:YES completion:nil];
+    
     [self.tabbarController stopJDAnimation];
     
-    CenterViewController* vc = [[CenterViewController alloc] init];
+    MapViewController *vc = [[MapViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     [nav setNavigationBarHidden:YES];
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
@@ -367,5 +384,23 @@
     return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
+- (void)GGWPAnalyse {
+    NSString *clsName = @"CenterViewController";
+    NSString * sel = @"backTestBtnAction:";
 
+    [NSClassFromString(clsName) aspect_hookSelector:NSSelectorFromString(sel) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
+        //NSLog(@"ggwp ==============");
+        NSString *str = NSStringFromSelector([aspectInfo originalInvocation].selector);
+        //NSLog(@"%@", aspectInfo);
+        NSUInteger numberOfArguments = [aspectInfo originalInvocation].methodSignature.numberOfArguments;
+        for (int i = 0; i < numberOfArguments; i++) {
+            const char *myChar = [[aspectInfo originalInvocation].methodSignature getArgumentTypeAtIndex:i];
+            NSString *string = [NSString stringWithFormat:@"%c", myChar];
+            NSLog(string);
+        }
+        NSLog(@"ggwp ==============");
+        
+    }error:nil];
+    
+}
 @end

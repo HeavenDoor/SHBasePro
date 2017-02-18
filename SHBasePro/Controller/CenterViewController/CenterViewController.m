@@ -128,8 +128,8 @@
     }
     _keyWindow = [[UIApplication sharedApplication] keyWindow];*/
     
-    SGScanningQRCodeVC *vc = [[SGScanningQRCodeVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    SGScanningQRCodeVC *vc = [[SGScanningQRCodeVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 
 }
 
