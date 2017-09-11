@@ -572,11 +572,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
             landmarkName = "-mvvmAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -754,11 +754,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -2698,11 +2698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "-paramRequstFinish"
             landmarkType = "7">
          </BreakpointContent>
@@ -2746,11 +2746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "368"
-            endingLineNumber = "368"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "-aliPayFaile:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2762,11 +2762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-test"
             landmarkType = "7">
          </BreakpointContent>
@@ -2858,11 +2858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-locationAuthorized"
             landmarkType = "7">
          </BreakpointContent>
@@ -3002,11 +3002,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-locationAuthorized"
             landmarkType = "7">
          </BreakpointContent>
@@ -3018,11 +3018,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-locationAuthorized"
             landmarkType = "7">
          </BreakpointContent>
@@ -3034,11 +3034,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
@@ -3050,11 +3050,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3066,11 +3066,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3082,11 +3082,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3370,11 +3370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3386,11 +3386,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3418,43 +3418,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "-objectionAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
+            timestampString = "526791622.544243"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "-objectionAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "262"
             endingLineNumber = "262"
-            landmarkName = "-objectionAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-objectionAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3530,11 +3530,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485460.960317"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-onComplexEventDealt:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3626,11 +3626,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-mvvmAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3642,11 +3642,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>

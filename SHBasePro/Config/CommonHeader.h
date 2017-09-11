@@ -11,9 +11,7 @@
 
 #ifdef __cplusplus
 
-#import <opencv2/opencv.hpp>
-#import <opencv2/stitching/detail/blenders.hpp>
-#import <opencv2/stitching/detail/exposure_compensate.hpp>
+
 #endif
 
 #ifdef __OBJC__
