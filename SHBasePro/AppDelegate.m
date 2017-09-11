@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HcdGuideViewManager.h"
-#import "Reachability.h"
+//#import "Reachability.h"
 #import "RDVTabBarItem.h"
 #import "TestViewController.h"
 #import "HomeViewController.h"
@@ -25,13 +25,22 @@
 #import <objc/runtime.h>
 #import "SHSingleton.h"
 #import "UncaughtExceptionHandler.h"
-#import "Aspects.h"
 #import "MapViewController.h"
 #import "NSTimer+Block.h"
 #import <QMapKit/QMapKit.h>
 #import <QMapSearchKit/QMapSearchKit.h>
+//#import "AlipayHeader.h"
+//#import "WXApi.h"
+#import "GModel.h"
+#import "GModel+ATest.h"
+#import "GModel+BTest.h"
+#import "TestViewController.h"
+#import "NetworkReachabilityManager.h"
 
-@interface AppDelegate () <RDVTabBarControllerDelegate>
+#import "ComplexDealCenter.h"
+
+
+@interface AppDelegate () <RDVTabBarControllerDelegate>  //WXApiDelegate,
 {
     NSString* aaa OBJC_ISA_AVAILABILITY;
 }
@@ -39,7 +48,7 @@
 @property (nonatomic, strong) UINavigationController *rootViewController;
 
 @property (nonatomic, strong) AppHelper* appHelper;
-@property (nonatomic, strong) Reachability* reachability;
+//@property (nonatomic, strong) Reachability* reachability;
 @property (nonatomic, strong) HomeViewController* homeViewController;
 @property (nonatomic, strong) MessageViewController* messageViewController;
 @property (nonatomic, strong) DataViewController* dataViewController;
@@ -49,15 +58,36 @@
 @property (nonatomic, strong) UINavigationController* dataNavigationController;
 @property (nonatomic, strong) UINavigationController* msgNavigationController;
 @property (nonatomic, strong) UINavigationController* mineNavigationController;
+
+@property (nonatomic, strong) id<PayCenterInterfaceProtocol, PayCenterCallBackProtocol, PayCenterInterfaceProtocol> payCenter;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    UIImage *img = [UIImage imageNamed:@"Image1"];
+    NSData * imageData = UIImageJPEGRepresentation(img, 1);
+    
+    CGFloat length = [imageData length]/1024;
+    
+    
+    NSError *error;
+    [TestViewController aspect_hookSelector:@selector(testggwp) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo){
 
-//    NSTimer *timer = [NSTimer handleTimerInterval:6 repeats:YES withBlock:^{
-//        NSLog(@"时间到");
-//    }];
+        NSLog(@"TestViewController 在这里干坏事了");
+        
+    }error:&error];
+        
+    GModel *gmodel = [[GModel alloc] init];
+    NSString *apro = [[NSString alloc] initWithString:@"123"];
+    NSString *bpro = [[NSString alloc] initWithString:@"456"];
+    gmodel.aPro = apro;
+    gmodel.bPro = bpro;
+    
+    GModel *mmdel = [gmodel copy];
+    mmdel.aPro = @"shenghai";
+    
     // 抓崩溃
     InstallUncaughtExceptionHandler();
     // 统计
@@ -72,22 +102,6 @@
         NSString* mdName = [NSString stringWithCString:method_getName(md)];
         NSLog(@"%@", mdName);
     }
-    /*SHLibra* ss = [[SHLibra alloc] init];
-    NSInteger gg = [ss testSHLibra:65];
-    
-    TestFrameWork* test = [[TestFrameWork alloc] init];
-    gg = [test testFrameWork];*/
-    
-    NSObject* boj = [NSObject new];
-    boj.addString = @"123";
-    
-    NSLog(@"%@", boj.addString);
-    
-    boj.addBlock = ^{
-        NSLog(@"addBlock call");
-    };
-    
-    boj.addBlock();
     
     self.appHelper = [[AppHelper alloc] init];
     [self.appHelper startJSPatch];
@@ -104,9 +118,11 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *version = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
-    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-    [_reachability startNotifier];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkStatusChanged:) name:kReachabilityChangedNotification object:nil];
+//    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+//    [_reachability startNotifier];
+    
+    
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     [self setRDVTabBarRootViewController];
@@ -123,7 +139,26 @@
     }
     
     [self pushApplication:application didFinishLaunchingWithOptions:launchOptions];
+    //[WXApi registerApp:WeChatID];
     
+    [NetworkReachabilityManager listenNetWorkingStatus:^(HFTNetworkStatus status) {
+        switch (status) {
+            case HFTNetworkStatusUnknown:
+                NSLog(@"AppDelegate  未知网络");
+                break;
+            case HFTNetworkStatusNotReachable:
+                NSLog(@"AppDelegate  没有联网");
+                break;
+            case HFTNetworkStatusReachableViaWWAN:
+                NSLog(@"AppDelegate  蜂窝数据");
+                break;
+            case HFTNetworkStatusReachableViaWiFi:
+                NSLog(@"AppDelegate 无线网");
+                break;
+            default:
+                break;
+        }
+    }];
     return YES;
 }
 
@@ -313,12 +348,47 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ForGroundAction" object:nil];
+    [_payCenter restoreSceneOfWeChatPay];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"asdf" message:@"asdfasdf" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
-- (void) netWorkStatusChanged: (NSNotification* )note
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary*)options {
+    if ([url.host isEqualToString:@"safepay"]) {
+        LazyWeakSelf;
+//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+//            [weakSelf.payCenter aliPayCallBack:resultDic];
+//        }];
+//        return YES;
+//    } else if ([url.relativeString rangeOfString:@"//pay/"].location != NSNotFound) {
+//        return [WXApi handleOpenURL:url delegate:self];
+    }
+    return YES;
+}
+
+#pragma mark - 微信支付回调
+//-(void)onResp:(BaseResp *)resp {
+//    if ([resp isKindOfClass:[PayResp class]]) {
+//        PayResp *response = (PayResp *)resp;
+//        switch (response.errCode) {
+//            case WXSuccess: {
+//                [_payCenter WeChatPayCallBackSuccess];
+//                break;
+//            }
+//            default: {
+//                [_payCenter callWeChatPayCallBackFaile:response.errStr];
+//                break;
+//            }
+//        }
+//    }
+//}
+
+
+
+/*- (void) netWorkStatusChanged: (NSNotification* )note
 {
     Reachability* reachability = note.object;
     
@@ -353,7 +423,7 @@
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
     }
-}
+}*/
 
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
@@ -362,6 +432,7 @@
 
 - (void) grabButtonTriggered
 {
+    [[ComplexDealCenter sharedInstance] triggerd:@"shenghairen"];
 //    [self.tabbarController stopJDAnimation];
 //    
 //    CenterViewController* vc = [[CenterViewController alloc] init];
@@ -371,7 +442,6 @@
 //    [self.rootViewController presentViewController: nav animated:YES completion:nil];
     
     [self.tabbarController stopJDAnimation];
-    
     MapViewController *vc = [[MapViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     [nav setNavigationBarHidden:YES];
@@ -382,6 +452,13 @@
 + (AppDelegate*) sharedInstance
 {
     return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
+
+- (id<PayCenterInterfaceProtocol, PayCenterCallBackProtocol, PayCenterInterfaceProtocol>)payCenter {
+    if (_payCenter == nil) {
+        _payCenter = [[PayCenter alloc] init];
+    }
+    return _payCenter;
 }
 
 - (void)GGWPAnalyse {

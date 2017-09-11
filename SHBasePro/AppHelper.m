@@ -7,8 +7,8 @@
 //
 
 #import "AppHelper.h"
-#import "JSPatch/JSPatch.h"
-#import "Jspatch/JPEngine.h"
+//#import "JSPatch/JSPatch.h"
+//#import "Jspatch/JPEngine.h"
 
 @implementation AppHelper
 
@@ -25,7 +25,8 @@
 }
 
 - (void) syncJSPatch: (NSString*) jsValue {
-    [JPEngine evaluateScript:jsValue];
+    //[JPEngine evaluateScript:jsValue];
 }
+
 
 @end

@@ -110,7 +110,7 @@
 }
 
 - (void) preTestBtnAction: (UIButton*) sender {
-    [self performSelector:@selector(ggw) withObject:nil];
+    //[self performSelector:@selector(ggw) withObject:nil];
     MessageSenderViewController* VC = [[MessageSenderViewController alloc] init];
     //UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:self];
     

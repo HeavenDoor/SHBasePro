@@ -15,4 +15,5 @@
  *  @param origionImageView 原始的ImageView
  */
 + (void)scaleImageToFitWithImageView:(UIImageView *)origionImageView;
+
 @end

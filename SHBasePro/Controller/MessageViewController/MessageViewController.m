@@ -9,6 +9,8 @@
 #import "MessageViewController.h"
 #import "DataCell.h"
 #import "MessageAPIManager.h"
+#import "SHRefreshHeader.h"
+#import "TankCycleScrollView.h"
 
 static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
@@ -16,8 +18,9 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray* dataArray;
-//@property (nonatomic, assign) NSInteger pageIndex;
+@property (nonatomic, assign) NSInteger pageIndex;
 @property(nonatomic, strong) MessageAPIManager *msgAPIManager;
+@property (nonatomic, strong) TankCycleScrollView *cycleView;
 @end
 
 @implementation MessageViewController
@@ -33,7 +36,7 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
     self.msgAPIManager = [[MessageAPIManager alloc] init];
     self.msgAPIManager.delegate = self;
     self.msgAPIManager.paramSource = self;
-    //self.pageIndex = 1;
+    self.pageIndex = 1;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
@@ -48,16 +51,21 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
     }];
     
     self.tableView.mj_footer =  [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        weakSelf.pageIndex++;
         [weakSelf.msgAPIManager loadData];
     }];
     
     self.tableView.tableFooterView.hidden = YES;
     [self.msgAPIManager loadData];
+    
+    
+    self.cycleView = [[TankCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, SCREEN_WIDTH*0.75) animationDuration:0];
+    
+    self.tableView.tableHeaderView = self.cycleView;
+    //[self.view addSubview:self.cycleView];
 }
 
-- (void) requestDataList: (BOOL) append
-{
-    
+- (void) requestDataList: (BOOL) append {
     /*NSString* currentIndex = @"1";
      if (append == YES) {
      currentIndex = [NSString stringWithFormat:@"%ld", self.pageIndex + 1];
@@ -72,17 +80,24 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 - (NSDictionary *)paramsForApi:(CTAPIBaseManager *)manager {
     NSDictionary *params = @{};
     if (manager == self.msgAPIManager) {
-        params = @{@"p" : @"1", @"tab" : @"latest"};
+        params = @{@"p" : [NSString stringWithFormat:@"%ld", self.pageIndex], @"tab" : @"latest"};
     }
     return params;
 }
 
 #pragma mark - CTAPIManagerCallBackDelegate
 - (void)managerCallAPIDidSuccess:(CTAPIBaseManager *)manager {
+    [self.dataArray removeAllObjects];
     if (manager == self.msgAPIManager) {
-        [self.dataArray removeAllObjects];
-        self.dataArray = [manager fetchDataWithReformer:self.msgAPIManager];
+        if (self.pageIndex == 1) {
+            [self.dataArray removeAllObjects];
+        }
         
+        //[self.dataArray addObjectsFromArray:[manager fetchDataWithReformer:self.msgAPIManager]];
+        NSMutableArray *array = [NSMutableArray array];
+        [array addObjectsFromArray:[manager fetchDataWithReformer:self.msgAPIManager]];
+        [self.dataArray addObject:array[0]];
+        [self.dataArray addObject:array[1]];
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
         
@@ -92,6 +107,13 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
         else {
             self.tableView.mj_header.state = MJRefreshStateIdle;
         }
+        
+        NSMutableArray *imageArray = [NSMutableArray array];
+        for (MovieModel *model in array) {
+            [imageArray addObject:model.image];
+        }
+        
+        self.cycleView.cycleImageUrlArray = imageArray;
         [self.tableView reloadData];
     }
 }
@@ -117,11 +139,13 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
+    NSLog(@"heightForRowAtIndexPath");
     return kUIScaleSize(80);
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cellForRowAtIndexPath");
     DataCell* cell = [tableView dequeueReusableCellWithIdentifier:DataViewCellIdentifier];
     if (cell == nil) {
         cell = [[DataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DataViewCellIdentifier];

@@ -36,14 +36,15 @@
 }
 
 - (BOOL)shouldCache {
-    return YES;
+    return NO;
 }
 
 - (NSDictionary *)reformParams:(NSDictionary *)params {
-    NSMutableDictionary *resultParams = [[NSMutableDictionary alloc] init];
-    [resultParams setObject:@"1" forKey:@"p"];
-    [resultParams setObject:@"latest" forKey:@"tab"];
-    return resultParams;
+//    NSMutableDictionary *resultParams = [[NSMutableDictionary alloc] init];
+//    [resultParams setObject:@"1" forKey:@"p"];
+//    [resultParams setObject:@"latest" forKey:@"tab"];
+//    return resultParams;
+    return params;
 }
 
 #pragma mark - CTAPIManagerValidator 数据校验

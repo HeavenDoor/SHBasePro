@@ -26,12 +26,22 @@
     return self;
 }
 
-- (void) setCellData:(MovieModel *)cellData
-{
+- (void) setCellData:(MovieModel *)cellData {
     _cellData = cellData;
     self.titleLabel.text = cellData.title;
-    [self.movieImageView sd_setImageWithURL:[NSURL URLWithString:cellData.image] placeholderImage:[UIImage imageNamed:@"picture_"] options:SDWebImageRefreshCached];
-    // 接下来这个 View中可能会有一些给予MovieModel的逻辑处理  ...
+    WEAK_SELF;
+    [self.movieImageView sd_setImageWithURL:[NSURL URLWithString:cellData.image] placeholderImage:[UIImage imageNamed:@"picture_"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        weakSelf.movieImageView.alpha = 0.0;
+        [UIView transitionWithView:weakSelf.movieImageView
+                          duration:0.4
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            [weakSelf.movieImageView setImage:image];
+                            weakSelf.movieImageView.alpha = 1.0;
+                        } completion:NULL];
+    }];
+    //_movieImageView.contentMode
+    // 接下来这个 View中可能会有一些给予MovieModel的逻辑处理  SDWebImageRefreshCached
 }
 
 - (void) configSubViews

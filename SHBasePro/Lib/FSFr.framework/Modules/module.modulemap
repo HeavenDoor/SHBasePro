@@ -1,6 +1,0 @@
-framework module FSFr {
-  umbrella header "FSFr.h"
-
-  export *
-  module * { export * }
-}

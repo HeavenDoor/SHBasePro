@@ -11,38 +11,6 @@
 @interface UILabel(Tool)
 
 /**
- *  字间距
- */
-@property (nonatomic, assign)CGFloat characterSpace;
-
-/**
- *  行间距
- */
-@property (nonatomic, assign)CGFloat lineSpace;
-
-/**
- *  关键字
- */
-@property (nonatomic, copy)NSString *keywords;
-@property (nonatomic, strong)UIFont *keywordsFont;
-@property (nonatomic, strong)UIColor *keywordsColor;
-
-/**
- *  下划线
- */
-@property (nonatomic,copy)NSString *underlineStr;
-@property (nonatomic,strong)UIColor *underlineColor;
-
-/**
- *  计算label宽高，必须调用
- *
- *  @param maxWidth 最大宽度
- *
- *  @return label的size
- */
-- (CGSize)getLableSizeWithMaxWidth:(CGFloat)maxWidth;
-
-/**
  *  文字颜色字体设置
  *
  *  @param text           需要处理的文字
@@ -62,13 +30,18 @@
 - (void)setAttrText:(NSString*)text scaleText:(NSArray*)scaleTexts scaleSize:(CGFloat)scaleSize;
 
 /**
- *  文字颜色设置
+ *  文字间距设置
  *
- *  @param text       需要处理的文字
- *  @param scaleTexts 需要处理颜色的文字
- *  @param color      文字颜色
+ *  @param lineSpacing 间距大小
  */
-- (void)setAttributedColor:(NSString*)text scaleText:(NSArray*)scaleTexts color:(UIColor*)color;
+- (void)setLineSpaceing:(CGFloat)lineSpacing;
+
+/**
+ *  文字列间距设置
+ *
+ *  @param lineSpacing 间距大小
+ */
+- (void)setcolumnSpaceing:(CGFloat)lineSpacing;
 
 /**
  *  文字颜色设置
@@ -77,8 +50,9 @@
  *  @param scaleTexts 需要处理颜色的文字
  *  @param color      文字颜色
  */
-- (void)setAttributedColor:(NSString*)text scaleText:(NSArray*)scaleTexts color:(UIColor*)color scaleSize:(CGFloat)scaleSize;
+- (void)setAttributedColor:(NSString*)text scaleText:(NSArray*)scaleTexts color:(UIColor*)color;
 
++(CGSize)getSpaceLabelHeight:(NSString*)str  withWidth:(CGFloat)width WithFontSize:(CGFloat)fontSize;
 @end
 
 @interface UIImage(Tool)

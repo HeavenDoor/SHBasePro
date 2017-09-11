@@ -9,6 +9,9 @@
 #ifndef CommonDefine_h
 #define CommonDefine_h
 
+#define LAZY_WEAK_SELF __weak typeof(self) weakSelf = self
+#define LazyWeakSelf LAZY_WEAK_SELF
+
 #define WEAK_TYPES(instance) __weak typeof(instance) weak##instance = instance;
 #define WEAK_SELF __weak typeof(self) weakSelf = self;
 //IOS7以上或以下版本判断
@@ -46,4 +49,5 @@
 /** 是否为iOS9 */
 #define IOS_VER_9 (([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) ? YES : NO)
 
+#define WeChatID @"wxdf8a143ad890459f"
 #endif /* CommonDefine_h */

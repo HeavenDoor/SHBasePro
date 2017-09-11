@@ -8,9 +8,11 @@
 
 #import "UIImageView+Tool.h"
 
+
 @implementation UIImageView (Tool)
 + (void)scaleImageToFitWithImageView:(UIImageView *)origionImageView {
     [origionImageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
     origionImageView.contentMode = UIViewContentModeScaleAspectFill;
 }
+
 @end
