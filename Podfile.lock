@@ -40,6 +40,13 @@ PODS:
   - MJRefresh (3.1.12)
   - Objection (1.6.1)
   - PodSpec (1.0.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
@@ -60,6 +67,7 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.0)
   - Objection (~> 1.6)
   - PodSpec (~> 1.0.2)
+  - ReactiveCocoa (= 2.5)
   - SDWebImage (~> 3.7.5)
   - YTKKeyValueStore (~> 0.1.2)
   - YYText (~> 1.0.7)
@@ -77,11 +85,12 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   PodSpec: 6993276280bbaddb12ef37dbe59eec7d4f1d6238
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-PODFILE CHECKSUM: a9c15b230a650df026a4b58ab8da7c8c6eba5dca
+PODFILE CHECKSUM: 22e88fa865503d81633937506bbadffb6de54f38
 
 COCOAPODS: 1.2.1

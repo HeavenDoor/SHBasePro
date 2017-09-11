@@ -66,6 +66,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    NSLog(@"1========%@",[NSThread currentThread]);
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"2========%@",[NSThread currentThread]);
+    });
+    NSLog(@"3========%@",[NSThread currentThread]);
+    
+
     UIImage *img = [UIImage imageNamed:@"Image1"];
     NSData * imageData = UIImageJPEGRepresentation(img, 1);
     

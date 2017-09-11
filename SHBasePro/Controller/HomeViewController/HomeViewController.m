@@ -22,9 +22,6 @@
 #import "MapParamsGenerator.h"
 
 
-#import "CameraPhotoViwerController.h"
-#import "CustomCameraViewController.h"
-
 #import "UIImageView+GIF.h"
 #import "UIImage+GIF.h"
 

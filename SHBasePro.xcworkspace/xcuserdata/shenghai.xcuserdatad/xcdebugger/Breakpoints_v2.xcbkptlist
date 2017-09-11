@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
          </BreakpointContent>
@@ -572,11 +572,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
             landmarkName = "-mvvmAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -754,11 +754,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -770,11 +770,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "451"
-            endingLineNumber = "451"
+            startingLineNumber = "458"
+            endingLineNumber = "458"
             landmarkName = "+sharedInstance"
             landmarkType = "7">
          </BreakpointContent>
@@ -834,11 +834,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "456"
-            endingLineNumber = "456"
+            startingLineNumber = "463"
+            endingLineNumber = "463"
             landmarkName = "-payCenter"
             landmarkType = "7">
          </BreakpointContent>
@@ -1346,11 +1346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "488"
+            endingLineNumber = "488"
             landmarkName = "-GGWPAnalyse"
             landmarkType = "7">
          </BreakpointContent>
@@ -1362,11 +1362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "482"
-            endingLineNumber = "482"
+            startingLineNumber = "489"
+            endingLineNumber = "489"
             landmarkName = "-GGWPAnalyse"
             landmarkType = "7">
          </BreakpointContent>
@@ -1378,11 +1378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "483"
-            endingLineNumber = "483"
+            startingLineNumber = "490"
+            endingLineNumber = "490"
             landmarkName = "@implementation AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -1394,11 +1394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493">
+            startingLineNumber = "500"
+            endingLineNumber = "500">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1408,11 +1408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "491"
-            endingLineNumber = "491">
+            startingLineNumber = "498"
+            endingLineNumber = "498">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1422,25 +1422,25 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "499"
+            endingLineNumber = "499">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/AppDelegate.m"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "492"
             endingLineNumber = "492">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "485"
-            endingLineNumber = "485">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2105,38 +2105,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
-            timestampString = "524974309.369098"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
-            timestampString = "524974309.369098"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-sayHello"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/MapViewController/MapViewController.m"
             timestampString = "521533250.121793"
             startingColumnNumber = "9223372036854775807"
@@ -2698,11 +2666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "-paramRequstFinish"
             landmarkType = "7">
          </BreakpointContent>
@@ -2746,11 +2714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "368"
-            endingLineNumber = "368"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "-aliPayFaile:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2762,11 +2730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-test"
             landmarkType = "7">
          </BreakpointContent>
@@ -2794,11 +2762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "-application:openURL:options:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2858,11 +2826,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-locationAuthorized"
             landmarkType = "7">
          </BreakpointContent>
@@ -2890,11 +2858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "-GGWPAnalyse"
             landmarkType = "7">
          </BreakpointContent>
@@ -3002,11 +2970,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-locationAuthorized"
             landmarkType = "7">
          </BreakpointContent>
@@ -3018,11 +2986,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-locationAuthorized"
             landmarkType = "7">
          </BreakpointContent>
@@ -3034,11 +3002,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
@@ -3050,11 +3018,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3066,11 +3034,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3082,28 +3050,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "-objectionAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
-            timestampString = "524974309.369098"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-imageClicked:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3370,11 +3322,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3386,11 +3338,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485388.359105"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3402,11 +3354,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485388.359105"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "-showWelcomePage"
             landmarkType = "7">
          </BreakpointContent>
@@ -3418,43 +3370,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "-objectionAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
+            timestampString = "526791622.544243"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "-objectionAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "262"
             endingLineNumber = "262"
-            landmarkName = "-objectionAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-objectionAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3498,11 +3450,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/AppDelegate.m"
-            timestampString = "524485373.974218"
+            timestampString = "526811175.396444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "-grabButtonTriggered"
             landmarkType = "7">
          </BreakpointContent>
@@ -3514,11 +3466,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
-            timestampString = "524974309.369098"
+            timestampString = "526794871.175521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-onComplexEventDealt:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3530,11 +3482,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485460.960317"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "-onComplexEventDealt:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3626,11 +3578,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-mvvmAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3642,11 +3594,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SHBasePro/Controller/HomeViewController/HomeViewController.m"
-            timestampString = "524485834.232868"
+            timestampString = "526791622.544243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-objectionAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3663,6 +3615,166 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
             endingLineNumber = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
+            timestampString = "526795117.651691"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
+            timestampString = "526795173.463952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-sayHelloButton"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/Controller/MineViewController/MineViewController.m"
+            timestampString = "526795214.897702"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-imageClicked:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/AppDelegate.m"
+            timestampString = "526811143.24913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate application:didFinishLaunchingWithOptions:]"
+                  moduleName = "&#x6709;&#x610f;&#x601d;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenghai/Desktop/SHBasePro/SHBasePro/AppDelegate.m"
+                  timestampString = "526811639.186497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57-[AppDelegate application:didFinishLaunchingWithOptions:]_block_invoke"
+                  moduleName = "&#x6709;&#x610f;&#x601d;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenghai/Desktop/SHBasePro/SHBasePro/AppDelegate.m"
+                  timestampString = "526811639.188597"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/AppDelegate.m"
+            timestampString = "526811143.730572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/AppDelegate.m"
+            timestampString = "526811144.203058"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/AppDelegate.m"
+            timestampString = "526811144.623857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SHBasePro/AppDelegate.m"
+            timestampString = "526811527.249665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

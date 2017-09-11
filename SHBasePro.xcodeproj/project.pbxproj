@@ -51,6 +51,7 @@
 		4A3CE3831CDD950C0084E6E0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3821CDD950C0084E6E0 /* ImageIO.framework */; };
 		4A3CE3851CDD95170084E6E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */; };
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
+		4A43B9FF1F6640B30012C5E2 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A43B9FE1F6640B30012C5E2 /* RevealServer.framework */; };
 		4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B8CDC1E2E334800124E65 /* SHSingleton.m */; };
 		4A539D821ED6D23D007E4E1E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D811ED6D23D007E4E1E /* TestViewController.m */; };
 		4A539D8C1ED6D4A9007E4E1E /* ATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D8B1ED6D4A9007E4E1E /* ATViewController.m */; };
@@ -236,6 +237,7 @@
 		4A3CE3821CDD950C0084E6E0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		4A3CE3841CDD95170084E6E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4A3CE3861CDD953C0084E6E0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A43B9FE1F6640B30012C5E2 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevealServer.framework; sourceTree = SOURCE_ROOT; };
 		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		4A4B8CDB1E2E334800124E65 /* SHSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSingleton.h; sourceTree = "<group>"; };
 		4A4B8CDC1E2E334800124E65 /* SHSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSingleton.m; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 				4A3BE51F1CDC7684005DBC90 /* MapKit.framework in Frameworks */,
 				4A3BE51D1CDC7672005DBC90 /* CoreMedia.framework in Frameworks */,
 				4A3BE51B1CDC7667005DBC90 /* CoreLocation.framework in Frameworks */,
+				4A43B9FF1F6640B30012C5E2 /* RevealServer.framework in Frameworks */,
 				6A4E1D186573391B70FA8190 /* libPods-SHBasePro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +816,7 @@
 		4A91138A1CF0702900641789 /* SHBasePro */ = {
 			isa = PBXGroup;
 			children = (
+				4A43B9FE1F6640B30012C5E2 /* RevealServer.framework */,
 				4AFB6BCA1E48A7B400FF45B9 /* Categrory */,
 				4AFB6BE21E48A7B400FF45B9 /* Config */,
 				4AFB6BEA1E48A7B400FF45B9 /* Tool */,
@@ -1449,6 +1453,7 @@
 				EB8AE3F51CD36CF200B0DD29 /* Resources */,
 				1EA4826660F028F4919D3BA2 /* [CP] Embed Pods Frameworks */,
 				DBF455A8A57C4C4D6BE640D3 /* [CP] Copy Pods Resources */,
+				4A43BA001F6640C40012C5E2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1544,6 +1549,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4A43BA001F6640C40012C5E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export REVEAL_SERVER_FILENAME=\"RevealServer.framework\"\n\n# Update this path to point to the location of RevealServer.framework in your project.\nexport REVEAL_SERVER_PATH=\"${SRCROOT}/${REVEAL_SERVER_FILENAME}\"\n\n# If configuration is not Debug, skip this script.\n[ \"${CONFIGURATION}\" != \"Debug\" ] && exit 0\n\n# If RevealServer.framework exists at the specified path, run code signing script.\nif [ -d \"${REVEAL_SERVER_PATH}\" ]; then\n\"${REVEAL_SERVER_PATH}/Scripts/copy_and_codesign_revealserver.sh\"\nelse\necho \"Cannot find RevealServer.framework, so Reveal Server will not be started for your app.\"\nfi";
 		};
 		6B850702798144DB372C4784 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

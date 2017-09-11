@@ -35,21 +35,24 @@
     [self.view addSubview:self.bgImg];
     
     self.view.backgroundColor = kColor(200, 200, 200);
-    self.sayHelloButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 50, SCREEN_HEIGHT - 300, 100, 50)];
+   
+    //self.sayHelloButton.uxy_acceptEventInterval = 1.5;
+    
     self.sayHelloButton.backgroundColor = [UIColor redColor];
     self.sayHelloButton.layer.cornerRadius = 8.0;
     [self.sayHelloButton setTitle: @"sayHello" forState:UIControlStateNormal];
-    [self.sayHelloButton addTarget:self action:@selector(sayHello) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.sayHelloButton];
-    //self.sayHelloButton.uxy_acceptEventInterval = 1.5;
     
-    
+    [[self.sayHelloButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+         NSLog(@"button clicked");
+     }];
+
     UIImage* img = [UIImage imageNamed:@"本店"];// [imageRotatedByDegrees: folatro];
     self.kkImageView = [[UIImageView alloc] initWithFrame: CGRectMake(100, SCREEN_HEIGHT -  200, 150,150)];
     self.kkImageView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.kkImageView];
     //self.kkImageView.image = img;
-    [self.kkImageView sd_setImageWithURL:[NSURL URLWithString:@"http://pic.vfanghui.com/pic/HEAD/1_1/SMALL/CD0351138_1_1480141863528.jpg"]];
+    [self.kkImageView setImage:[UIImage imageNamed:@"aa.gif"]];
     self.kkImageView.userInteractionEnabled = YES;
     
     UITapGestureRecognizer *gest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClicked:)];
@@ -76,6 +79,13 @@
 //    self.kkImageView.image = img;
 //    
 //    NSLog(@"Say Hello Clicked");
+}
+
+- (UIButton *)sayHelloButton {
+    if (_sayHelloButton == nil) {
+        _sayHelloButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/2 - 50, SCREEN_HEIGHT - 300, 100, 50)];
+    }
+    return _sayHelloButton;
 }
 
 
