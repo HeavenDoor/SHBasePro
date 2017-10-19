@@ -53,6 +53,7 @@
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
 		4A43B9FF1F6640B30012C5E2 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A43B9FE1F6640B30012C5E2 /* RevealServer.framework */; };
 		4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B8CDC1E2E334800124E65 /* SHSingleton.m */; };
+		4A4D546F1F96EEA4006BC3AC /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D546E1F96EEA4006BC3AC /* WebViewController.m */; };
 		4A539D821ED6D23D007E4E1E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D811ED6D23D007E4E1E /* TestViewController.m */; };
 		4A539D8C1ED6D4A9007E4E1E /* ATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D8B1ED6D4A9007E4E1E /* ATViewController.m */; };
 		4A539D8F1ED6D4BD007E4E1E /* BTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D8E1ED6D4BD007E4E1E /* BTViewController.m */; };
@@ -241,6 +242,8 @@
 		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		4A4B8CDB1E2E334800124E65 /* SHSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSingleton.h; sourceTree = "<group>"; };
 		4A4B8CDC1E2E334800124E65 /* SHSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSingleton.m; sourceTree = "<group>"; };
+		4A4D546D1F96EEA4006BC3AC /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4A4D546E1F96EEA4006BC3AC /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4A539D801ED6D23D007E4E1E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4A539D811ED6D23D007E4E1E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		4A539D831ED6D270007E4E1E /* HFTNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTNavigationProtocol.h; sourceTree = "<group>"; };
@@ -712,6 +715,15 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		4A4D546C1F96EE95006BC3AC /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D546D1F96EEA4006BC3AC /* WebViewController.h */,
+				4A4D546E1F96EEA4006BC3AC /* WebViewController.m */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
 		4A57DDEA1CF2F66F00174FC8 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +914,7 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4A4D546C1F96EE95006BC3AC /* WebViewController */,
 				4AD72CEE1F42FAC8009D49CF /* MultiDelegate */,
 				4A90F6741ED96AFD008B50CA /* NetworkReachabilityManager */,
 				4A66C0451EC9D23F00C1AB06 /* TankCycleScrollView */,
@@ -1569,13 +1582,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SHBasePro-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBF455A8A57C4C4D6BE640D3 /* [CP] Copy Pods Resources */ = {
@@ -1584,9 +1600,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/ZBarSDK/iphone/res/zbar-back.png",
+				"${PODS_ROOT}/ZBarSDK/iphone/res/zbar-help.html",
+				"${PODS_ROOT}/ZBarSDK/iphone/res/zbar-helpicons.png",
+				"${PODS_ROOT}/ZBarSDK/iphone/res/zbar-samples.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1626,6 +1649,7 @@
 				4AFB6CC61E8A166700351622 /* ParamsGenerator.m in Sources */,
 				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
 				4AADBB371E57DE3B00BAF66D /* UITextField+Blocks.m in Sources */,
+				4A4D546F1F96EEA4006BC3AC /* WebViewController.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
 				4AFB6BC01E48A7A600FF45B9 /* CTCommonParamsGenerator.m in Sources */,

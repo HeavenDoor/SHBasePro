@@ -18,6 +18,10 @@ pod 'BlocksKit', '~> 2.2.5'
 
 pod 'YYText', '~> 1.0.7'
 pod 'ReactiveCocoa', '2.5'
+pod 'PodSpec', '~> 1.0.2'
+
+#source 'http://GitBase/GitBase.git'
+#pod 'PayCenter', :git => 'http://GitBase/GitBase.git'
 
 target "SHBasePro" do
     
