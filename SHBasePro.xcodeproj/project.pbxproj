@@ -100,6 +100,7 @@
 		4ADB5A281E2B475F006349DF /* MessageSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB5A271E2B475F006349DF /* MessageSenderViewController.m */; };
 		4ADB5A2D1E2B668F006349DF /* MessageSenderLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB5A2C1E2B668F006349DF /* MessageSenderLogic.m */; };
 		4AE3F18F1ED2C866002F582B /* GModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3F18E1ED2C866002F582B /* GModel.m */; };
+		4AEDA2F11FC6E83C00DED563 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEDA2F01FC6E83C00DED563 /* BinaryTreeNode.m */; };
 		4AF2B6171E05175300714667 /* NSObject+ApiServiceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */; };
 		4AF2B61E1E05301300714667 /* ApiServicePassthrouth.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61D1E05301300714667 /* ApiServicePassthrouth.m */; };
 		4AF2B6211E05334400714667 /* GetApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2B61F1E05334400714667 /* GetApiService.m */; };
@@ -328,6 +329,8 @@
 		4ADB5A2C1E2B668F006349DF /* MessageSenderLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSenderLogic.m; sourceTree = "<group>"; };
 		4AE3F18D1ED2C866002F582B /* GModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GModel.h; sourceTree = "<group>"; };
 		4AE3F18E1ED2C866002F582B /* GModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GModel.m; sourceTree = "<group>"; };
+		4AEDA2EF1FC6E83C00DED563 /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
+		4AEDA2F01FC6E83C00DED563 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		4AF2B6151E05175300714667 /* NSObject+ApiServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ApiServiceProtocol.h"; sourceTree = "<group>"; };
 		4AF2B6161E05175300714667 /* NSObject+ApiServiceProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ApiServiceProtocol.m"; sourceTree = "<group>"; };
 		4AF2B6181E0517FF00714667 /* ObjectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectionProtocol.h; sourceTree = "<group>"; };
@@ -914,6 +917,7 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4AEDA2EE1FC6E82800DED563 /* BinaryTree */,
 				4A4D546C1F96EE95006BC3AC /* WebViewController */,
 				4AD72CEE1F42FAC8009D49CF /* MultiDelegate */,
 				4A90F6741ED96AFD008B50CA /* NetworkReachabilityManager */,
@@ -1023,6 +1027,15 @@
 				4ADB5A2C1E2B668F006349DF /* MessageSenderLogic.m */,
 			);
 			path = MessageSenderLogic;
+			sourceTree = "<group>";
+		};
+		4AEDA2EE1FC6E82800DED563 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				4AEDA2EF1FC6E83C00DED563 /* BinaryTreeNode.h */,
+				4AEDA2F01FC6E83C00DED563 /* BinaryTreeNode.m */,
+			);
+			path = BinaryTree;
 			sourceTree = "<group>";
 		};
 		4AF2B6111E0514D300714667 /* Objection */ = {
@@ -1733,6 +1746,7 @@
 				4A0D26E11D94D3D700CAB38B /* AppHelper.m in Sources */,
 				4AFB6BBA1E48A7A600FF45B9 /* CTCache.m in Sources */,
 				4AFB6BB31E48A7A600FF45B9 /* NSMutableString+AXNetworkingMethods.m in Sources */,
+				4AEDA2F11FC6E83C00DED563 /* BinaryTreeNode.m in Sources */,
 				4A606A841E1E91E800161996 /* UIViewController+ViewControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
