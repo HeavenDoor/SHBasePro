@@ -36,4 +36,8 @@
 - (void)test {
     NSLog(@"GModel Test...");
 }
+    
+- (void)ggwp {
+    NSLog(@"%@ Test...", @"ggwp");
+}
 @end

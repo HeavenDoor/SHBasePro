@@ -14,6 +14,8 @@
 #import "ComplexDealCenter.h"
 #import "UILabel+Tool.h"
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 @interface MineViewController () <ComplexDealProtocol>
 @property (strong, nonatomic) UIImageView* bgImg;
 @property (nonatomic, strong) UIButton* sayHelloButton;
