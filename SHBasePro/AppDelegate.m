@@ -38,6 +38,7 @@
 #import "NetworkReachabilityManager.h"
 
 #import "ComplexDealCenter.h"
+#import "WebViewController.h"
 
 
 @interface AppDelegate () <RDVTabBarControllerDelegate>  //WXApiDelegate,
@@ -65,6 +66,18 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSString *regex = @"(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)";
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    if (![pre evaluateWithObject:@"12345678912365432X"]) {
+        NSLog(@"不匹配");
+        
+    } else {
+        NSLog(@"fhgjkn;l'");
+    }
+    
+    //^[1-9]\\d*$
+    
     
     NSLog(@"1========%@",[NSThread currentThread]);
     dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -445,10 +458,20 @@
 
     [self.tabbarController stopJDAnimation];
     CenterViewController *vc = [[CenterViewController alloc] init];
+//    [self.tabbarController stopJDAnimation];
+//    
+    WebViewController* vc = [[WebViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     [nav setNavigationBarHidden:YES];
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self.rootViewController presentViewController: nav animated:YES completion:nil];
+	
+//    [self.tabbarController stopJDAnimation];
+//    MapViewController *vc = [[MapViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [nav setNavigationBarHidden:YES];
+//    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [self.rootViewController presentViewController: nav animated:YES completion:nil];
 }
 
 + (AppDelegate*) sharedInstance

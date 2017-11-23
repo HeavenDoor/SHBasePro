@@ -21,6 +21,10 @@ pod 'DZNEmptyDataSet', '~> 1.8.1'
 pod 'BlocksKit', '~> 2.2.5'
 pod 'YYText', '~> 1.0.7'
 pod 'ReactiveCocoa', '2.5'
+pod 'PodSpec', '~> 1.0.2'
+
+#source 'http://GitBase/GitBase.git'
+#pod 'PayCenter', :git => 'http://GitBase/GitBase.git'
 
 #pod 'CTAssetsPickerController', '~> 3.3.1'
 #pod 'PayCenter', :git => 'http://jj18cm/GitBase.git', :tag => '1.2.9'
