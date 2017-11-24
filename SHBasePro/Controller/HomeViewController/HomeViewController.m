@@ -29,6 +29,8 @@
 #import <CoreLocation/CLLocationManager.h>
 #import <objc/runtime.h>
 
+#import "CenterViewController.h"
+
 //#import "TestViewController+AT.h"
 //#import "TestViewController+BT.h"
 
@@ -59,6 +61,13 @@
 @end
 
 @implementation HomeViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    for (int i =0; i < 5; i++) {
+        CenterViewController *vc2 = [[CenterViewController alloc] init];
+        [self.navigationController pushViewController:vc2 animated:YES];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -182,11 +191,6 @@
     NSLog(@"=====%@被销毁了=====", [self class]);
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -198,7 +202,26 @@
 }
 
 - (void) objectionAction: (UIButton*) sender {
-    [[ComplexDealCenter sharedInstance] removeDelegate:self];
+//    for (int i = 0; i < 10; i++) {
+//        CenterViewController *vc = [[CenterViewController alloc] init];
+//        [self.navigationController pushViewController:vc animated:YES];
+//        
+//        [vc.navigationController popViewControllerAnimated:YES];
+//    }
+    
+//    sleep(0.3);
+//    
+//    CenterViewController *vc1 = [[CenterViewController alloc] init];
+//    [self.navigationController pushViewController:vc1 animated:YES];
+//    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        CenterViewController *vc2 = [[CenterViewController alloc] init];
+        [self.navigationController pushViewController:vc2 animated:YES];
+    });
+    
+    //[vc.navigationController popViewControllerAnimated:YES];
+    
+    //[[ComplexDealCenter sharedInstance] removeDelegate:self];
     /*
     NSMutableArray *array = [NSMutableArray array];
     unsigned int count;
@@ -243,13 +266,13 @@
     
     //NSArray *imageArray = [_cameraView getAllImages];
     
-    _loadingImg = [[UIImageView alloc] init];
-    [self.view addSubview:_loadingImg];
-    [_loadingImg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(100);
-        make.width.equalTo(self.view.mas_width);
-        make.height.mas_equalTo(@200);
-    }];
+//    _loadingImg = [[UIImageView alloc] init];
+//    [self.view addSubview:_loadingImg];
+//    [_loadingImg mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.view.mas_top).offset(100);
+//        make.width.equalTo(self.view.mas_width);
+//        make.height.mas_equalTo(@200);
+//    }];
     
 //    
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

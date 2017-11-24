@@ -100,6 +100,8 @@
     }error:&error];
         
     GModel *gmodel = [[GModel alloc] init];
+    [gmodel performSelectorOnMainThread:@selector(ggwp) withObject:nil waitUntilDone:YES];
+    
     NSString *apro = [[NSString alloc] initWithString:@"123"];
     NSString *bpro = [[NSString alloc] initWithString:@"456"];
     gmodel.aPro = apro;
@@ -453,6 +455,9 @@
 - (void) grabButtonTriggered
 {
     [[ComplexDealCenter sharedInstance] triggerd:@"shenghairen"];
+
+    [self.tabbarController stopJDAnimation];
+    CenterViewController *vc = [[CenterViewController alloc] init];
 //    [self.tabbarController stopJDAnimation];
 //    
     WebViewController* vc = [[WebViewController alloc] init];

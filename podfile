@@ -1,5 +1,9 @@
 platform:ios,'7.0'
 
+
+
+target "SHBasePro" do
+
 #use_frameworks!
 pod 'AFNetworking','~>3.0.4'
 pod 'MBProgressHUD', '~> 1.0.0'
@@ -15,7 +19,6 @@ pod 'PodSpec', '~> 1.0.2'
 pod 'Aspects', '~> 1.4.1'
 pod 'DZNEmptyDataSet', '~> 1.8.1'
 pod 'BlocksKit', '~> 2.2.5'
-
 pod 'YYText', '~> 1.0.7'
 pod 'ReactiveCocoa', '2.5'
 pod 'PodSpec', '~> 1.0.2'
@@ -23,6 +26,9 @@ pod 'PodSpec', '~> 1.0.2'
 #source 'http://GitBase/GitBase.git'
 #pod 'PayCenter', :git => 'http://GitBase/GitBase.git'
 
-target "SHBasePro" do
+#pod 'CTAssetsPickerController', '~> 3.3.1'
+#pod 'PayCenter', :git => 'http://jj18cm/GitBase.git', :tag => '1.2.9'
+
+
     
 end

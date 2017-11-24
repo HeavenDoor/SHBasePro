@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ren. All rights reserved.
 //
 
-#import <Objection/Objection.h>
+//#import <Objection/Objection.h>
 
 @interface DataViewControllerModule : JSObjectionModule
 

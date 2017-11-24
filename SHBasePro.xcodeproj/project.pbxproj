@@ -14,7 +14,6 @@
 		040D0B1D1D5CCC9A00A178B6 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B0C1D5CCC9A00A178B6 /* MessageViewController.m */; };
 		040D0B1E1D5CCC9A00A178B6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B0F1D5CCC9A00A178B6 /* MineViewController.m */; };
 		040D0B4E1D5CCCAE00A178B6 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B291D5CCCAE00A178B6 /* HitTestView.m */; };
-		040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */; };
 		4A0BA1D81E251C4C0002D79F /* UIImage+SHBasePro.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BA1D61E251C4C0002D79F /* UIImage+SHBasePro.m */; };
 		4A0BA1DF1E251CBA0002D79F /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BA1DA1E251CBA0002D79F /* main.js */; };
 		4A0BA1E01E251CBA0002D79F /* NSSHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BA1DC1E251CBA0002D79F /* NSSHTest.m */; };
@@ -66,6 +65,7 @@
 		4A6B783D1CDCA81F0062111F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6B783C1CDCA81F0062111F /* libxml2.tbd */; };
 		4A75F0291E8E4B3E00C40A7A /* aa.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4A75F0281E8E4B3E00C40A7A /* aa.gif */; };
 		4A75F02D1E8E584400C40A7A /* UIImageView+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A75F02C1E8E584400C40A7A /* UIImageView+GIF.m */; };
+		4A790D7D1F67EF4C001B0092 /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A790D7C1F67EF4C001B0092 /* RequestViewModel.m */; };
 		4A83CEAD1D798D5C002CA71C /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEA61D798D5C002CA71C /* RDVTabBar.m */; };
 		4A83CEAE1D798D5C002CA71C /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEA81D798D5C002CA71C /* RDVTabBarController.m */; };
 		4A83CEAF1D798D5C002CA71C /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A83CEAA1D798D5C002CA71C /* RDVTabBarItem.m */; };
@@ -177,8 +177,6 @@
 		040D0B0F1D5CCC9A00A178B6 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		040D0B281D5CCCAE00A178B6 /* HitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
 		040D0B291D5CCCAE00A178B6 /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
-		040D0B481D5CCCAE00A178B6 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
-		040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHBasePro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0BA1D61E251C4C0002D79F /* UIImage+SHBasePro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SHBasePro.m"; sourceTree = "<group>"; };
 		4A0BA1D71E251C4C0002D79F /* UIImage+SHBasePro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SHBasePro.h"; sourceTree = "<group>"; };
@@ -267,6 +265,8 @@
 		4A75F0281E8E4B3E00C40A7A /* aa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = aa.gif; sourceTree = "<group>"; };
 		4A75F02B1E8E584400C40A7A /* UIImageView+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GIF.h"; sourceTree = "<group>"; };
 		4A75F02C1E8E584400C40A7A /* UIImageView+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIF.m"; sourceTree = "<group>"; };
+		4A790D7B1F67EF4C001B0092 /* RequestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewModel.h; sourceTree = "<group>"; };
+		4A790D7C1F67EF4C001B0092 /* RequestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewModel.m; sourceTree = "<group>"; };
 		4A83CEA51D798D5C002CA71C /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
 		4A83CEA61D798D5C002CA71C /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
 		4A83CEA71D798D5C002CA71C /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
@@ -560,15 +560,6 @@
 			path = Hittest;
 			sourceTree = "<group>";
 		};
-		040D0B471D5CCCAE00A178B6 /* XMLDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				040D0B481D5CCCAE00A178B6 /* XMLDictionary.h */,
-				040D0B491D5CCCAE00A178B6 /* XMLDictionary.m */,
-			);
-			path = XMLDictionary;
-			sourceTree = "<group>";
-		};
 		4A0BA1D91E251CBA0002D79F /* JSPatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -795,6 +786,15 @@
 			path = "UIImageView+GIF";
 			sourceTree = "<group>";
 		};
+		4A790D7A1F67EF2E001B0092 /* RequestViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A790D7B1F67EF4C001B0092 /* RequestViewModel.h */,
+				4A790D7C1F67EF4C001B0092 /* RequestViewModel.m */,
+			);
+			path = RequestViewModel;
+			sourceTree = "<group>";
+		};
 		4A83CEA41D798D5C002CA71C /* RDVTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +813,7 @@
 		4A83CEB51D799881002CA71C /* CenterViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4A790D7A1F67EF2E001B0092 /* RequestViewModel */,
 				4A83CEB61D7998A4002CA71C /* CenterViewController.h */,
 				4A83CEB71D7998A4002CA71C /* CenterViewController.m */,
 			);
@@ -935,7 +936,6 @@
 				4A606A811E1E91A000161996 /* Aspects */,
 				4AF2B6111E0514D300714667 /* Objection */,
 				040D0B271D5CCCAE00A178B6 /* Hittest */,
-				040D0B471D5CCCAE00A178B6 /* XMLDictionary */,
 			);
 			path = TestCode;
 			sourceTree = "<group>";
@@ -1661,6 +1661,7 @@
 				4AD72CF41F42FC67009D49CF /* ComplexDealCenter.m in Sources */,
 				4AFB6CC61E8A166700351622 /* ParamsGenerator.m in Sources */,
 				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
+				4A790D7D1F67EF4C001B0092 /* RequestViewModel.m in Sources */,
 				4AADBB371E57DE3B00BAF66D /* UITextField+Blocks.m in Sources */,
 				4A4D546F1F96EEA4006BC3AC /* WebViewController.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
@@ -1703,7 +1704,6 @@
 				4AFB6BBF1E48A7A600FF45B9 /* CTURLResponse.m in Sources */,
 				4A90F6771ED96AFD008B50CA /* NetworkReachabilityManager.m in Sources */,
 				4AFB6BFA1E48A7B400FF45B9 /* UIViewExt.m in Sources */,
-				040D0B5F1D5CCCAE00A178B6 /* XMLDictionary.m in Sources */,
 				4A655B881D7ADB59007BCF39 /* MovieModel.m in Sources */,
 				4AFB6BC21E48A7A600FF45B9 /* CTSignatureGenerator.m in Sources */,
 				4AFB6BC51E48A7A600FF45B9 /* CTServiceFactory.m in Sources */,
@@ -1916,7 +1916,6 @@
 			baseConfigurationReference = 4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = "SHBasePro/有意思.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
@@ -1978,7 +1977,6 @@
 			baseConfigurationReference = A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = "SHBasePro/有意思.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
