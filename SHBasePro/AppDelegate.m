@@ -460,11 +460,11 @@
     CenterViewController *vc = [[CenterViewController alloc] init];
 //    [self.tabbarController stopJDAnimation];
 //    
-    WebViewController* vc = [[WebViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [nav setNavigationBarHidden:YES];
-    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self.rootViewController presentViewController: nav animated:YES completion:nil];
+//    WebViewController* vc = [[WebViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [nav setNavigationBarHidden:YES];
+//    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [self.rootViewController presentViewController: nav animated:YES completion:nil];
 	
 //    [self.tabbarController stopJDAnimation];
 //    MapViewController *vc = [[MapViewController alloc] init];

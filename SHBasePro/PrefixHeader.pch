@@ -17,7 +17,7 @@
 #ifdef __OBJC__
 #import "CommonDefine.h"
 #import "CommonHeader.h"
-//#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #endif
 
 
