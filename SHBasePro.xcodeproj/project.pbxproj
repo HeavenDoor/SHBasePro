@@ -52,6 +52,7 @@
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
 		4A43B9FF1F6640B30012C5E2 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A43B9FE1F6640B30012C5E2 /* RevealServer.framework */; };
 		4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B8CDC1E2E334800124E65 /* SHSingleton.m */; };
+		4A4CF9B81FC6FEDD0066C1EB /* TestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF9B71FC6FEDD0066C1EB /* TestLoginViewController.m */; };
 		4A4D546F1F96EEA4006BC3AC /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D546E1F96EEA4006BC3AC /* WebViewController.m */; };
 		4A539D821ED6D23D007E4E1E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D811ED6D23D007E4E1E /* TestViewController.m */; };
 		4A539D8C1ED6D4A9007E4E1E /* ATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D8B1ED6D4A9007E4E1E /* ATViewController.m */; };
@@ -241,6 +242,8 @@
 		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		4A4B8CDB1E2E334800124E65 /* SHSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSingleton.h; sourceTree = "<group>"; };
 		4A4B8CDC1E2E334800124E65 /* SHSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSingleton.m; sourceTree = "<group>"; };
+		4A4CF9B61FC6FEDD0066C1EB /* TestLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginViewController.h; sourceTree = "<group>"; };
+		4A4CF9B71FC6FEDD0066C1EB /* TestLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewController.m; sourceTree = "<group>"; };
 		4A4D546D1F96EEA4006BC3AC /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4A4D546E1F96EEA4006BC3AC /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4A539D801ED6D23D007E4E1E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -709,6 +712,23 @@
 			path = Singleton;
 			sourceTree = "<group>";
 		};
+		4A4CF9B41FC6FE890066C1EB /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CF9B51FC6FEC40066C1EB /* TestLoginViewController */,
+			);
+			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		4A4CF9B51FC6FEC40066C1EB /* TestLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A4CF9B61FC6FEDD0066C1EB /* TestLoginViewController.h */,
+				4A4CF9B71FC6FEDD0066C1EB /* TestLoginViewController.m */,
+			);
+			path = TestLoginViewController;
+			sourceTree = "<group>";
+		};
 		4A4D546C1F96EE95006BC3AC /* WebViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -918,6 +938,7 @@
 		4AB6A3C31D5C2D3D00460300 /* TestCode */ = {
 			isa = PBXGroup;
 			children = (
+				4A4CF9B41FC6FE890066C1EB /* ReactiveCocoa */,
 				4AEDA2EE1FC6E82800DED563 /* BinaryTree */,
 				4A4D546C1F96EE95006BC3AC /* WebViewController */,
 				4AD72CEE1F42FAC8009D49CF /* MultiDelegate */,
@@ -1653,6 +1674,7 @@
 				4AE3F18F1ED2C866002F582B /* GModel.m in Sources */,
 				4AFB6BB91E48A7A600FF45B9 /* CTAPIBaseManager.m in Sources */,
 				4AFB6BB41E48A7A600FF45B9 /* NSObject+AXNetworkingMethods.m in Sources */,
+				4A4CF9B81FC6FEDD0066C1EB /* TestLoginViewController.m in Sources */,
 				4AFB6BF51E48A7B400FF45B9 /* UIColor+Tool.m in Sources */,
 				4AFB6BF41E48A7B400FF45B9 /* UIButton+Layout.m in Sources */,
 				4A32E0361E5444CA00EEAC92 /* SGScanningQRCodeVC.m in Sources */,
@@ -1916,6 +1938,7 @@
 			baseConfigurationReference = 4339DAF5961A41AD0BD8F36C /* Pods-SHBasePro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = "SHBasePro/有意思.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
@@ -1977,6 +2000,7 @@
 			baseConfigurationReference = A5BB4BCC5F3AA1E3D4800C87 /* Pods-SHBasePro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = "SHBasePro/有意思.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Li (RZZ58Q6X9C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Meng Li (RZZ58Q6X9C)";

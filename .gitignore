@@ -50,3 +50,4 @@ iOSInjectionProject/x86_64/compile_commands.sh
 iOSInjectionProject/x86_64/identity.txt
 iOSInjectionProject/x86_64/injecting_class.o
 SHBasePro.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+Podfile.lock

@@ -41,6 +41,7 @@
 #import "NetworkReachabilityManager.h"
 
 #import "ComplexDealCenter.h"
+#import "TestLoginViewController.h"
 
 
 //#import "CVWrapper.h"
@@ -63,10 +64,10 @@
 @implementation HomeViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    for (int i =0; i < 5; i++) {
-        CenterViewController *vc2 = [[CenterViewController alloc] init];
-        [self.navigationController pushViewController:vc2 animated:YES];
-    }
+//    for (int i =0; i < 5; i++) {
+//        CenterViewController *vc2 = [[CenterViewController alloc] init];
+//        [self.navigationController pushViewController:vc2 animated:YES];
+//    }
 }
 
 - (void)viewDidLoad {
@@ -202,6 +203,11 @@
 }
 
 - (void) objectionAction: (UIButton*) sender {
+    TestLoginViewController *vc = [[TestLoginViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
 //    for (int i = 0; i < 10; i++) {
 //        CenterViewController *vc = [[CenterViewController alloc] init];
 //        [self.navigationController pushViewController:vc animated:YES];
@@ -214,10 +220,10 @@
 //    CenterViewController *vc1 = [[CenterViewController alloc] init];
 //    [self.navigationController pushViewController:vc1 animated:YES];
 //    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        CenterViewController *vc2 = [[CenterViewController alloc] init];
-        [self.navigationController pushViewController:vc2 animated:YES];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        CenterViewController *vc2 = [[CenterViewController alloc] init];
+//        [self.navigationController pushViewController:vc2 animated:YES];
+//    });
     
     //[vc.navigationController popViewControllerAnimated:YES];
     
