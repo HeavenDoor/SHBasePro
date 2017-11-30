@@ -181,6 +181,8 @@
                 break;
         }
     }];
+    
+    [[IQKeyboardManager sharedManager] setEnable:YES];
     return YES;
 }
 

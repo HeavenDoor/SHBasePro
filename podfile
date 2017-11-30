@@ -1,4 +1,4 @@
-platform:ios,'7.0'
+platform:ios,'8.0'
 
 
 
@@ -22,6 +22,7 @@ pod 'BlocksKit', '~> 2.2.5'
 pod 'YYText', '~> 1.0.7'
 pod 'ReactiveCocoa', '2.5'
 pod 'PodSpec', '~> 1.0.2'
+pod 'IQKeyboardManager', '~> 5.0.0'
 
 #source 'http://GitBase/GitBase.git'
 #pod 'PayCenter', :git => 'http://GitBase/GitBase.git'

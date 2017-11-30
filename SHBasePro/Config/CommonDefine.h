@@ -22,6 +22,7 @@
 #define kColor(a,b,c) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:1]
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBGRAY(color) RGBCOLOR(color, color, color)
 
 //---------------------- int型转换为string ----------------------
 #define INT_To_STRING(intValue) ([NSString stringWithFormat:@"%d",(int)intValue])

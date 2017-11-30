@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "HFTNavigationProtocol.h"
 
-@interface TestLoginViewController : BaseViewController
+@interface TestLoginViewController : UIViewController <HFTNavigationProtocol>
 
 @end

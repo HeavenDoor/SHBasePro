@@ -74,6 +74,7 @@ static NSString* DataViewCellIdentifier = @"DataViewCellIdentifier";
      [DataModelRequest requestVMovieList:currentIndex succeedBlock:^(NSArray<MovieModel*>* data) {
      
      }];*/
+    
 }
 
 #pragma mark - CTAPIManagerParamSource

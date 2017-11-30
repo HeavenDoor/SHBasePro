@@ -52,7 +52,9 @@
 		4A3CE3871CDD953C0084E6E0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3CE3861CDD953C0084E6E0 /* Security.framework */; };
 		4A43B9FF1F6640B30012C5E2 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A43B9FE1F6640B30012C5E2 /* RevealServer.framework */; };
 		4A4B8CDD1E2E334800124E65 /* SHSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B8CDC1E2E334800124E65 /* SHSingleton.m */; };
-		4A4CF9B81FC6FEDD0066C1EB /* TestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF9B71FC6FEDD0066C1EB /* TestLoginViewController.m */; };
+		4A4CF9C31FCBA89F0066C1EB /* UIViewController+NavigationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF9C11FCBA89E0066C1EB /* UIViewController+NavigationProtocol.m */; };
+		4A4CF9C91FCBBA620066C1EB /* TestLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF9C81FCBBA610066C1EB /* TestLoginViewController.m */; };
+		4A4CF9CC1FCBE5DC0066C1EB /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CF9CB1FCBE5DC0066C1EB /* RWDummySignInService.m */; };
 		4A4D546F1F96EEA4006BC3AC /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D546E1F96EEA4006BC3AC /* WebViewController.m */; };
 		4A539D821ED6D23D007E4E1E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D811ED6D23D007E4E1E /* TestViewController.m */; };
 		4A539D8C1ED6D4A9007E4E1E /* ATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A539D8B1ED6D4A9007E4E1E /* ATViewController.m */; };
@@ -242,8 +244,12 @@
 		4A47FD1D1E040D550099811E /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		4A4B8CDB1E2E334800124E65 /* SHSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSingleton.h; sourceTree = "<group>"; };
 		4A4B8CDC1E2E334800124E65 /* SHSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSingleton.m; sourceTree = "<group>"; };
-		4A4CF9B61FC6FEDD0066C1EB /* TestLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoginViewController.h; sourceTree = "<group>"; };
-		4A4CF9B71FC6FEDD0066C1EB /* TestLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewController.m; sourceTree = "<group>"; };
+		4A4CF9C11FCBA89E0066C1EB /* UIViewController+NavigationProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationProtocol.m"; sourceTree = "<group>"; };
+		4A4CF9C21FCBA89F0066C1EB /* UIViewController+NavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationProtocol.h"; sourceTree = "<group>"; };
+		4A4CF9C71FCBBA610066C1EB /* TestLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLoginViewController.h; sourceTree = "<group>"; };
+		4A4CF9C81FCBBA610066C1EB /* TestLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLoginViewController.m; sourceTree = "<group>"; };
+		4A4CF9CA1FCBE5DB0066C1EB /* RWDummySignInService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
+		4A4CF9CB1FCBE5DC0066C1EB /* RWDummySignInService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
 		4A4D546D1F96EEA4006BC3AC /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4A4D546E1F96EEA4006BC3AC /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4A539D801ED6D23D007E4E1E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -715,16 +721,18 @@
 		4A4CF9B41FC6FE890066C1EB /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				4A4CF9B51FC6FEC40066C1EB /* TestLoginViewController */,
+				4A4CF9C61FCBBA610066C1EB /* TestLoginViewController */,
 			);
 			path = ReactiveCocoa;
 			sourceTree = "<group>";
 		};
-		4A4CF9B51FC6FEC40066C1EB /* TestLoginViewController */ = {
+		4A4CF9C61FCBBA610066C1EB /* TestLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4A4CF9B61FC6FEDD0066C1EB /* TestLoginViewController.h */,
-				4A4CF9B71FC6FEDD0066C1EB /* TestLoginViewController.m */,
+				4A4CF9CA1FCBE5DB0066C1EB /* RWDummySignInService.h */,
+				4A4CF9CB1FCBE5DC0066C1EB /* RWDummySignInService.m */,
+				4A4CF9C71FCBBA610066C1EB /* TestLoginViewController.h */,
+				4A4CF9C81FCBBA610066C1EB /* TestLoginViewController.m */,
 			);
 			path = TestLoginViewController;
 			sourceTree = "<group>";
@@ -1297,6 +1305,8 @@
 		4AFB6BCA1E48A7B400FF45B9 /* Categrory */ = {
 			isa = PBXGroup;
 			children = (
+				4A4CF9C21FCBA89F0066C1EB /* UIViewController+NavigationProtocol.h */,
+				4A4CF9C11FCBA89E0066C1EB /* UIViewController+NavigationProtocol.m */,
 				4A75F02A1E8E583100C40A7A /* UIImageView+GIF */,
 				4AADBB281E57DE3B00BAF66D /* NSString+LKCategory */,
 				4AADBB2B1E57DE3B00BAF66D /* NSTimer+Block */,
@@ -1635,6 +1645,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SHBasePro/Pods-SHBasePro-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/ZBarSDK/iphone/res/zbar-back.png",
 				"${PODS_ROOT}/ZBarSDK/iphone/res/zbar-help.html",
@@ -1674,7 +1685,6 @@
 				4AE3F18F1ED2C866002F582B /* GModel.m in Sources */,
 				4AFB6BB91E48A7A600FF45B9 /* CTAPIBaseManager.m in Sources */,
 				4AFB6BB41E48A7A600FF45B9 /* NSObject+AXNetworkingMethods.m in Sources */,
-				4A4CF9B81FC6FEDD0066C1EB /* TestLoginViewController.m in Sources */,
 				4AFB6BF51E48A7B400FF45B9 /* UIColor+Tool.m in Sources */,
 				4AFB6BF41E48A7B400FF45B9 /* UIButton+Layout.m in Sources */,
 				4A32E0361E5444CA00EEAC92 /* SGScanningQRCodeVC.m in Sources */,
@@ -1685,6 +1695,7 @@
 				4A159AEA1E08EFCA00549EEE /* DataCellMvvm.m in Sources */,
 				4A790D7D1F67EF4C001B0092 /* RequestViewModel.m in Sources */,
 				4AADBB371E57DE3B00BAF66D /* UITextField+Blocks.m in Sources */,
+				4A4CF9C31FCBA89F0066C1EB /* UIViewController+NavigationProtocol.m in Sources */,
 				4A4D546F1F96EEA4006BC3AC /* WebViewController.m in Sources */,
 				040D0B1A1D5CCC9A00A178B6 /* HcdGuideViewCell.m in Sources */,
 				4A9114341CF0702900641789 /* AppDelegate.m in Sources */,
@@ -1711,6 +1722,7 @@
 				4ADB5A281E2B475F006349DF /* MessageSenderViewController.m in Sources */,
 				4A32E0381E5444CA00EEAC92 /* SGScanningQRCodeView.m in Sources */,
 				4A91145D1CF0702900641789 /* main.m in Sources */,
+				4A4CF9CC1FCBE5DC0066C1EB /* RWDummySignInService.m in Sources */,
 				4A32E0371E5444CA00EEAC92 /* SGQRCodeTool.m in Sources */,
 				4AFB6BFE1E48A7B400FF45B9 /* MongoliaView.m in Sources */,
 				4A0BA1E61E2520E00002D79F /* SHSearchView.m in Sources */,
@@ -1735,6 +1747,7 @@
 				4AFB6BF71E48A7B400FF45B9 /* UIImageView+Tool.m in Sources */,
 				4A0BA1D81E251C4C0002D79F /* UIImage+SHBasePro.m in Sources */,
 				4A66C0481EC9D23F00C1AB06 /* TankCycleScrollView.m in Sources */,
+				4A4CF9C91FCBBA620066C1EB /* TestLoginViewController.m in Sources */,
 				4AFB6BF11E48A7B400FF45B9 /* NSAttributedString+XTAttributionSize.m in Sources */,
 				4AFB6BC41E48A7A600FF45B9 /* CTService.m in Sources */,
 				4AB7A7071E1FD4C200BCAF47 /* NSObject+RunTime.m in Sources */,

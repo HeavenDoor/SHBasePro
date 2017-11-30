@@ -8,6 +8,8 @@
 
 #import "UIViewController+NavigationProtocol.h"
 #import "HFTNavigationProtocol.h"
+#import "AppDelegate.h"
+#import "RDVTabBarController.h"
 
 @implementation UIViewController (NavigationProtocol)
 
@@ -45,14 +47,16 @@
 		
 		//自动判断如果是第一次导航栏隐藏否则显示，联动的标签控制栏要另外处理
 		if (self.navigationController.viewControllers.count == 1) {
-//            NSLog(@"%@",NSStringFromCGRect(self.rdv_tabBarController.tabBar.frame));
-//            [self.rdv_tabBarController.tabBar removeFromSuperview];
-//            [self.rdv_tabBarController.tabBar setFrame:CGRectMake(0, self.view.bounds.size.height - 49, kScreenWidth, 49)];
-//            [self.view addSubview:self.rdv_tabBarController.tabBar];
+            NSLog(@"%@",NSStringFromCGRect(self.rdv_tabBarController.tabBar.frame));
+            [self.rdv_tabBarController.tabBar removeFromSuperview];
+            [self.rdv_tabBarController.tabBar setFrame:CGRectMake(0, self.view.bounds.size.height - 49, SCREEN_WIDTH, 49)];
+            [self.view addSubview:self.rdv_tabBarController.tabBar];
 //            
-			[self.navigationController setNavigationBarHidden:YES animated:YES];
+			[self.navigationController setNavigationBarHidden:YES animated:NO];
 		} else {
-			[self.navigationController setNavigationBarHidden:NO animated:YES];
+			[self.navigationController setNavigationBarHidden:NO animated:NO];
+            [self.rdv_tabBarController setTabBarHidden:YES animated:NO];
+            
 		}
 		
 //		if (self.isHideNaviBar) {

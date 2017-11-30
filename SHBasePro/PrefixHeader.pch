@@ -19,6 +19,9 @@
 #import "CommonHeader.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "Masonry.h"
+#import "IQKeyboardManager.h"
+
 #endif
 
 

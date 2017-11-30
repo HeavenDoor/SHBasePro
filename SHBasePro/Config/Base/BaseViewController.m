@@ -34,10 +34,10 @@
     
     //自动判断如果是第一次导航栏隐藏否则显示，联动的标签控制栏要另外处理
     if (self.navigationController.viewControllers.count == 1) {
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
         [self.rdv_tabBarController setTabBarHidden:NO animated:NO];
     } else {
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
         [self.rdv_tabBarController setTabBarHidden:YES animated:NO];
     }
 }
@@ -51,6 +51,15 @@
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
+    
+    //自动判断如果是第一次导航栏隐藏否则显示，联动的标签控制栏要另外处理
+    if (self.navigationController.viewControllers.count == 1) {
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+        [self.rdv_tabBarController setTabBarHidden:NO animated:NO];
+    } else {
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
+    }
+        
 }
 
 - (void) backBtnPre : (UIButton*) sender {
